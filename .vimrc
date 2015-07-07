@@ -13,10 +13,13 @@ syntax on
 " :set guicursor&
 
 " tab stuffs
-:set number
-:set relativenumber
-:set tabstop=4
-:set noexpandtab
+:set number 		"sets absolute line numbers
+:set relativenumber "sets relative line numbers, when combined with the above, gives 2 columns of line numbers
+:set tabstop=8		"a tab is 8 spaces
+:set expandtab		"Always use spaces instead of tabs
+:set softtabstop=4	"Insert 4 spaces per tab press
+:set shiftwidth=4	"An indent is 4 spaces
+:set shiftround		"Round indent to nearest shiftwidth multiple
 :%retab!
 nnoremap <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 
