@@ -151,6 +151,10 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+# starts xbindkeys
+exec xbindkeys
+# starts nm-applet
+exec nm-applet
 # starts pulseaudio's X11 start script when i3 finishes reading the config file
 exec start-pulseaudio-x11
 # starts xflux to do screen-dimming
