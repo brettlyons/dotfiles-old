@@ -7,6 +7,13 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 
+set background=dark
+try
+  colorscheme solarized
+catch
+endtry
+
+
 " Disable all cursor blinking:
 :set guicursor+=a:blinkon0
 " Default setting, uncommong to restore:
