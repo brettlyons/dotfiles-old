@@ -13,6 +13,11 @@ try
 catch
 endtry
 
+if (exists('+colorcolumn'))
+  set colorcolumn=80
+  highlight ColorColumn ctermbg=9
+endif
+
 
 " Disable all cursor blinking:
 :set guicursor+=a:blinkon0
