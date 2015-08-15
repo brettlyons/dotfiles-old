@@ -15,9 +15,14 @@ endtry
 
 if (exists('+colorcolumn'))
   set colorcolumn=80
-  highlight ColorColumn ctermbg=9
+  highlight ColorColumn ctermbg=3
 endif
 
+" sets save(write) on dbl-escape
+map <Esc><Esc> :w<CR>
+
+" turn off the visual bell
+:set visualbell t_vb=
 
 " Disable all cursor blinking:
 :set guicursor+=a:blinkon0
@@ -48,3 +53,9 @@ autocmd BufWritePre * :call <SID>StripTrailingWhiteSpaces()
 " autocmd InsertEnter * :set number
 " autocmd InsertLeave * :set relativenumber
 
+
+" Rainbow Parentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
