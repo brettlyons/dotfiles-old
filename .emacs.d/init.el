@@ -87,7 +87,7 @@
   ;; :bind (:map yas-minor-mode-map
   ;;             ("<C-tab>" .'yas-expand))
 ;; (define-key yas-minor-mode-map (kbd "<C-tab>") 'yas-expand)
-;; == 
+;; ==
 ;; (define-key yas-minor-mode-map (kbd "<tab>") nil)
 ;; (define-key yas-minor-mode-map (kbd "TAB") nil)
 
@@ -106,16 +106,16 @@
 ;; (ac-config-default)
 ;; (ac-set-trigger-key "TAB")
 ;; (ac-set-trigger-key "<tab>")
+
+;; ;; http://www.flycheck.org/manual/latest/index.html
 (use-package flycheck
   :ensure t
   :config
   (global-flycheck-mode))
-
-;; ;; http://www.flycheck.org/manual/latest/index.html
-;; (require 'flycheck)
-
 ;; ;; turn on flychecking globally
 ;; (add-hook 'after-init-hook #'global-flycheck-mode)
+
+
 
 (use-package rainbow-delimiters
   :ensure t
@@ -134,8 +134,15 @@
 (use-package scala-mode
   :ensure t)
 
+(use-package ensime
+  :init
+  (add-hook 'scala-mode-hook 'ensime-mode)
+  :commands ensime ensime-mode)
+
 ;; pairing of parens (built-in)
 (electric-pair-mode 1)
+(show-paren-mode 1)
+;; (display-time-mode t)
 
 ;; adds line numbers to sourcecode files
 (add-hook 'prog-mode-hook
@@ -173,6 +180,7 @@
 
 ;; autosave entire file to the file(no #filename# files or w/e)
 (defun full-auto-save ()
+  "Automatically save the file directly."
   (interactive)
   (save-excursion
     (dolist (buf (buffer-list))
@@ -181,17 +189,10 @@
           (basic-save-buffer)))))
 (add-hook 'auto-save-hook 'full-auto-save)
 
-
-;; for copy and paste on mac
-(if (string-equal system-type "darwin")
-    ((require 'pbcopy)
-     (turn-on-pbcopy))
-  nil)
   
 ;(require 'pbcopy)
 ;(turn-on-pbcopy)
 
-(display-time-mode t)
 
 
 ;; start fullscreen (for OS X / floating WMs)
@@ -202,7 +203,7 @@
 ;; (custom-set-variables
 ;;  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
-;; golden ratio mode for split window editing -- not yet working with evil mode 
+;; golden ratio mode for split window editing
 ;(require 'golden-ratio)
 ;(golden-ratio-mode 1)
 ;(golden-ratio-auto-scale t)
