@@ -15,7 +15,7 @@ endtry
 
 if (exists('+colorcolumn'))
   set colorcolumn=80
-  highlight ColorColumn ctermbg=3
+  highlight ColorColumn ctermbg=2
 endif
 
 " sets save(write) on dbl-escape
@@ -28,16 +28,18 @@ map <Esc><Esc> :w<CR>
 :set guicursor+=a:blinkon0
 " Default setting, uncommong to restore:
 " :set guicursor&
+" Enable mouse for all modes
+:set mouse=a
 
 " tab stuffs
 :set number 		"sets absolute line numbers
 " :set relativenumber     "sets relative line numbers, when combined with the above, gives 2 columns of line numbers
 :set autoindent         "continues indentation from previous line
 " :set smartindent        "adds indentation sometimes
-:set tabstop=2		"a tab is 8 spaces
+:set tabstop=2		"a tab is 2 spaces
 :set expandtab		"Always use spaces instead of tabs
-:set softtabstop=2	"Insert 4 spaces per tab press
-:set shiftwidth=2	"An indent is 4 spaces
+:set softtabstop=2	"Insert 2 spaces per tab press
+:set shiftwidth=2	"An indent is 2 spaces
 :set shiftround		"Round indent to nearest shiftwidth multiple
 :%retab!
 nnoremap <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
