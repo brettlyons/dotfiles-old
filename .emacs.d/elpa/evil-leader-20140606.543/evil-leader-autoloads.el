@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "evil-leader" "evil-leader.el" (22045 27514
-;;;;;;  0 0))
+;;;### (autoloads nil "evil-leader" "evil-leader.el" (22364 20435
+;;;;;;  305262 174000))
 ;;; Generated autoloads from evil-leader.el
 
 (autoload 'global-evil-leader-mode "evil-leader" "\

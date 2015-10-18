@@ -3,7 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "undo-tree" "undo-tree.el" (22008 32318 0 0))
+;;;### (autoloads nil "undo-tree" "undo-tree.el" (22364 19573 137611
+;;;;;;  467000))
 ;;; Generated autoloads from undo-tree.el
 
 (autoload 'undo-tree-mode "undo-tree" "\

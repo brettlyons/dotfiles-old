@@ -1,8 +1,0 @@
-function removeDupes(string) {
-  string.split('').reduce(function (collectionObject, currentLetter) {
-    if(collectionObject.indexOf(currentLetter) !== -1) {
-      return collectionObject.push(currentLetter)
-    }
-  }, []);
-
-}
