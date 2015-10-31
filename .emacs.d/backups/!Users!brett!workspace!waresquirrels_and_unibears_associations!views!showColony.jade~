@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  h1= Colony #{colonyName}
+    p Welcome to #{title}
+    

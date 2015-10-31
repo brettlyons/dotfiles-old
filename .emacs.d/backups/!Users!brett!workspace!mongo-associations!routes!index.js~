@@ -1,0 +1,51 @@
+var express = require('express');
+var router = express.Router();
+var db = require('monk')('localhost/mongo-associations-lesson')
+var meetups = db.get('meetups')
+var locations = db.get('locations')
+var users = db.get('users')
+
+router.get('/', function(req, res, next) {
+  meetups.find({}, function (err, documents) {
+    if(err) throw err
+    res.render('index', { meetups: documents });
+  })
+});
+
+router.get('/meetups/:id', function(req, res, next) {
+  meetups.find({ _id: req.params.id }, function (err, meetupDocs) {
+    if(err) throw err;
+    locations.findOne( { _id: meetupDocs[0].locationId }, function (err, locationDoc) {
+      if (err) throw err;
+      var memberPromises = meetupDocs[0].memberIds.map( function (element )  {
+        return (users.find( { _id: element }))
+      });
+      // users.find({ _id: memberIds '$in:'   }, function (err, meetDoc) {
+      // to the hammock
+      Promise.all(memberPromises).then(function (memberRecords) {
+        var namesList = memberRecords.map(function (element)   {
+          return element[0];
+        });
+        var followersList = memberRecords.map(function (element) {
+          return element[0].follows;
+        });
+        res.render('index', {
+          meetups: meetupDocs,
+          location: locationDoc,
+          members: namesList
+        });
+      });
+    });
+  });
+});
+
+router.get('/users/:id', function (req, res, next) {
+  users.find({ _id: req.params.id }, function (err, userDocs) {
+    if(err) throw err;
+    res.render('/users', {
+    })
+
+  });
+});
+
+module.exports = router;

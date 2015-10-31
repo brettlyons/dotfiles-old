@@ -1,0 +1,5 @@
+extends layout
+
+block content
+  if profile
+      img(src=profile.pictureUrl)

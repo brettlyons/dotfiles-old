@@ -1,0 +1,58 @@
+require('es6-promise').polyfill();
+var db = require('monk')('localhost/mongo-weresquirrels')
+
+var colonies = db.get('colonies');
+var weresquirrels = db.get('weresquirrels');
+var unibears = db.get('unibears');
+var weresquirrelAgreements = db.get('weresquirrelAgreements');
+var unibearAgreements = db.get('unibearAgreements');
+var duels = db.get('duels');
+var weresquirrelStats = db.get('weresquirrelStats');
+var colonyIds = [colonies.id(),colonies.id(),colonies.id(),colonies.id()]
+
+var squirrelIds = [weresquirrels.id(), weresquirrels.id(), weresquirrels.id(), weresquirrels.id(), weresquirrels.id(), weresquirrels.id(), weresquirrels.id(), weresquirrels.id(), weresquirrels.id(), weresquirrels.id(), weresquirrels.id(), weresquirrels.id()]
+var unibearIds = [unibears.id(),unibears.id(),unibears.id(),unibears.id(),unibears.id(),unibears.id(),unibears.id(),unibears.id(),unibears.id(),unibears.id(),unibears.id(),unibears.id()]
+
+Promise.all([
+  colonies.remove().then(function () {
+    return Promise.all([
+      colonies.insert({_id: colonyIds[0], name: 'Earth'}),
+      colonies.insert({_id: colonyIds[1], name: 'Wind'}),
+      colonies.insert({_id: colonyIds[2], name: 'Fire'}),
+      colonies.insert({_id: colonyIds[3], name: 'Water'})
+    ])
+  }),
+
+  weresquirrels.remove().then(function () {
+    var promises = [];
+    for (var i = 0; i < squirrelIds.length; i ++) {
+      promises.push(weresquirrels.insert({_id: squirrelIds[i], name: 'Weresquirrel ' + (i + 1)}));
+    }
+    return Promise.all(promises)
+  }),
+
+    weresquirrelAgreements.remove().then(function () {
+      return Promise.all([
+        weresquirrelAgreements.insert({weresquirrel_id: squirrelIds[0], colony_id: colonyIds[0], length: 1, peanuts: 10 }),
+        weresquirrelAgreements.insert({weresquirrel_id: squirrelIds[1], colony_id: colonyIds[0], length: 1, peanuts: 10 }),
+        weresquirrelAgreements.insert({weresquirrel_id: squirrelIds[2], colony_id: colonyIds[1], length: 1, peanuts: 10 }),
+        weresquirrelAgreements.insert({weresquirrel_id: squirrelIds[3], colony_id: colonyIds[1], length: 1, peanuts: 10 }),
+        weresquirrelAgreements.insert({weresquirrel_id: squirrelIds[4], colony_id: colonyIds[2], length: 1, peanuts: 10 }),
+        weresquirrelAgreements.insert({weresquirrel_id: squirrelIds[5], colony_id: colonyIds[2], length: 1, peanuts: 10 }),
+        weresquirrelAgreements.insert({weresquirrel_id: squirrelIds[6], colony_id: colonyIds[3], length: 1, peanuts: 10 }),
+        weresquirrelAgreements.insert({weresquirrel_id: squirrelIds[7], colony_id: colonyIds[3], length: 1, peanuts: 10 }),
+      ])
+    }),
+
+    unibears.remove().then(function () {
+      var promises = [];
+      for (var i = 0; i < unibearIds.length; i ++) {
+        promises.push(unibears.insert({_id: unibearIds[i], name: 'Unibears ' + (i + 1)}));
+      }
+      return Promise.all(promises)
+    }),
+
+    unibearAgreements.remove().then(function () {
+      return Promise.all([
+        unibearAgreements.insert({unibear_id: unibearIds[0], colony_id: colonyIds[0], length: 2, honey: 20 }),
+        unibearAgreements.insert({unibear_id: unibearIds})])})])

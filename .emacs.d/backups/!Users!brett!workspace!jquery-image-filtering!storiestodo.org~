@@ -1,0 +1,5 @@
+* the user should be able to
+  * click a button to 
+    * toggle the background image between 
+      * dark_wood.png and tileable_wood_texture.png
+    * toggle a forest.jpg background on or off

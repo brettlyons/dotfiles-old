@@ -1,0 +1,36 @@
+* Notes/helps for later, etc.
+* Job opprotunities
+** niki@BoldBetties.com 
+** Bold Betties rents outdoor equipment to women w/ a social experience
+     and an MVP due on Dec. 3rd ** out of boomtown accelerator
+* Project ideas 
+** a "crassly applying humor" (cards against humanity) online version
+*** players should be able to add and remove cards, card rendering via css, websockets for a "table", custom cards(update/delete)
+** A gratitude list app, where people can finish the sentance "I am grateful for . . ."
+   * It's a very "word cloud" kind of app, like, tabulation and analysis of sentances.
+   * but not a lot of "many to many" relationships, so to speak.
+** a personal finance tracker 
+** 
+   * ^ this one?   seems like it might be fun, esp. in Clojure etc.
+** an Operational Security obstacle course / check list web app
+** an automatic plant waterer arduino
+** something for tanya, perhaps a storefront or smtg?
+** an arduino heart-moniter + a website for tracking
+** b an arduino that flies / races drones *from the control sticks* ?
+** c 'game' art with timing and breathe deep and progress makeing it
+   kind of psychadelic and having speed analytics and stuff as well.
+** d Something that uses an API
+* last weeks tasks completed: 2/9
+* TODO MAINTENCE TASKS [1/8]
+  - [ ] add auth to picture gallery site
+  - [X] aws sign up tonite
+  - [ ] add Oauth to picture gallery site
+  - [ ] laundry bedsheets
+  - [ ] sell other macbook air
+  - [ ] LRU kata on codewars
+  - [ ] Higher Order Functions on Lists on codewars
+  - [ ] write a client side XHRequest with ClojureScript
+  - [ ] do week 1 of living clojure exercises
+    - [ ] Day 5
+ 
+

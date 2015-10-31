@@ -1,0 +1,19 @@
+function ShoppingCart() {
+  that = this;
+  this.contents = [];
+  return {
+    getContents: function () {
+      return that.contents;
+    },
+    addItem: function (newItem) {
+      that.contents.push(newItem);
+    },
+    removeItemByName: function (itemName) {
+      that.contents.filter(function (itemObject) {
+        return (itemName !== itemObject.name);
+      })
+    }
+  }
+}
+
+module.exports = ShoppingCart;

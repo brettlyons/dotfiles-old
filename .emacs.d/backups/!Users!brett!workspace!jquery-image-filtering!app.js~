@@ -1,0 +1,64 @@
+$(document).ready(function() {
+  // --- background changer
+  $('.dark').on('click', function () {
+      $('body').css('background-image', 'url("./img/dark_wood.png")');
+      $('body').css('background-size', 'auto');
+  });
+  $('.light').on('click', function () { 
+      $('body').css('background-image', 'url("./img/tileable_wood_texture.png")');
+      $('body').css('background-size', 'auto');
+  });
+  $('.forest').on('click', function () { 
+      $('body').css('background-image', 'url("./img/forest.jpg")');
+      $('body').css('background-size', 'cover');
+  });
+  // --- sorter
+  function sortHigh(a, b) {
+    return $(b).data().price - $(a).data().price;
+  }
+  function sortLow(a, b) {
+    return $(a).data().price - $(b).data().price;
+  }
+  function appendToImgContainer(_, element) {  // _ means "value only to satisfy arity of function , otherwise unused"
+        $('.image-container').append(element);
+  } 
+  $('.high').on('click', function (event) {
+    $('.home') 
+      .sort(sortHigh)
+      .each(appendToImgContainer)
+    event.preventDefault(); 
+  });
+  $('.low').on('click', function (event) {
+    $('.home') 
+      .sort(sortLow)
+      .each(appendToImgContainer)
+   return false; // a way to preventDefault() and preventPropogation()
+  });
+  // ---- price range clicker
+  $('[type=checkbox]').on('click', function () {
+    if($('input:checked').length > 0) {  // don't hide houses if no filter is checked
+      $('.home').hide();
+      $(':checked').parent().each(function (_, element) {  // lets only run this on checked boxes . . .
+        function getFilterBounds (idx) { // idx of 0 will return lowBound of filter, 1 will return upperBound of filter
+          return $(element).contents().text()
+            .split("-")[idx]
+            .replace(/[k]/i, "000")
+            .replace(/[mil]/i, "000000")
+            .replace(/\D/g, "");
+        } // regex no jutsu
+        $('.home').filter(function (_, element) {
+          return ( $(element).data().price <= getFilterBounds(1) // this is the upper bound . . 
+                && $(element).data().price >= getFilterBounds(0) ); // and the lower . . . get it?
+        }).show(); //  Ah, vertical symetry.   
+      });
+    }
+    else { //  see preceding if
+      $('.home').show();
+    }
+  });
+  // ----- pagination
+  // if($('.home').filter(':visible').length > 6) {
+  //   $('.home:visible:gt(5)').hide('fast');
+  // }
+  // to the hammock!
+});

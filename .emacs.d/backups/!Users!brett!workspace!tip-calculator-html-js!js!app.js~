@@ -1,0 +1,51 @@
+document.getElementById('inputbox')
+  .addEventListener('input', putTipToDocBody, false);
+
+document.getElementById('calcbutton')
+  .addEventListener('click', putTipToDocBody, false);
+
+function putTipToDocBody() {
+  if(document.getElementById('tipamt') !== null) {
+    document.getElementById('tipamt').remove();
+  }
+
+  if(document.getElementById('inputbox').value !== null) {
+    var tmpPercent = document.getElementById('percentage').selectedIndex;
+    var tmpInput = document.getElementById('inputbox').value;
+  } // some magic happens in flight
+  // that borks these two values, so they need to be saved temporarily.
+  //  -- something else is side-effecting on the dom other than this.
+
+  document.body.innerHTML
+    += "<div class='container'><div id='tipamt' class='item'>"
+    + "You should tip $"
+    + calcTip(document.getElementById('inputbox').value.replace(/[^0-9.]/g,"")
+      , document.getElementById('percentage').value)
+    + "</div></div>";
+
+  document.getElementById('calcbutton')
+    .removeEventListener('click', putTipToDocBody);
+  document.getElementById('calcbutton')
+    .addEventListener('click', putTipToDocBody, false);
+
+  document.getElementById('percentage')
+    .removeEventListener('change', putTipToDocBody);
+  document.getElementById('percentage')
+    .addEventListener('change', putTipToDocBody, false);
+
+
+  document.getElementById('inputbox')
+    .removeEventListener('input', putTipToDocBody, false);
+  document.getElementById('inputbox')
+    .addEventListener('input', putTipToDocBody, false);
+
+  document.getElementById('inputbox').focus();
+
+  document.getElementById('percentage').selectedIndex = tmpPercent;
+  document.getElementById('inputbox').value = tmpInput;
+  // this shouldn't be needed, but it is . . .
+}
+
+function calcTip(amount, percentage) {
+  return (amount * percentage).toFixed(2);
+} // aka pure.  Total referential transparency ?

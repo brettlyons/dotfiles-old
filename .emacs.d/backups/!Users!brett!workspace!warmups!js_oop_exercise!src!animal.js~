@@ -1,0 +1,34 @@
+function Animal(name, age, kind){
+  this.name = name;
+  this.age = age;
+  this.kind = kind; // horse/lion/pig ?
+  this.awake = false;
+}
+
+Animal.prototype.growUp = function () {
+  this.age += 1;
+}
+
+Animal.prototype.feed = function () {
+  if (this.awake) {
+    return "NOM NOM NOM";
+  }
+}
+
+
+Animal.prototype.wakeUp = function() {
+  this.awake = true;
+}
+
+Animal.prototype.sleep = function () {
+  this.awake = false;
+}
+
+Animal.prototype.oink = function(){
+  if(this.kind.toLowerCase() == 'pig') {
+    return "oink";
+  }
+  return null;
+};
+
+module.exports=Animal;

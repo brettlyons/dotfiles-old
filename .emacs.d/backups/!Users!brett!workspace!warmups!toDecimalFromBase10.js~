@@ -1,0 +1,10 @@
+
+function toDecimal(binaryNumber) {
+  return binaryNumber
+    .toString().split("")
+    .reduce(function (accumulator, current, index) {
+      return accumulator + (current * Math.exp(2, (index - binaryNumber.length - 1)));
+  }, 0);
+}
+
+console.log(toDecimal(1101));
