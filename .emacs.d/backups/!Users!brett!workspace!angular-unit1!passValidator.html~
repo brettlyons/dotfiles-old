@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myAppController">
+  <head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js'></script>
+    <script src='raw2waydatabinding.js'></script>
+    <script>
+      angular.module('myApp',[])
+        .controller('myAppController', function($scope) {
+          $scope.greeting = "Fuck the"
+          $scope.passwordField = '';
+      })
+    </script>
+    <style>
+
+    </style>
+    <meta charset="utf-8">
+    <title>{{ greeting }} World</title>
+  </head>
+<body>
+  <h1> Sign Up Page </h1>
+  <form name="passForm">
+    <input type="text" ng-model="passwordField">
+  <p>
+  <h2>
+    <div>Your password is {{ passwordField.length }} characters
+  </h2>
+  </div>
+  <input type="submit" value="Sign up!" ng-hide="passwordField.length < 5">
+  <h2 ng-show="passwordField.length < 5">Invalid Password</h2>
+  </form>
+</body>
+</html>

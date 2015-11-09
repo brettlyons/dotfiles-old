@@ -1,0 +1,80 @@
+require('dotenv').load();
+var express = require('express');
+var router = express.Router();
+var fs = require('fs');
+var bcrypt = require('bcrypt');
+//offload the db stuff to ./lib
+var dbCommand = require('../lib/databaseCommand');
+
+// AUTH TODO:
+// add authorization
+// in a way that doesn't require repeating "Is authed?"
+// on every page
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', {title: 'Picture Gallery'});
+});
+
+router.get('/pictures', function(req, res, next) {
+  dbCommand.getAllPictures().then(function(dbPictures) {
+    res.render('pictures', {pictures: dbPictures});
+  });
+});
+
+router.get('/pictures/:id', function(req, res, next) {
+  getOnePicture(req.params.id).then(function(dbPicture) {
+    getCommentsForPictureId(dbPicture._id).then(function (comments) {
+      res.render('showpicture', { picData: dbPicture, commentsArray: comments });
+      //comments should be an array at this point, render
+    });
+  });
+});
+
+router.post('/pictures/:id/comment', function(req, res, next) {
+  // TODO get author via login in the future.
+  addComment(req.params.id, req.body.author, req.body.comment).then(function () {
+    res.redirect('/pictures/' + req.params.id);
+  });
+});
+
+// These should go on the /user/ path
+
+router.get('/postpic', function(req, res, next) {
+  res.render('postpic');
+});
+
+router.post('/postpic', function(req, res, next) {
+  var filePath = '/files/';
+  var tmpId = '';
+  var fstream;
+  req.pipe(req.busboy);
+  req.busboy.on('file', function(fieldname, file, filename) {
+    console.log('Uploading: ' + filename + 'to' + filePath);
+    filePath = filePath + filename;
+    console.log('Now filepath is: ', filePath);
+    fstream = fs.createWriteStream('./public' + filePath);
+    file.pipe(fstream);
+    fstream.on('close', function() {
+      addNewPicture(filepath).then(function (record) {
+        res.render('/pictures/' + record._id); 
+      });
+    });
+  });
+});
+
+// temporarily commented out, should be rendered unnecessary by cleaner front end 
+
+// router.post('/postnext/:id', function(req, res, next) {
+//   picCollection.findAndModify({_id: req.params.id}, {
+//     $set: {
+//       title1: req.body.title1,
+//       subtitle: req.body.title2,
+//       comments: []
+//     }
+//   });
+//   res.redirect('/pictures/' + req.params.id);
+// });
+
+
+module.exports = router;

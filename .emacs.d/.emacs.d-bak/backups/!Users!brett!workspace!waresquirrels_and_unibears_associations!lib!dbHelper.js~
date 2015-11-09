@@ -1,0 +1,22 @@
+var db = require('monk')('localhost/mongo-weresquirrels');
+var colonies = db.get('colonies');
+var weresquirrels = db.get('weresquirrels');
+var unibears = db.get('unibears');
+var weresquirrelAgreements = db.get('weresquirrelAgreements');
+var unibearAgreements = db.get('unibearAgreements');
+var duels = db.get('duels');
+var weresquirrelStats = db.get('weresquirrelStats');
+
+module.exports = {
+
+  getColonies: function (optId) {
+    if(!optId || optId === {} ) {
+      return (colonies.find({}));
+    }
+    return (colonies.find({_id: optId}));
+  },
+
+  getWinsByColony:: function (colonyId) {
+    return duels.find({ winner: colonyId })
+  }
+}

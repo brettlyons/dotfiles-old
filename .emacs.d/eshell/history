@@ -1,37 +1,128 @@
-ls
-node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
-node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
-node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
-ls
-rm \@
-rm @
-ls
-clear
-nvim todo.org 
-ls
-nvim todo.org
-ls
-ls
-clear
-node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
-node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
-node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
-node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
-node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
-node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
+node gameOfThrees.js 
+node gameOfThrees.js 
+node gameOfThrees.js 
+node gameOfThrees.js 
+node gameOfThrees.js 
+node gameOfThrees.js 
+node gameOfThrees.js 
+node gameOfThrees.js 
+node gameOfThrees.js 
+node gameOfThrees.js 
+node gameOfThrees.js 
 exit
 ls
+open 04.html 
+exit
+open 05.html 
+exit
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+node spiral.js 
+clear
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+node lumberjackPiles.js 
+exit
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+clear
+clear
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asciihouse.js 
+node asterixCount.js 
+node asterixCount.js 
 ls
+cd 06-intro-to-controllers/
+ls
+open index.html 
+http-server -c-1
+http-server -c-1
+ls
+git add -A
 cd ..
-npm install --save dotenv
-ls
-nvim .env
-ls
+git add -A
+git commit
+git push
+exit
 nodemon
-ls
-node and_seeds.js 
-nvim and_seeds.js 
-ls
-less and_seeds.js 
-ls
-nodemon
+ear
+clear
+exit

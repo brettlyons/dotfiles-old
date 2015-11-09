@@ -1,0 +1,60 @@
+((("names" .
+   [3 0 0 0 0])
+  ("idx" .
+   [1 0 0])
+  ("push" .
+   [1 0 0 0])
+  ("getWeresquirrelStats" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0])
+  ("wereSquirrelStats" .
+   [4 0 0 0 0 0 0 0 0 0 0 0 0 4 0 1 0])
+  ("wereSquirrel" .
+   [3 0 0 0 0 0 0 0 0 0 0 1])
+  ("getSquirrelsPerColony" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("_id" .
+   [5 0 0])
+  ("colonyRecord" .
+   [1 0 0 0 0 0 0 0 0 1 0 0])
+  ("id" .
+   [1 0])
+  ("params" .
+   [1 0 0 0 0 0])
+  ("req" .
+   [1 0 0])
+  ("wereSquirrelArray" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("wereSqId" .
+   [0 0 0 0 0 0 0 1])
+  ("wereSquirrels" .
+   [9 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("map" .
+   [6 0 0])
+  ("Promise" .
+   [3 0 0 0 0 0 0])
+  ("wereSquirrelIds" .
+   [1 0 0 0 0 0 0 0 0 0 1 0 0 1 2])
+  ("then" .
+   [6 0 0 0])
+  ("weresquirrel_id" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 1])
+  ("element" .
+   [2 0 0 1 0 0 0])
+  ("all" .
+   [4 0 0])
+  ("promise" .
+   [3 0 0 0 0 0 0])
+  ("dbHelper" .
+   [6 0 0 1 0 0 1 0])
+  ("wereAgreements" .
+   [1 0 0 0 0 1 1 0 0 0 0 0 0 0])
+  ("Weresquirrel" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("log" .
+   [20 0 0])
+  ("console" .
+   [20 0 0 0 0 0 1])
+  ("function" .
+   [0 0 0 2 0 0 0 0])
+  ("logger" .
+   [0 0 0 1 0 0])))

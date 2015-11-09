@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+    p Welcome to #{title}
+    p This is the signup page.  Here you can sign up using an email address and defining your password.
+    p
+    form 

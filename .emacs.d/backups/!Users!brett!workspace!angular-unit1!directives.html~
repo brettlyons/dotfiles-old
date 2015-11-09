@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myAppController">
+  <head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js'></script>
+    <script type="text/javascript">
+      angular.module('myApp',[])
+      .controller('myAppController', function($scope, $sce) {
+        $scope.greeting = "Hello Wizarding";
+        $scope.names = ["Harry", "Ron", "Hermione", "Sirius", "Hedwig", "Tonks"];
+        $scope.symbols = ["&spades;", "&clubs;", "&hearts;", "&diams;"];
+        $scope.symbols = $scope.symbols.map(function (symbol) {
+          return $sce.trustAsHtml(symbol)
+        });
+      });
+    </script>
+    <meta charset="utf-8">
+    <title>{{ greeting }} World</title>
+  </head>
+<body>
+  <ul>
+  <li ng-repeat="name in names">
+    {{name}}
+   </li>
+</ul>
+<ul ng-repeat="symbol in symbols">
+  <li>
+    <p ng-bind-html="symbol">
+</li>
+</ul>
+</body>
+</html>

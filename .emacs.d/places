@@ -1,7 +1,54 @@
 ;;; -*- coding: utf-8 -*-
-(("/Users/brett/workspace/waresquirrels_and_unibears_associations/routes/index.js" . 1036)
- ("/Users/brett/todo.org" . 1281)
- ("/Users/brett/.emacs.d/init.el" . 932)
+(("/Users/brett/workspace/picturegallery_node/lib/databaseCommand.js" . 559)
+ ("/Users/brett/workspace/angular-unit1/08-redditclone/"
+  (dired-filename . "/Users/brett/workspace/angular-unit1/08-redditclone/.."))
+ ("/Users/brett/workspace/angular-unit1/"
+  (dired-filename . "/Users/brett/workspace/angular-unit1/07-clicker"))
+ ("/Users/brett/workspace/angular-unit1/07-clicker/"
+  (dired-filename . "/Users/brett/workspace/angular-unit1/07-clicker/index.html"))
+ ("/Users/brett/workspace/angular-unit1/08-redditclone/app.js" . 94)
+ ("/Users/brett/workspace/angular-unit1/08-redditclone/index.html" . 77)
+ ("/Users/brett/workspace/angular-unit1/07-clicker/index.html" . 78)
+ ("/Users/brett/.emacs.d/init.el" . 1291)
+ ("/Users/brett/.emacs.d/elpa/evil-surround-20150605.2306/evil-surround-autoloads.el" . 2182)
+ ("/Users/brett/workspace/angular-unit1/07-clicker/app.js" . 125)
+ ("/Users/brett/workspace/angular-unit1/.git/"
+  (dired-filename . "/Users/brett/workspace/angular-unit1/.git/.."))
+ ("/Users/brett/workspace/"
+  (dired-filename . "/Users/brett/workspace/.."))
+ ("/Users/brett/"
+  (dired-filename . "/Users/brett/.emacs.d"))
+ ("/Users/brett/.emacs.d/"
+  (dired-filename . "/Users/brett/.emacs.d/init.el"))
+ ("/Users/brett/workspace/angular-unit1/index.html" . 197)
+ ("/Users/brett/.emacs.d/elpa/ace-jump-mode-20140616.115/ace-jump-mode-autoloads.el" . 1553)
+ ("/Users/brett/.emacs.d/elpa/cider-20151106.2226/cider-autoloads.el" . 6772)
+ ("/Users/brett/.emacs.d/elpa/seq-20151028.759/seq-autoloads.el" . 215)
+ ("/Users/brett/.emacs.d/elpa/clojure-mode-20151108.1316/clojure-mode-autoloads.el" . 1145)
+ ("/Users/brett/.emacs.d/elpa/dash-20151021.113/dash-autoloads.el" . 217)
+ ("/Users/brett/.emacs.d/elpa/elscreen-20151025.1800/elscreen-autoloads.el" . 625)
+ ("/Users/brett/.emacs.d/elpa/evil-20151108.220/evil-autoloads.el" . 1302)
+ ("/Users/brett/.emacs.d/elpa/flycheck-20151106.559/flycheck-autoloads.el" . 8299)
+ ("/Users/brett/.emacs.d/elpa/js2-mode-20151107.950/js2-mode-autoloads.el" . 1605)
+ ("/Users/brett/.emacs.d/elpa/markdown-mode-20151108.735/markdown-mode-autoloads.el" . 697)
+ ("/Users/brett/.emacs.d/elpa/powerline-20151008.1449/powerline-autoloads.el" . 2229)
+ ("/Users/brett/.emacs.d/elpa/solarized-theme-20151029.1029/solarized-theme-autoloads.el" . 642)
+ ("/Users/brett/.emacs.d/elpa/web-mode-20151107.26/web-mode-autoloads.el" . 354)
+ ("/Users/brett/.emacs.d/elpa/zenburn-theme-20151101.1158/zenburn-theme-autoloads.el" . 449)
+ ("/Users/brett/todo.org" . 1330)
+ ("/Users/brett/.emacs.d/elpa/ace-jump-mode-2.0.0.0/ace-jump-mode-autoloads.el" . 1553)
+ ("/Users/brett/workspace/warmups/gameOfThrees.js" . 589)
+ ("/Users/brett/workspace/warmups/spiral.js" . 704)
+ ("/Users/brett/.emacs.d/elpa/exec-path-from-shell-20151006.2253/exec-path-from-shell-autoloads.el" . 1251)
+ ("/Users/brett/.emacs.d/elpa/web-mode-20151031.59/web-mode-autoloads.el" . 353)
+ ("/Users/brett/.emacs.d/elpa/json-mode-20150413.1948/json-mode-autoloads.el" . 623)
+ ("/Users/brett/.emacs.d/elpa/json-reformat-20151007.1728/json-reformat-autoloads.el" . 556)
+ ("/Users/brett/.emacs.d/elpa/json-snatcher-20150511.2047/json-snatcher-autoloads.el" . 432)
+ ("/Users/brett/.emacs.d/elpa/flycheck-20151101.649/flycheck-autoloads.el" . 8297)
+ ("/Users/brett/.emacs.d/elpa/js2-mode-20151103.445/js2-mode-autoloads.el" . 1602)
+ ("/Users/brett/.zshrc" . 3395)
+ ("/Users/brett/.emacs.d/elpa/let-alist-1.0.4/let-alist-autoloads.el" . 1233)
+ ("/Users/brett/workspace/warmups/gameOfThrees.clj" . 66)
  ("/Users/brett/.emacs.d/elpa/calmer-forest-theme-20130925.2210/calmer-forest-theme-autoloads.el" . 440)
  ("/Users/brett/workspace/gh-oauth/app.js" . 1786)
  ("/Users/brett/workspace/warmups/oo-move-manager/"
@@ -10,10 +57,6 @@
  ("/Users/brett/workspace/warmups/oo-move-manager/code.js" . 401)
  ("/Users/brett/workspace/warmups/oo-move-manager/spec/"
   (dired-filename . "/Users/brett/workspace/warmups/oo-move-manager/spec/.."))
- ("/Users/brett/"
-  (dired-filename . "/Users/brett/.ghc"))
- ("/Users/brett/.emacs.d/"
-  (dired-filename . "/Users/brett/.emacs.d/init.el"))
  ("/Users/brett/idea" . 116)
  ("/Users/brett/Documents/"
   (dired-filename . "/Users/brett/Documents/.."))

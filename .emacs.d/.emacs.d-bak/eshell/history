@@ -1,0 +1,37 @@
+ls
+node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
+node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
+node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
+ls
+rm \@
+rm @
+ls
+clear
+nvim todo.org 
+ls
+nvim todo.org
+ls
+ls
+clear
+node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
+node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
+node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
+node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
+node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
+node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
+exit
+ls
+ls
+cd ..
+npm install --save dotenv
+ls
+nvim .env
+ls
+nodemon
+ls
+node and_seeds.js 
+nvim and_seeds.js 
+ls
+less and_seeds.js 
+ls
+nodemon

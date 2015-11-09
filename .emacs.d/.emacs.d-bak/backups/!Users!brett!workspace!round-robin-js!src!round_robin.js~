@@ -1,0 +1,80 @@
+var size = _.memoize(_.size);  // we call size a lot, so memoize . . .
+var first = _.memoize(_.first); // allow me to 'splain. . . no, there is too much.
+var rest = _.memoize(_.rest);   // allow me to sum up.  MEMOIZE ALL THE THINGS!
+
+// function zipToPairs(array1, array2) {
+//   function go(array1, array2, output) {
+//     if (isEmpty(array1) || isEmpty(array2)) { return output; }
+//     output.push(pair(first(array1), first(array2)));
+//     return go(rest(array1), rest(array2), output);
+//   }
+//   return go(array1, array2, []);
+// }
+
+var zipToPairs = _.zip;
+
+var pair = function(a, b) {
+  return [a, b];
+};
+
+var isEmpty = _.memoize(function(array) {
+  return (size(array) == 0);
+});
+
+var isEvenSize = _.memoize(function(array) {
+  return (size(array) % 2 == 0);
+});
+
+function rotateTail(array) {
+  var first = _.memoize(_.first); // the memoization has to be locally scoped
+  var rest = _.memoize(_.rest);   // or this function breaks, prob. cuz
+  var output = rest(array);       // we call first and rest a lot in other
+  output.unshift(output.pop());   // scopes, so we have to locally scope this
+  output.unshift(first(array));   // memoization cache to prevent cache collisions.
+  return output;
+}
+
+function roundRobin(array) {
+  var output = [];
+  // var tmpArr = [];
+  if (size(array) == 0) { return []; }
+  if (size(array) % 2 == 1) {
+    array.push('(none)');
+  }
+  var chunk = _.memoize(_.chunk); // memoize to eleminate perf. hit.
+  // this takes second call and makes it O(1) (A hash table lookup).
+  // this is actually the one spot where memoization does improve perf.
+  // and I understand why it's useful etc. . .
+  while (size(output) < size(array) - 1) {
+    // tmpArr = _.chunk(array, (size(array) / 2));
+    // array1 = tmpArr[0]; // first half
+    // array2 = tmpArr[1].reverse(); // second half
+    output.push(zipToPairs(chunk(array, (size(array) / 2))[0]
+      , chunk(array, (size(array) / 2))[1].reverse()));
+    array = rotateTail(array);
+  }
+  return output;
+}
+
+$(document).ready(function() {
+  $('#generateBtn').on('click', function() {
+    var rounds = roundRobin($('#teamNames').val().split('\n'));
+    var counter = 0;
+    $('.pulled-right').html('');
+    for (var i = 0 ; i < rounds.length ; i++) {
+      $('.pulled-right').append('<div style="margin-left:2%;">Round ' +
+      String(i + 1) + '</div><div><table style="border:2px solid black;">' +
+      genRoundTables(i) + '</table></div>');
+    }
+    function genRoundTables(roundNum) {
+      var output = '';
+      output += '<tr><th>Team 1</th><th>Team 2</th></tr>';
+      for (var j = 0; j < rounds[roundNum].length ; j++) {
+        output += '<tr><td style="border:2px solid black;">' +
+          rounds[roundNum][j][0] + '</td><td style="border:2px solid black;">' +
+          rounds[roundNum][j][1] + '</td></tr>';
+      }
+      return output;
+    }
+  });
+});

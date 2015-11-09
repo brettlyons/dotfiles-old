@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js'></script>
+    <!-- <script src='raw2waydatabinding.js'></script> -->
+    <meta charset="utf-8">
+    <title>{{ greeting }} World</title>
+  </head>
+  <body>
+    <p>{{1 + 6}}<p>
+    <br>
+    <p>Say something to the world <input type="text" id="say" ng-model="greeting" ng-init="greeting='Hello, '"></p>
+    <p>{{ greeting }} world!</p>
+    <form>
+      <input type="text" id="typebox" ng-model="name" placeholder="What is your name?">
+    </form>
+    <h1>My name is: {{name}}</h1>
+    <select ng-model="creature">
+      <option>Dogs</option>
+      <option>Cats</option>
+      <option>Cats and Dogs</option>
+      <option>Neither</option>
+    </select>
+    <h1>I love: {{creature}}!</h1>
+  </body>
+</html>

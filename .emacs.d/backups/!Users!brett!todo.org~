@@ -10,6 +10,7 @@
    * It's a very "word cloud" kind of app, like, tabulation and analysis of sentances.
    * but not a lot of "many to many" relationships, so to speak.
 ** a personal finance tracker 
+** a moon lander game
 ** 
    * ^ this one?   seems like it might be fun, esp. in Clojure etc.
 ** an Operational Security obstacle course / check list web app
@@ -20,16 +21,15 @@
 ** c 'game' art with timing and breathe deep and progress makeing it
    kind of psychadelic and having speed analytics and stuff as well.
 ** d Something that uses an API
-* last weeks tasks completed: 2/9
+* last weeks tasks completed: 5/10
 * TODO MAINTENCE TASKS [1/8]
-  - [ ] add auth to picture gallery site
-  - [X] aws sign up tonite
-  - [ ] add Oauth to picture gallery site
+  - [ ] add auth to picture gallery site ??
+  - [ ] add Oauth to picture gallery site ?? 
   - [ ] laundry bedsheets
   - [ ] sell other macbook air
-  - [ ] LRU kata on codewars
-  - [ ] Higher Order Functions on Lists on codewars
-  - [ ] write a client side XHRequest with ClojureScript
+  - [X] pay rent !! TODAY
+  - [ ] finish unit 1 of Angular stuff
+  - [ ] start react curriculum
   - [ ] do week 1 of living clojure exercises
     - [ ] Day 5
  

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js'></script>
+    <meta charset="utf-8">
+    <title>Mad Libs</title>
+  </head>
+  <label>Boy's Name<input type="text" ng-model="boyname" placeholder="Enter a boys name..."></label>
+  <label>Adjective<input type="text" ng-model="firstAdj"></label>
+  <label>Plural Noun<input type="text" ng-model="firstPluralN"></label>
+  <label>An insect, plural<input type="text" ng-model="pluralInsects"></label>
+  <label>Plural noun<input type="text" ng-model="secondPluralN"></label>
+  <label>A verb ending in s<input type="text" ng-model="endsInSV"></label>
+  <body>
+  </body>
+</html>

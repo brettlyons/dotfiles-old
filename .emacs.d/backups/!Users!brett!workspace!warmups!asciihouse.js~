@@ -1,0 +1,20 @@
+const testInput = ['   *\n',
+                   '  ***\n',
+                   '******\n']
+
+function squareFromAsterix(blueprint) {
+  return blueprint.map(function (line) {
+    return line.split('').map(function(character) {
+      //console.log("CHARACTER:", character);
+      if(character == '*') {
+        return "+---+\n|   |\n+---+\n";
+      }
+      else if(character == ' ') {
+        return "     \n     \n     \n";
+      }
+      else { return '\n';}
+    }).join('\n');
+  });
+}
+
+console.log(squareFromAsterix(testInput).join(','));
