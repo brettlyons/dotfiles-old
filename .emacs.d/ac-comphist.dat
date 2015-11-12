@@ -1,142 +1,246 @@
-((("picId" .
+((("href" .
+   [1 0 0 0])
+  ("model" .
    [1 0 0 0 0])
-  ("init" .
+  ("when" .
    [1 0 0 0])
-  ("powerline-evil-center-color-theme" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("splitChar" .
-   [5 0 0 0 0 0 0 0 0])
-  ("largestSort" .
-   [1 0 0 0 1 0 0 1 0 0 0])
-  ("sortFn" .
-   [3 0 0 0 0 0])
-  ("findBiggestCount" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("split" .
-   [2 0 0 0 0])
-  ("blueprint" .
-   [1 0 0 0 0 0 0 0 0])
-  ("squareFromAsterix" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("character" .
-   [6 0 0 0 0 0 0 0 0])
-  ("testInput" .
-   [2 0 0 0 0 1 0 0 0])
-  ("splitToLines" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("text" .
-   [1 0 0 0])
-  ("window.greeting" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("greetingKeyUp" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0])
-  ("names" .
-   [3 0 0 0 0])
-  ("idx" .
-   [1 0 0])
-  ("push" .
-   [1 0 0 0])
-  ("getWeresquirrelStats" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0])
-  ("wereSquirrelStats" .
-   [4 0 0 0 0 0 0 0 0 0 0 0 0 4 0 1 0])
-  ("wereSquirrel" .
-   [3 0 0 0 0 0 0 0 0 0 0 1])
-  ("getSquirrelsPerColony" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("_id" .
-   [5 0 0])
-  ("colonyRecord" .
-   [1 0 0 0 0 0 0 0 0 1 0 0])
-  ("id" .
-   [1 0])
-  ("params" .
+  ("next" .
+   [7 0 0 0])
+  ("res" .
+   [8 0 0])
+  ("router" .
+   [6 0 0 0 0 0])
+  ("$locationProvider" .
+   [0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0])
+  ("config" .
    [1 0 0 0 0 0])
-  ("req" .
-   [1 0 0])
-  ("wereSquirrelArray" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("wereSqId" .
-   [0 0 0 0 0 0 0 1])
-  ("wereSquirrels" .
-   [9 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("map" .
-   [7 0 0])
-  ("Promise" .
-   [3 0 0 0 0 0 0])
-  ("wereSquirrelIds" .
-   [1 0 0 0 0 0 0 0 0 0 1 0 0 1 2])
-  ("then" .
-   [6 0 0 0])
-  ("weresquirrel_id" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 1])
-  ("element" .
-   [2 0 0 1 0 0 0])
-  ("all" .
+  ("$routeProvider" .
+   [1 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("greeting" .
+   [4 0 0 0 0 0 0 0])
+  ("controller" .
+   [3 0 0 0 0 1 0 1 0 0])
+  ("app" .
    [4 0 0])
-  ("promise" .
-   [3 0 0 0 0 0 0])
-  ("dbHelper" .
-   [6 0 0 1 0 0 1 0])
-  ("wereAgreements" .
-   [1 0 0 0 0 1 1 0 0 0 0 0 0 0])
-  ("Weresquirrel" .
-   [2 0 0 0 0 0 0 0 0 0 0 0])
-  ("log" .
-   [25 0 2])
-  ("console" .
-   [33 0 0 0 1 0 2])
-  ("function" .
-   [1 0 0 2 1 0 0 0])
-  ("logger" .
-   [0 0 0 1 0 0])
-  ("gameOfThrees" .
-   [0 0 0 0 0 0 1 0 0 0 0 0])
-  ("script" .
-   [2 0 0 0 0 0])
-  ("/script" .
-   [3 0 0 0 0 0 0])
-  ("option" .
-   [0 0 0 0 1 0])
-  ("/option" .
-   [0 0 0 0 1 0 0])
-  ("ng-model=" .
+  ("commentDb" .
    [1 0 0 0 0 0 0 0 0])
-  ("/h1" .
-   [0 0 1])
-  ("body" .
-   [1 0 0 0])
-  ("/body" .
+  ("pictureId" .
+   [1 0 0 0 0 0 0 0 1])
+  ("commentsAndTags" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("dbPicture" .
+   [1 0 0 0 0 0 0 0 0])
+  ("console.log" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("$sce.trustAsHtml" .
+   [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0])
+  ("$scope.symbols" .
+   [3 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("ng-bind-html=" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("symbol" .
+   [7 0 0 0 0 0])
+  ("/li" .
+   [1 0 0])
+  ("symbols" .
+   [0 0 0 0 0 0 1])
+  ("ng-repeat=" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("/ul" .
+   [1 0 0])
+  ("$scope" .
+   [15 0 0 1 1 1])
+  ("type=" .
    [1 0 0 0 0])
   ("html" .
    [1 0 0 0])
-  ("type=" .
+  ("/body" .
    [1 0 0 0 0])
-  ("$scope" .
-   [1 0 0 0 0 0])
-  ("/ul" .
-   [1 0 0])
-  ("ng-repeat=" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("symbols" .
-   [0 0 0 0 0 0 1])
-  ("/li" .
-   [1 0 0])
-  ("symbol" .
-   [7 0 0 0 0 0])
-  ("ng-bind-html=" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("$scope.symbols" .
-   [3 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("$sce.trustAsHtml" .
-   [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0])
-  ("console.log" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("dbPicture" .
+  ("body" .
+   [2 0 0 0])
+  ("/h1" .
+   [0 0 1])
+  ("ng-model=" .
    [1 0 0 0 0 0 0 0 0])
-  ("commentsAndTags" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
-  ("pictureId" .
-   [1 0 0 0 0 0 0 0 1])
-  ("commentDb" .
-   [1 0 0 0 0 0 0 0 0])))
+  ("/option" .
+   [0 0 0 0 1 0 0])
+  ("option" .
+   [0 0 0 0 1 0])
+  ("/script" .
+   [3 0 0 0 0 0 0])
+  ("script" .
+   [2 0 0 0 0 0])
+  ("gameOfThrees" .
+   [0 0 0 0 0 0 1 0 0 0 0 0])
+  ("logger" .
+   [0 0 0 1 0 0])
+  ("function" .
+   [1 0 0 2 1 0 0 0])
+  ("console" .
+   [46 0 0 0 1 1 2])
+  ("log" .
+   [28 0 2])
+  ("Weresquirrel" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("wereAgreements" .
+   [1 0 0 0 0 1 1 0 0 0 0 0 0 0])
+  ("dbHelper" .
+   [6 0 0 1 0 0 1 0])
+  ("promise" .
+   [3 0 0 0 0 0 0])
+  ("all" .
+   [4 0 0])
+  ("element" .
+   [2 0 0 1 0 0 0])
+  ("weresquirrel_id" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 1])
+  ("then" .
+   [6 0 0 0])
+  ("wereSquirrelIds" .
+   [1 0 0 0 0 0 0 0 0 0 1 0 0 1 2])
+  ("Promise" .
+   [3 0 0 0 0 0 0])
+  ("map" .
+   [7 0 0])
+  ("wereSquirrels" .
+   [9 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("wereSqId" .
+   [0 0 0 0 0 0 0 1])
+  ("wereSquirrelArray" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("req" .
+   [6 0 0])
+  ("params" .
+   [3 0 0 0 0 0])
+  ("id" .
+   [1 0])
+  ("colonyRecord" .
+   [1 0 0 0 0 0 0 0 0 1 0 0])
+  ("_id" .
+   [5 0 0])
+  ("getSquirrelsPerColony" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("wereSquirrel" .
+   [3 0 0 0 0 0 0 0 0 0 0 1])
+  ("wereSquirrelStats" .
+   [4 0 0 0 0 0 0 0 0 0 0 0 0 4 0 1 0])
+  ("getWeresquirrelStats" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0])
+  ("push" .
+   [1 0 0 0])
+  ("idx" .
+   [1 0 0])
+  ("names" .
+   [3 0 0 0 0])
+  ("greetingKeyUp" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("window.greeting" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("text" .
+   [1 0 0 0])
+  ("splitToLines" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("testInput" .
+   [2 0 0 0 0 1 0 0 0])
+  ("character" .
+   [6 0 0 0 0 0 0 0 0])
+  ("squareFromAsterix" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("blueprint" .
+   [1 0 0 0 0 0 0 0 0])
+  ("split" .
+   [2 0 0 0 0])
+  ("findBiggestCount" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("sortFn" .
+   [3 0 0 0 0 0])
+  ("largestSort" .
+   [1 0 0 0 1 0 0 1 0 0 0])
+  ("splitChar" .
+   [5 0 0 0 0 0 0 0 0])
+  ("powerline-evil-center-color-theme" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("init" .
+   [1 0 0 0])
+  ("picId" .
+   [1 0 0 0 0])
+  ("templateUrl" .
+   [1 0 0 0 0 0 0 0 0 1 0])
+  ("result" .
+   [5 0 0 0 0 2])
+  ("operator" .
+   [3 0 0 0 0 0 1 1])
+  ("number2" .
+   [2 0 0 1 0 0 1])
+  ("number1" .
+   [4 0 0 0 0 0 0])
+  ("$routeParams" .
+   [4 0 0 0 0 0 0 0 3 1 0 7])
+  ("$route" .
+   [1 0 0 0 0 0])
+  ("Number" .
+   [0 0 0 7 0 2])
+  ("array" .
+   [3 0 0 0 0])
+  ("arrayOfObjects" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("object" .
+   [14 0 0 0 0 0])
+  ("collector" .
+   [14 0 0 0 0 0 0 0 0])
+  ("index" .
+   [1 0 0 0 0])
+  ("reduce" .
+   [2 0 0 0 0 0])
+  ("customerId" .
+   [12 0 0 0 0 0 0 0 0 0])
+  ("groupById" .
+   [0 0 0 0 0 0 0 0 1])
+  ("orders" .
+   [3 0 0 0 0 0])
+  ("valToGroupBy" .
+   [2 0 0 0 0 0 0 0 1 0 1 1])
+  ("array1" .
+   [15 0 0 0 0 0])
+  ("array2" .
+   [6 0 0 0 0 0])
+  ("slice" .
+   [3 0 0 0 0])
+  ("customer" .
+   [2 0 0 0 0 0 0 0])
+  ("collectorArray" .
+   [4 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("specificZipJoin" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("customers" .
+   [1 0 0 0 0 0 0 0 0])
+  ("val" .
+   [4 0 0])
+  ("specificZipJoinReduced" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("module" .
+   [1 0 0 0 0 0])
+  ("exports" .
+   [1 0 0 0 0 0 0])
+  ("express" .
+   [1 0 0 0 0 0 0])
+  ("get" .
+   [1 0 0])
+  ("render" .
+   [3 0 0 0 0 0])
+  ("tacos" .
+   [1 0 0 0 0])
+  ("rows" .
+   [5 0 0 0])
+  ("shell" .
+   [1 0 0 0 0])
+  ("connect" .
+   [1 0 0 0 0 0 0])
+  ("conString" .
+   [1 0 0 0 0 0 0 0 0])
+  ("err" .
+   [1 0 0])
+  ("Taco" .
+   [1 0 0 0])
+  ("redirect" .
+   [1 0 0 0 0 0 0 0])))

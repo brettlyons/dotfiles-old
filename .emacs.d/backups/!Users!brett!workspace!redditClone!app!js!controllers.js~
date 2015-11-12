@@ -1,0 +1,4 @@
+app.controller('RedditClone', function($scope) {
+  $scope.greeting = 'Hello World!';
+  $scope.thing = 'stuff';
+});

@@ -1,5 +1,86 @@
 ;;; -*- coding: utf-8 -*-
-(("/Users/brett/workspace/picturegallery_node/lib/databaseCommand.js" . 559)
+(("/Users/brett/workspace/tacos/"
+  (dired-filename . "/Users/brett/workspace/tacos/views"))
+ ("/Users/brett/workspace/tacos/views/"
+  (dired-filename . "/Users/brett/workspace/tacos/views/tacos"))
+ ("/Users/brett/workspace/tacos/views/tacos/"
+  (dired-filename . "/Users/brett/workspace/tacos/views/tacos/add.jade"))
+ ("/Users/brett/workspace/tacos/views/tacos/update.jade" . 128)
+ ("/Users/brett/workspace/tacos/views/tacos/add.jade" . 300)
+ ("/Users/brett/workspace/tacos/views/tacos/index.jade" . 285)
+ ("/Users/brett/workspace/tacos/routes/tacos.js" . 1899)
+ ("/Users/brett/workspace/tacos/routes/"
+  (dired-filename . "/Users/brett/workspace/tacos/routes/tacos.js"))
+ ("/Users/brett/workspace/"
+  (dired-filename . "/Users/brett/workspace/js_exercise"))
+ ("/Users/brett/workspace/tacos/app.js" . 736)
+ ("/Users/brett/workspace/sql-example/01_down.sql" . 28)
+ ("/Users/brett/workspace/learn-sql/"
+  (dired-filename . "/Users/brett/workspace/learn-sql/db"))
+ ("/Users/brett/workspace/learn-sql/db/"
+  (dired-filename . "/Users/brett/workspace/learn-sql/db/seed.sql"))
+ ("/Users/brett/workspace/learn-sql/db/seed.sql" . 143)
+ ("/Users/brett/workspace/sql-example/01_up.sql" . 330)
+ ("/Users/brett/workspace/sql-example/schema.sql" . 2)
+ ("/Users/brett/workspace/learn-sql/db/schema.sql" . 395)
+ ("/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/index.html" . 709)
+ ("/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/js/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/js/.."))
+ ("/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/result.html"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/result.html" . 77)
+ ("/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/js/controllers.js" . 67)
+ ("/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/js/app.js" . 229)
+ ("/Users/brett/workspace/redditClone/app/index.html" . 1216)
+ ("/Users/brett/workspace/redditClone/app/"
+  (dired-filename . "/Users/brett/workspace/redditClone/app/js"))
+ ("/Users/brett/workspace/redditClone/app/js/"
+  (dired-filename . "/Users/brett/workspace/redditClone/app/js/controllers.js"))
+ ("/Users/brett/workspace/redditClone/app/js/app.js" . 191)
+ ("/Users/brett/workspace/redditClone/app/js/controllers.js" . 76)
+ ("/Users/brett/.emacs.d/init.el" . 4038)
+ ("/Users/brett/workspace/redditClone/app/404.html" . 77)
+ ("/Users/brett/workspace/codeAlongAngularCRUD/public/index.html" . 850)
+ ("/Users/brett/workspace/codeAlongAngularCRUD/"
+  (dired-filename . "/Users/brett/workspace/codeAlongAngularCRUD/routes"))
+ ("/Users/brett/workspace/codeAlongAngularCRUD/routes/"
+  (dired-filename . "/Users/brett/workspace/codeAlongAngularCRUD/routes/index.js"))
+ ("/Users/brett/workspace/codeAlongAngularCRUD/routes/index.js" . 172)
+ ("/Users/brett/workspace/codeAlongAngularCRUD/public/partials/"
+  (dired-filename . "/Users/brett/workspace/codeAlongAngularCRUD/public/partials/."))
+ ("/Users/brett/workspace/codeAlongAngularCRUD/public/"
+  (dired-filename . "/Users/brett/workspace/codeAlongAngularCRUD/public/.."))
+ ("/Users/brett/workspace/codeAlongAngularCRUD/public/partials/guitars.html" . 40)
+ ("/Users/brett/workspace/codeAlongAngularCRUD/public/partials/home.html" . 46)
+ ("/Users/brett/workspace/codeAlongAngularCRUD/public/404.html" . 76)
+ ("/Users/brett/workspace/warmups/dataJoining.js" . 759)
+ ("/Users/brett/workspace/angular-unit2/02-routing/homencats/app/js/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/homencats/app/js/controllers.js"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/homencats/app/js/controllers.js" . 106)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/js"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/route-calculator/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/route-calculator/.."))
+ ("/Users/brett/workspace/angular-unit2/02-routing/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/homencats"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/homencats/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/homencats/app"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/homencats/app/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/homencats/app/index.html"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/js/app.js" . 53)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/js/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/js/controllers.js"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/homencats/app/index.html" . 1084)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/js/controllers.js" . 95)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/index.html" . 1041)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/home.html" . 82)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/projects.html" . 105)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/bio.html" . 188)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/resume.html" . 189)
+ ("/Users/brett/workspace/angular-unit2/02-routing/homencats/app/js/app.js" . 51)
+ ("/Users/brett/workspace/picturegallery_node/lib/databaseCommand.js" . 559)
  ("/Users/brett/workspace/angular-unit1/08-redditclone/"
   (dired-filename . "/Users/brett/workspace/angular-unit1/08-redditclone/.."))
  ("/Users/brett/workspace/angular-unit1/"
@@ -9,13 +90,10 @@
  ("/Users/brett/workspace/angular-unit1/08-redditclone/app.js" . 94)
  ("/Users/brett/workspace/angular-unit1/08-redditclone/index.html" . 77)
  ("/Users/brett/workspace/angular-unit1/07-clicker/index.html" . 78)
- ("/Users/brett/.emacs.d/init.el" . 1291)
  ("/Users/brett/.emacs.d/elpa/evil-surround-20150605.2306/evil-surround-autoloads.el" . 2182)
  ("/Users/brett/workspace/angular-unit1/07-clicker/app.js" . 125)
  ("/Users/brett/workspace/angular-unit1/.git/"
   (dired-filename . "/Users/brett/workspace/angular-unit1/.git/.."))
- ("/Users/brett/workspace/"
-  (dired-filename . "/Users/brett/workspace/.."))
  ("/Users/brett/"
   (dired-filename . "/Users/brett/.emacs.d"))
  ("/Users/brett/.emacs.d/"

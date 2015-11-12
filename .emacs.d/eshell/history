@@ -1,56 +1,3 @@
-node gameOfThrees.js 
-node gameOfThrees.js 
-node gameOfThrees.js 
-node gameOfThrees.js 
-node gameOfThrees.js 
-node gameOfThrees.js 
-node gameOfThrees.js 
-node gameOfThrees.js 
-node gameOfThrees.js 
-node gameOfThrees.js 
-node gameOfThrees.js 
-exit
-ls
-open 04.html 
-exit
-open 05.html 
-exit
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-node spiral.js 
-clear
-node lumberjackPiles.js 
 node lumberjackPiles.js 
 node lumberjackPiles.js 
 node lumberjackPiles.js 
@@ -125,4 +72,57 @@ exit
 nodemon
 ear
 clear
+exit
+nodemon
+http-server -c-1
+http-server -c-1
+http-server -c-1
+clear
+exit
+http-server -c-1
+http-server -c-1
+node dataJoining.js 
+node dataJoining.js 
+exit
+exit
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+node dataJoining.js 
+exit
+node dataJoining.js 
+exit
+ls
+mkdir partials
+mv guitars.html partials
+cd partials/
+ls
+cd ..
+ls
+mv partials/guitars.html partials/home.html
+cd partials/
+ls
+cd ..
+ls
+mv 404.html partials/
 exit

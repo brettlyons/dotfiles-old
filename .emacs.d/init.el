@@ -135,7 +135,9 @@
   (exec-path-from-shell-initialize))
 
 ;; end of eslint stuffs with jsx
+
 ;; start of webmode stuff with indents, etc.
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 (defun my-web-mode-hook ()
   "Hooks for Web mode. Adjust indents"
@@ -144,6 +146,12 @@
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-code-indent-offset 2))
 (add-hook 'web-mode-hook  'my-web-mode-hook)
+
+(setq web-mode-enable-current-column-highlight t)
+
+(setq web-mode-ac-sources-alist
+  '(("css" . (ac-source-css-property))
+    ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
 
 ;; end of web-mode stuff for indent setting etc.
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="guitarApp">
+<head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+  <title></title>
+  <script>
+    angular.module("guitarApp", ['ngRoute'])
+    .controller("HomeController", function($scope) {
+
+    
+    })
+    .config(function($routeProvider, $locationProvider) {
+      $routeProvider.when('/', {
+        templateUrl: '/partials/home.html'
+        controller: 'HomeController'
+      })
+      $locationProvider.html5Mode(true);
+    })
+    // .controller("GuitarController", function($scope) {
+
+    
+    // })
+    // .config(function($routeProvider, $locationProvider) {
+
+
+    // })
+  </script>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    |
+  <a href="/guitars">Guitars</a>
+  </nav>
+  <ng-view>
+  </ng-view>
+</body>
+</html>

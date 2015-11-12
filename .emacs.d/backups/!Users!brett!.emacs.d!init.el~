@@ -66,6 +66,10 @@
 (require 'powerline)
 (powerline-evil-vim-color-theme)
 
+;; evil-surround mode on!
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+
 ;;(powerline-evil-theme)
 ;; (powerline-default-theme) ; also possible: (powerline-evil-center-color-theme)
 (display-time-mode t)
