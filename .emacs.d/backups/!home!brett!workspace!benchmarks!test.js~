@@ -1,0 +1,66 @@
+var m = require("mori"),
+    Immutable = require("immutable");
+
+function time(f, iters) {
+    iters = iters || 1;
+    for(var i = 0; i < iters; i++) {
+        var s = new Date();
+        f();
+        console.log("Elapsed "+((new Date()).valueOf()-s.valueOf())+"ms");
+        console.log("----------");
+    }
+}
+
+// ~180ms Node 0.10.35, 2.26ghz 2010 MBP
+time(function() {
+    var hm = m.hashMap();
+    for(var i = 0 ; i < 100000; i++) {
+        for(var j = 0; j < 8; j++) {
+            hm = m.assoc.f3(hm, "foo"+j, j);
+        }
+    }
+}, 1);
+
+// ~2000ms
+time(function() {
+    var hm = Immutable.Map();
+    for(var i = 0 ; i < 100000; i++) {
+        for(var j = 0; j < 8; j++) {
+            hm = hm.set("foo"+j, j);
+        }
+    }
+}, 1);
+
+// ~330ms
+time(function() {
+    var v = m.vector();
+    for(var i = 0 ; i < 1000000; i++) {
+        v = m.conj.f2(v, i);
+    }
+}, 1);
+
+// ~2500ms
+time(function() {
+    var l = Immutable.List();
+    for(var i = 0 ; i < 1000000; i++) {
+        l = l.push(i);
+    }
+}, 1);
+
+// ~80ms
+time(function() {
+    var v = m.mutable.thaw(m.vector());
+    for(var i = 0 ; i < 1000000; i++) {
+        v = m.mutable.conj.f2(v, i);
+    }
+    v = m.mutable.freeze(v);
+}, 1);
+
+// ~500ms
+time(function() {
+    var l = Immutable.List().asMutable();
+    for(var i = 0 ; i < 1000000; i++) {
+        l = l.push(i);
+    }
+    l.asImmutable();
+}, 1);

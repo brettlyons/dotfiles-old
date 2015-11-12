@@ -20,8 +20,13 @@
   (function (lambda ()
       (linum-mode 1))))
 
+;;(let ((default-directory "/usr/share/emacs/site-lisp/"))
+;;  (normal-top-level-add-subdirs-to-load-path))
+
+(setq x-select-enable-clipboard-manager nil)
+
 (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
-  (normal-top-level-add-subdirs-to-load-path))
+   (normal-top-level-add-subdirs-to-load-path))
 
 ;; autosave to file instead of #filename#
 ;; (defun save-buffer-if-visiting-file (&optional args)
@@ -79,7 +84,7 @@
 
 ;; start fullscreen
 (custom-set-variables
- '(initial-frame-alist (quote ((fullscreen . maximized))))) 
+ '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
 ; auto-complete mode
 (global-auto-complete-mode 1)
