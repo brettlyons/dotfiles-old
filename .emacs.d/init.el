@@ -11,7 +11,6 @@
 (setq-default evil-shift-width 2)
 
 
-
 ;;(add-hook 'js-mode-hook
 ;;    (function (lambda ()
 ;;        (setq evil-shift-width js-indent-level))))
@@ -23,7 +22,7 @@
 ;;(let ((default-directory "/usr/share/emacs/site-lisp/"))
 ;;  (normal-top-level-add-subdirs-to-load-path))
 
-(setq x-select-enable-clipboard-manager nil)
+;;(setq x-select-enable-clipboard-manager nil)
 
 (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
    (normal-top-level-add-subdirs-to-load-path))
@@ -159,7 +158,6 @@
     ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
 
 ;; end of web-mode stuff for indent setting etc.
-
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
