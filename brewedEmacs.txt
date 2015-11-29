@@ -1,0 +1,43 @@
+emacs: stable 24.5 (bottled), devel 25.0-dev, HEAD
+GNU Emacs text editor
+https://www.gnu.org/software/emacs/
+/usr/local/Cellar/emacs/24.5 (3923 files, 118M) *
+  Built from source with: --with-cocoa --with-imagemagick --with-librsvg --with-mailutils --with-d-bus
+From: https://github.com/Homebrew/homebrew/blob/master/Library/Formula/emacs.rb
+==> Dependencies
+Build: xz ✔, pkg-config ✔
+Optional: d-bus ✔, gnutls ✔, librsvg ✔, imagemagick ✔, mailutils ✔, glib ✔
+==> Options
+--with-cocoa
+	Build a Cocoa version of emacs
+--with-ctags
+	Don't remove the ctags executable that emacs provides
+--with-d-bus
+	Build with d-bus support
+--with-glib
+	Build with glib support
+--with-gnutls
+	Build with gnutls support
+--with-imagemagick
+	Build with imagemagick support
+--with-librsvg
+	Build with librsvg support
+--with-mailutils
+	Build with mailutils support
+--with-x11
+	Build with x11 support
+--without-libxml2
+	Don't build with libxml2 support
+--devel
+	Install development version 25.0-dev
+--HEAD
+	Install HEAD version
+==> Caveats
+A command line wrapper for the cocoa app was installed to:
+  /usr/local/Cellar/emacs/24.5/bin/emacs
+
+To reload emacs after an upgrade:
+  launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.emacs.plist
+  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.emacs.plist
+.app bundles were installed.
+Run `brew linkapps emacs` to symlink these to /Applications.
