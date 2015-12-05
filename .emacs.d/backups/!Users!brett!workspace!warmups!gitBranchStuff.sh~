@@ -1,0 +1,23 @@
+#!/bin/sh
+rm -rf gitFoo
+
+git init gitFoo
+cd gitFoo
+echo "May the foo be with you" > newFoo.txt
+git add newFoo.txt
+git commit -m "A Initial Commit, added newFoo.txt"
+echo "the foo is strong with this one" >> newFoo.txt
+git add newFoo.txt
+git commit -m "B added newFoo.txt content"
+git checkout -b fooBranch
+echo "The foo is everywhere, all around us" >> newFoo.txt
+git add newFoo.txt
+git commit -m "C added a line to newFoo.txt"
+echo "Luminous beings are we, not this crude baz" >> newFoo.txt
+git add newFoo.txt
+git commit -m "D added another line to newFoo.txt"
+git checkout master
+echo "There is no disturbance in the foo at this time" >> newFoo.txt
+git add newFoo.txt
+git commit -m "E Another line to newFoo.txt"
+

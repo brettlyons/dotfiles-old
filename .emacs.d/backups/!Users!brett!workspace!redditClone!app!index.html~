@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" ng-app="redditClone">
   <head>
   <base href ="/">
@@ -23,11 +23,10 @@
       <h1>Reddit Clone FTW</h1>
       <br>
       <!-- add content here -->
-      
-
-      
-
-
+      <div class="container"> <!-- ng-repeat goes here -->
+        <div class="row">  
+          </div>
+      </div>
     </div>
   </body>
 </html>

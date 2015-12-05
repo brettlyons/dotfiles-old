@@ -1,0 +1,16 @@
+;; Object warmups/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "warmups/"
+  :tables
+  (list
+    (semanticdb-table "moarHoFPractice.js"
+      :major-mode 'js-mode
+      :tags nil
+      :file "moarHoFPractice.js"
+      :pointmax 1460
+      :fsize 1459
+      :lastmodtime '(22093 64342 0 0)
+      :unmatched-syntax '((VARIABLE 1425 . 1432) (PAREN_BLOCK 1436 . 1458) (VAR 1199 . 1202) (FUNCTION 1219 . 1227) (PAREN_BLOCK 1227 . 1240) (VAR 1087 . 1090) (FUNCTION 1107 . 1115) (PAREN_BLOCK 1115 . 1121) (VAR 1001 . 1004) (FUNCTION 1020 . 1028) (PAREN_BLOCK 1028 . 1034) (PAREN_BLOCK 804 . 844) (DOT 800 . 801) (VARIABLE 742 . 747) (PAREN_BLOCK 754 . 800) (BRACK_BLOCK 44 . 675) (VARIABLE 1434 . 1441) (PAREN_BLOCK 1445 . 1467) (VAR 1208 . 1211) (FUNCTION 1228 . 1236) (PAREN_BLOCK 1236 . 1249) (VAR 1096 . 1099) (FUNCTION 1116 . 1124) (PAREN_BLOCK 1124 . 1130) (VARIABLE 846 . 853) (VAR 1010 . 1013) (FUNCTION 1029 . 1037) (PAREN_BLOCK 1037 . 1043) (PAREN_BLOCK 804 . 844) (DOT 800 . 801) (VARIABLE 742 . 747) (PAREN_BLOCK 754 . 800) (BRACK_BLOCK 44 . 675) (VARIABLE 1425 . 1432) (PAREN_BLOCK 1436 . 1458) (VAR 1199 . 1202) (FUNCTION 1219 . 1227) (PAREN_BLOCK 1227 . 1240) (VAR 1087 . 1090) (FUNCTION 1107 . 1115) (PAREN_BLOCK 1115 . 1121) (VAR 1001 . 1004) (FUNCTION 1020 . 1028) (PAREN_BLOCK 1028 . 1034) (PAREN_BLOCK 804 . 844) (DOT 800 . 801) (VARIABLE 742 . 747) (PAREN_BLOCK 754 . 800) (BRACK_BLOCK 44 . 675))))
+  :file "!home!brett!workspace!warmups!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

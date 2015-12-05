@@ -1,0 +1,96 @@
+;; Object Unit-3-Inheritance/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Unit-3-Inheritance/"
+  :tables
+  (list
+    (semanticdb-table "Inheritance01.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("galvanize" package nil nil [1 19])
+            ("Person" type
+               (:members 
+                  ( ("printName" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("first" variable (:type "String") (reparse-symbol formal_parameters) [61 73])
+                            ("last" variable (:type "String") (reparse-symbol formal_parameters) [75 86]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [39 137])
+                    ("printName" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("first" variable (:type "String") (reparse-symbol formal_parameters) [162 174])
+                            ("middle" variable (:type "String") (reparse-symbol formal_parameters) [176 189])
+                            ("last" variable (:type "String") (reparse-symbol formal_parameters) [191 202]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [140 210]))                  
+                :type "class")
+                nil [21 212])
+            ("Inheritance01" type
+               (:members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [262 275]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [238 352]))                  
+                :type "class")
+                nil [214 354]))          
+      :file "Inheritance01.java"
+      :pointmax 355
+      :fsize 359
+      :lastmodtime '(22100 49839 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "bogus.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("Bogus" type
+               (:members 
+                  ( ("bogus" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("someInt" variable (:type "int") (reparse-symbol formal_parameters) [43 54])
+                            ("someFloat" variable (:type "float") (reparse-symbol formal_parameters) [56 71]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [17 119])
+                    ("bogus" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("someInt" variable (:type "int") (reparse-symbol formal_parameters) [148 159])
+                            ("otherInt" variable (:type "int") (reparse-symbol formal_parameters) [161 173]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [122 235])
+                    ("bogus" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("anInt" variable (:type "int") (reparse-symbol formal_parameters) [264 273]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [238 328])
+                    ("bogus" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("anObj" variable (:type "Object") (reparse-symbol formal_parameters) [357 369]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [331 425])
+                    ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [453 466]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [429 554]))                  
+                :type "class")
+                nil [1 556]))          
+      :file "bogus.java"
+      :pointmax 557
+      :fsize 556
+      :lastmodtime '(22100 43680 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!brett!workspace!java-curriculum!Unit-3-Inheritance!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

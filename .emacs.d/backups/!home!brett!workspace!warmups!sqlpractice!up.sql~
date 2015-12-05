@@ -1,0 +1,5 @@
+create table actors (
+      id serial primary key,
+      name varchar,
+      dob date
+);

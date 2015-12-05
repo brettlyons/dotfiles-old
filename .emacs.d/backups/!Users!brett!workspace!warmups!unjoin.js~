@@ -1,0 +1,5 @@
+[
+  {kidId: 1, kidName: 'Ed', toyName: 'Teddy Bear'},
+  {kidId: 1, kidName: 'Ed', toyName: 'Car'},
+  {kidId: 2, kidName: 'Su', toyName: 'Teddy Bear'},
+]

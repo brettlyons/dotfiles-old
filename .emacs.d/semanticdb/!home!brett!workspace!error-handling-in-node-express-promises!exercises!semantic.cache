@@ -1,0 +1,33 @@
+;; Object exercises/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "exercises/"
+  :tables
+  (list
+    (semanticdb-table "01-javascript-try-catch-throw.js"
+      :major-mode 'js-mode
+      :tags 
+        '( ("throwSomeError" function nil nil [325 405]))          
+      :file "01-javascript-try-catch-throw.js"
+      :pointmax 739
+      :fsize 738
+      :lastmodtime '(22112 34050 923463 630000)
+      :unmatched-syntax '((VARIABLE 593 . 596) (BRACE_BLOCK 597 . 647) (VARIABLE 648 . 653) (PAREN_BLOCK 654 . 657) (VARIABLE 407 . 410) (BRACE_BLOCK 411 . 434) (VARIABLE 435 . 440) (PAREN_BLOCK 441 . 444) (VARIABLE 103 . 106) (BRACE_BLOCK 107 . 157) (VARIABLE 158 . 163) (PAREN_BLOCK 164 . 167) (PAREN_BLOCK 17 . 23) (VARIABLE 592 . 595) (BRACE_BLOCK 596 . 646) (VARIABLE 647 . 652) (PAREN_BLOCK 653 . 656) (VARIABLE 406 . 409) (BRACE_BLOCK 410 . 433) (VARIABLE 434 . 439) (PAREN_BLOCK 440 . 443) (VARIABLE 103 . 106) (BRACE_BLOCK 107 . 157) (VARIABLE 158 . 163) (PAREN_BLOCK 164 . 167) (PAREN_BLOCK 17 . 23) (VARIABLE 593 . 596) (BRACE_BLOCK 597 . 647) (VARIABLE 648 . 653) (PAREN_BLOCK 654 . 657) (VARIABLE 407 . 410) (BRACE_BLOCK 411 . 434) (VARIABLE 435 . 440) (PAREN_BLOCK 441 . 444) (VARIABLE 103 . 106) (BRACE_BLOCK 107 . 157) (VARIABLE 158 . 163) (PAREN_BLOCK 164 . 167) (PAREN_BLOCK 17 . 23) (VARIABLE 612 . 615) (BRACE_BLOCK 616 . 666) (VARIABLE 667 . 672) (PAREN_BLOCK 673 . 676) (VARIABLE 426 . 429) (BRACE_BLOCK 430 . 453) (VARIABLE 454 . 459) (PAREN_BLOCK 460 . 463) (VARIABLE 407 . 414) (PAREN_BLOCK 418 . 424) (VARIABLE 103 . 106) (BRACE_BLOCK 107 . 157) (VARIABLE 158 . 163) (PAREN_BLOCK 164 . 167) (PAREN_BLOCK 17 . 23) (VARIABLE 593 . 596) (BRACE_BLOCK 597 . 647) (VARIABLE 648 . 653) (PAREN_BLOCK 654 . 657) (VARIABLE 407 . 410) (BRACE_BLOCK 411 . 434) (VARIABLE 435 . 440) (PAREN_BLOCK 441 . 444) (VARIABLE 103 . 106) (BRACE_BLOCK 107 . 157) (VARIABLE 158 . 163) (PAREN_BLOCK 164 . 167) (PAREN_BLOCK 17 . 23)))
+    (semanticdb-table "05-promise-errors-in-then.js"
+      :major-mode 'js-mode
+      :tags nil
+      :file "05-promise-errors-in-then.js"
+      :pointmax 409
+      :fsize 408
+      :lastmodtime '(22112 36087 330861 450000)
+      :unmatched-syntax '((PAREN_BLOCK 364 . 407) (DOT 359 . 360) (VARIABLE 342 . 354) (PAREN_BLOCK 354 . 356) (VAR 73 . 76) (PAREN_BLOCK 94 . 105) (VAR 25 . 28) (PAREN_BLOCK 51 . 71) (PAREN_BLOCK 17 . 23) (PAREN_BLOCK 364 . 407) (DOT 359 . 360) (VARIABLE 342 . 354) (PAREN_BLOCK 354 . 356) (VAR 73 . 76) (PAREN_BLOCK 94 . 105) (VAR 25 . 28) (PAREN_BLOCK 51 . 71) (PAREN_BLOCK 17 . 23) (PAREN_BLOCK 364 . 407) (DOT 359 . 360) (VARIABLE 342 . 354) (PAREN_BLOCK 354 . 356) (VAR 73 . 76) (PAREN_BLOCK 94 . 105) (VAR 25 . 28) (PAREN_BLOCK 51 . 71) (PAREN_BLOCK 17 . 23)))
+    (semanticdb-table "07-promise-errors-and-chaining.js"
+      :major-mode 'js-mode
+      :tags nil
+      :file "07-promise-errors-and-chaining.js"
+      :pointmax 873
+      :fsize 872
+      :lastmodtime '(22112 36761 219693 638000)
+      :unmatched-syntax '((PAREN_BLOCK 816 . 871) (DOT 811 . 812) (PAREN_BLOCK 686 . 808) (DOT 681 . 682) (PAREN_BLOCK 622 . 678) (DOT 617 . 618) (PAREN_BLOCK 558 . 614) (DOT 553 . 554) (PAREN_BLOCK 494 . 550) (DOT 489 . 490) (PAREN_BLOCK 430 . 486) (DOT 425 . 426) (PAREN_BLOCK 366 . 422) (DOT 361 . 362) (VARIABLE 344 . 356) (PAREN_BLOCK 356 . 358) (VAR 73 . 76) (PAREN_BLOCK 94 . 105) (VAR 25 . 28) (PAREN_BLOCK 51 . 71) (PAREN_BLOCK 17 . 23))))
+  :file "!home!brett!workspace!error-handling-in-node-express-promises!exercises!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

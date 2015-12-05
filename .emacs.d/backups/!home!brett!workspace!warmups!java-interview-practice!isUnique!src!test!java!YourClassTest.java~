@@ -1,0 +1,14 @@
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+
+public class YourClassTest {
+  @Test
+  public void testUniqueness_ShouldReturnBooleans() {
+    IsUnique test = new IsUnique();
+    // YourClass foo = new YourClass();
+    assertEquals(true, test.testUniqueness("hello", "elhlo"));
+    // assertEquals("Some value", foo.someMethod());
+  }
+}

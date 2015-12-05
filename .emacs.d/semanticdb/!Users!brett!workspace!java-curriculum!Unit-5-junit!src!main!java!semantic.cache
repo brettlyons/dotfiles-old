@@ -1,0 +1,167 @@
+;; Object java/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "java/"
+  :tables
+  (list
+    (semanticdb-table "Human.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("Human" type
+               (:typemodifiers ("public")
+                :interfaces ("Person")
+                :members 
+                  ( ("name" variable (:type "String") (reparse-symbol class_member_declaration) [42 54])
+                    ("plea" variable (:type "String") (reparse-symbol class_member_declaration) [55 60])
+                    ("age" variable (:type "int") (reparse-symbol class_member_declaration) [62 70])
+                    ("eaten" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [72 94])
+                    ("Human" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("name" variable (:type "String") (reparse-symbol formal_parameters) [111 122])
+                            ("age" variable (:type "int") (reparse-symbol formal_parameters) [124 131]))                          )
+                        (reparse-symbol class_member_declaration) [98 179])
+                    ("Human" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("name" variable (:type "String") (reparse-symbol formal_parameters) [196 207])
+                            ("age" variable (:type "int") (reparse-symbol formal_parameters) [209 216])
+                            ("plea" variable (:type "String") (reparse-symbol formal_parameters) [218 229]))                          )
+                        (reparse-symbol class_member_declaration) [183 299])
+                    ("getAge" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [303 344])
+                    ("kill" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [347 395])
+                    ("isDead" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [411 489])
+                    ("compareTo" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("compareHuman" variable (:type "Human") (reparse-symbol formal_parameters) [517 535]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [496 722]))                  
+                :type "class")
+                nil [1 724]))          
+      :file "Human.java"
+      :pointmax 725
+      :fsize 724
+      :lastmodtime '(22100 62190 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "Zombie.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util.HashMap" include nil nil [1 26])
+            ("java.util.Arrays" include nil nil [27 51])
+            ("Zombie" type
+               (:typemodifiers ("public")
+                :interfaces ("Person")
+                :members 
+                  ( ("name" variable (:type "String") (reparse-symbol class_member_declaration) [95 107])
+                    ("health" variable (:type "int") (reparse-symbol class_member_declaration) [109 120])
+                    ("knownHumans" variable
+                       (:dereference 1
+                        :type "Human")
+                        (reparse-symbol class_member_declaration) [122 142])
+                    ("victimPleas" variable
+                       (:dereference 1
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [144 165])
+                    ("Zombie" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("name" variable (:type "String") (reparse-symbol formal_parameters) [258 269]))                          )
+                        (reparse-symbol class_member_declaration) [244 297])
+                    ("Zombie" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("name" variable (:type "String") (reparse-symbol formal_parameters) [314 325])
+                            ("health" variable (:type "int") (reparse-symbol formal_parameters) [327 337]))                          )
+                        (reparse-symbol class_member_declaration) [300 391])
+                    ("search" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("humans" variable
+                               (:dereference 1
+                                :type "Human")
+                                (reparse-symbol formal_parameters) [414 428]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [395 486])
+                    ("eat" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [490 1116])
+                    ("isDead" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [1130 1172])
+                    ("compareTo" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("b" variable (:type "Human") (reparse-symbol formal_parameters) [1197 1204]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1176 1265]))                  
+                :type "class")
+                nil [53 1267]))          
+      :file "Zombie.java"
+      :pointmax 1268
+      :fsize 1267
+      :lastmodtime '(22100 62215 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "Person.java"
+      :major-mode 'jdee-mode
+      :tags nil
+      :file "Person.java"
+      :pointmax 83
+      :fsize 82
+      :lastmodtime '(22100 59135 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 51 . 82) (GT 49 . 50) (IDENTIFIER 44 . 49) (LT 43 . 44)))
+    (semanticdb-table "Car.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util.ArrayList" include nil nil [1 28])
+            ("Car" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("mpg" variable (:type "int") (reparse-symbol class_member_declaration) [50 58])
+                    ("gallons" variable (:type "int") (reparse-symbol class_member_declaration) [61 73])
+                    ("odometer" variable (:type "int") (reparse-symbol class_member_declaration) [76 89])
+                    ("Car" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("mpg" variable (:type "int") (reparse-symbol formal_parameters) [157 164]))                          )
+                        (reparse-symbol class_member_declaration) [146 171])
+                    ("fill" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("gas" variable (:type "int") (reparse-symbol formal_parameters) [192 199]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [175 206])
+                    ("drive" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("miles" variable (:type "int") (reparse-symbol formal_parameters) [228 237]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [210 244]))                  
+                :type "class")
+                nil [30 247]))          
+      :file "Car.java"
+      :pointmax 248
+      :fsize 247
+      :lastmodtime '(22100 62190 0 0)
+      :unmatched-syntax '((SEMICOLON 141 . 142) (PAREN_BLOCK 139 . 141) (GT 138 . 139) (LT 131 . 132) (NEW 118 . 121) (EQ 116 . 117) (GT 108 . 109) (IDENTIFIER 92 . 101) (LT 101 . 102))))
+  :file "!Users!brett!workspace!java-curriculum!Unit-5-junit!src!main!java!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

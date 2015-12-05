@@ -1,0 +1,28 @@
+;; Object java/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "java/"
+  :tables
+  (list
+
+    (semanticdb-table "IsUniqueTest.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("org.junit.Before" include nil nil [1 25])
+            ("org.junit.Test" include nil nil [26 48])
+            ("IsUniqueTest" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("testUniqueness_ShouldReturnBooleans" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [134 336]))                  
+                :type "class")
+                nil [96 338]))          
+      :file "IsUniqueTest.java"
+      :pointmax 339
+      :fsize 338
+      :lastmodtime '(22109 53132 863754 289000)
+      :unmatched-syntax nil))
+  :file "!home!brett!workspace!warmups!java-interview-practice!isUnique!src!test!java!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

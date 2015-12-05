@@ -1,0 +1,33 @@
+;; Object java/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "java/"
+  :tables
+  (list
+    (semanticdb-table "YourClassTest.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("org.junit.Before" include nil nil [1 25])
+            ("org.junit.Test" include nil nil [26 48]))          
+      :file "YourClassTest.java"
+      :pointmax 266
+      :unmatched-syntax '((PUBLIC 96 . 102) (BRACE_BLOCK 110 . 265) (IDENTIFIER 80 . 92) (DOT 79 . 80) (IDENTIFIER 73 . 79) (DOT 72 . 73) (IDENTIFIER 67 . 72) (DOT 66 . 67) (IMPORT 49 . 55) (STATIC 56 . 62) (IDENTIFIER 63 . 66) (BRACE_BLOCK 112 . 267) (IDENTIFIER 110 . 111) (PUBLIC 96 . 102) (COLON 109 . 110) (IDENTIFIER 80 . 92) (DOT 79 . 80) (IDENTIFIER 73 . 79) (DOT 72 . 73) (IDENTIFIER 67 . 72) (DOT 66 . 67) (IMPORT 49 . 55) (STATIC 56 . 62) (IDENTIFIER 63 . 66) (BRACE_BLOCK 111 . 266) (PUBLIC 96 . 102) (COLON 109 . 110) (IDENTIFIER 80 . 92) (DOT 79 . 80) (IDENTIFIER 73 . 79) (DOT 72 . 73) (IDENTIFIER 67 . 72) (DOT 66 . 67) (IMPORT 49 . 55) (STATIC 56 . 62) (IDENTIFIER 63 . 66)))
+    (semanticdb-table "BogusStringRotateTest.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("org.junit.Before" include nil nil [1 25])
+            ("org.junit.Test" include nil nil [26 48])
+            ("BogusStringRotationTest" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("checkRotation_shouldTrueForGivenTest" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [145 331]))                  
+                :type "class")
+                nil [96 333]))          
+      :file "BogusStringRotateTest.java"
+      :pointmax 334
+      :unmatched-syntax '((IDENTIFIER 80 . 92) (DOT 79 . 80) (IDENTIFIER 73 . 79) (DOT 72 . 73) (IDENTIFIER 67 . 72) (DOT 66 . 67) (IMPORT 49 . 55) (STATIC 56 . 62) (IDENTIFIER 63 . 66) (IDENTIFIER 80 . 92) (DOT 79 . 80) (IDENTIFIER 73 . 79) (DOT 72 . 73) (IDENTIFIER 67 . 72) (DOT 66 . 67) (IMPORT 49 . 55) (STATIC 56 . 62) (IDENTIFIER 63 . 66))))
+  :file "!home!brett!workspace!warmups!java-interview-practice!string-rotation!src!test!java!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

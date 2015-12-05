@@ -1,0 +1,11 @@
+import java.util.Arrays;
+
+class IsUnique {
+
+  public boolean testUniqueness(String str1, String str2) {
+    char[] tmpChar1 = new Character[str1.length()];
+    char[] tmpChar2 = new Character[str2.length()];
+
+    return true;
+  }
+}

@@ -1,0 +1,3 @@
+select *
+       from appearances
+            inner join actors on actors.id appearances.actor_id

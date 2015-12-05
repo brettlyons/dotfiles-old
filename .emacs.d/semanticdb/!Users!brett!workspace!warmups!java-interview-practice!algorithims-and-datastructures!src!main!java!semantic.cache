@@ -1,0 +1,52 @@
+;; Object java/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "java/"
+  :tables
+  (list
+    (semanticdb-table "Television.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.util.HashMap" include nil nil [1 26])
+            ("java.util.Arrays" include nil nil [27 51])
+            ("Television" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("isOn" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [81 110])
+                    ("settingKeys" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [113 159])
+                    ("settingValues" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [162 210])
+                    ("isOn" function (:type "boolean") (reparse-symbol class_member_declaration) [216 253])
+                    ("turnOn" function (:type "void") (reparse-symbol class_member_declaration) [257 293])
+                    ("get" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("setting" variable (:type "String") (reparse-symbol formal_parameters) [335 349]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [317 522])
+                    ("set" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("settingName" variable (:type "String") (reparse-symbol formal_parameters) [542 560])
+                            ("settingVal" variable (:type "Object") (reparse-symbol formal_parameters) [562 579]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [526 779]))                  
+                :type "class")
+                nil [53 781]))          
+      :file "Television.java"
+      :pointmax 782
+      :fsize 781
+      :lastmodtime '(22101 63626 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!brett!workspace!warmups!java-interview-practice!algorithims-and-datastructures!src!main!java!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

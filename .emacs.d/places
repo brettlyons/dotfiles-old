@@ -1,2 +1,250 @@
 ;;; -*- coding: utf-8 -*-
-
+(("/home/brett/"
+  (dired-filename . "/home/brett/.emacs.d"))
+ ("/home/brett/.emacs.d/"
+  (dired-filename . "/home/brett/.emacs.d/init.el"))
+ ("/home/brett/brewedEmacs.txt" . 1346)
+ ("/home/brett/.emacs.d/init.el" . 3606)
+ ("/home/brett/workspace/warmups/convertToGrade.js" . 436)
+ ("/home/brett/workspace/warmups/constructorProtoMethodDifferences.js" . 114)
+ ("/home/brett/workspace/warmups/"
+  (dired-filename . "/home/brett/workspace/warmups/.."))
+ ("/home/brett/workspace/"
+  (dired-filename . "/home/brett/workspace/.."))
+ ("/home/brett/.oh-my-zsh/plugins/"
+  (dired-filename . "/home/brett/.oh-my-zsh/plugins/.."))
+ ("/home/brett/.oh-my-zsh/"
+  (dired-filename . "/home/brett/.oh-my-zsh/.."))
+ ("/home/brett/workspace/warmups/callPrac.js" . 89)
+ ("/home/brett/workspace/warmups/brokenKeyboard.js" . 288)
+ ("/home/brett/workspace/warmups/zip.js" . 555)
+ ("/home/brett/workspace/warmups/toString.js" . 225)
+ ("/home/brett/.oh-my-zsh/oh-my-zsh.sh" . 236)
+ ("/home/brett/todo.org" . 1606)
+ ("/home/brett/workspace/warmups/arraySum.js" . 332)
+ ("/home/brett/workspace/warmups/concatPrac.js" . 104)
+ ("/home/brett/.emacs.d/elpa/golden-ratio-20150819.420/golden-ratio-autoloads.el" . 921)
+ ("/home/brett/workspace/redditClone/app/js/controllers.js" . 865)
+ ("/home/brett/workspace/warmups/java-interview-practice/string-rotation/src/main/java/BogusStringRotation.java" . 29)
+ ("/home/brett/.emacs.d/elpa/yasnippet-20151126.518/snippets/js-mode/log" . 25)
+ ("/home/brett/workspace/warmups/yodawg.js" . 192)
+ ("/home/brett/.emacs.d/elpa/yasnippet-20151126.518/snippets/js-mode/try" . 95)
+ ("/home/brett/workspace/redditClone/app/js/"
+  (dired-filename . "/home/brett/workspace/redditClone/app/js/controllers.js"))
+ ("/home/brett/workspace/redditClone/"
+  (dired-filename . "/home/brett/workspace/redditClone/app"))
+ ("/home/brett/workspace/redditClone/app/"
+  (dired-filename . "/home/brett/workspace/redditClone/app/index.html"))
+ ("/home/brett/workspace/redditClone/app/index.html" . 4032)
+ ("/home/brett/workspace/warmups/convol.js" . 52)
+ ("/home/brett/workspace/redditClone/app/js/app.js" . 57)
+ ("/home/brett/workspace/angular-unit1/cameraShop.html" . 1085)
+ ("/home/brett/.Xresources" . 790)
+ ("/home/brett/.gitconfig" . 119)
+ ("/home/brett/.zshrc" . 5315)
+ ("/home/brett/.config/systemd/user/emacs.service" . 230)
+ ("/home/brett/workspace/error-handling-in-node-express-promises/routes/index.js" . 541)
+ ("/home/brett/.emacs.d/elpa/java-snippets-20140727.2236/java-snippets-autoloads.el" . 534)
+ ("/home/brett/workspace/error-handling-in-node-express-promises/exercises/07-promise-errors-and-chaining.js" . 343)
+ ("/home/brett/workspace/error-handling-in-node-express-promises/exercises/05-promise-errors-in-then.js" . 407)
+ ("/home/brett/workspace/error-handling-in-node-express-promises/exercises/01-javascript-try-catch-throw.js" . 413)
+ ("/home/brett/workspace/warmups/java-interview-practice/string-rotation/src/main/java/"
+  (dired-filename . "/home/brett/workspace/warmups/java-interview-practice/string-rotation/src/main/java/.."))
+ ("/home/brett/workspace/warmups/java-interview-practice/string-rotation/src/main/"
+  (dired-filename . "/home/brett/workspace/warmups/java-interview-practice/string-rotation/src/main/.."))
+ ("/home/brett/workspace/warmups/java-interview-practice/string-rotation/src/"
+  (dired-filename . "/home/brett/workspace/warmups/java-interview-practice/string-rotation/src/test"))
+ ("/home/brett/workspace/warmups/java-interview-practice/string-rotation/src/test/"
+  (dired-filename . "/home/brett/workspace/warmups/java-interview-practice/string-rotation/src/test/java"))
+ ("/home/brett/workspace/warmups/java-interview-practice/string-rotation/src/test/java/"
+  (dired-filename . "/home/brett/workspace/warmups/java-interview-practice/string-rotation/src/test/java/BogusStringRotateTest.java"))
+ ("/home/brett/workspace/warmups/java-interview-practice/string-rotation/src/test/java/BogusStringRotateTest.java" . 303)
+ ("/home/brett/workspace/warmups/permutations.clj" . 384)
+ ("/home/brett/workspace/warmups/oneEditAway.clj" . 371)
+ ("/home/brett/workspace/warmups/java-interview-practice/zeroMatrixColRow/src/main/java/BogusMatrixZeroer.java" . 391)
+ ("/home/brett/workspace/express-angular-sockets/lib/io.js" . 2024)
+ ("/home/brett/workspace/warmups/java-interview-practice/isUnique/"
+  (dired-filename . "/home/brett/workspace/warmups/java-interview-practice/isUnique/src"))
+ ("/home/brett/workspace/warmups/java-interview-practice/isUnique/src/"
+  (dired-filename . "/home/brett/workspace/warmups/java-interview-practice/isUnique/src/main"))
+ ("/home/brett/workspace/warmups/java-interview-practice/isUnique/src/main/"
+  (dired-filename . "/home/brett/workspace/warmups/java-interview-practice/isUnique/src/main/java"))
+ ("/home/brett/workspace/warmups/java-interview-practice/isUnique/src/main/java/"
+  (dired-filename . "/home/brett/workspace/warmups/java-interview-practice/isUnique/src/main/java/YourClass.java"))
+ ("/home/brett/workspace/memories/routes/index.js" . 878)
+ ("/home/brett/workspace/zfs-dkms/PKGBUILD" . 2164)
+ ("/home/brett/workspace/spl-dkms/PKGBUILD" . 1116)
+ ("/home/brett/.nvimrc" . 121)
+ ("/Users/brett/todo.org" . 1475)
+ ("/Users/brett/.emacs.d/init.el" . 2485)
+ ("/Users/brett/workspace/microservice-memories-api-test/main.js" . 132)
+ ("/Users/brett/workspace/memories-client/js/app.js" . 1689)
+ ("/Users/brett/workspace/memories-client/index.html" . 1521)
+ ("/Users/brett/workspace/memories-client/manifest.yml" . 5)
+ ("/Users/brett/workspace/warmups/removeDupes.js" . 441)
+ ("/Users/brett/workspace/java-curriculum/Unit-5-junit/src/test/java/ZombieTest.java" . 96)
+ ("/Users/brett/workspace/java-curriculum/Unit-5-junit/src/main/java/Zombie.java" . 329)
+ ("/Users/brett/workspace/java-curriculum/Unit-3-Inheritance/Inheritance01.java" . 281)
+ ("/Users/brett/workspace/java-curriculum/Unit-2-Encapsulation/Encapsulation02.java" . 355)
+ ("/Users/brett/workspace/java-curriculum/Unit-2-Encapsulation/"
+  (dired-filename . "/Users/brett/workspace/java-curriculum/Unit-2-Encapsulation/Encapsulation03.java"))
+ ("/Users/brett/.emacs.d/elpa/jdee-20151005.1237/jdee-autoloads.el" . 47764)
+ ("/Users/brett/workspace/warmups/java-warmups/24clock.java" . 1170)
+ ("/Users/brett/workspace/java-curriculum/Unit-2-Encapsulation/Encapsulation01.java" . 65)
+ ("/Users/brett/workspace/java-curriculum/Unit-1-Syntax/"
+  (dired-filename . "/Users/brett/workspace/java-curriculum/Unit-1-Syntax/Exercise02.java"))
+ ("/Users/brett/workspace/java-curriculum/Unit-1-Syntax/Exercise02.java" . 883)
+ ("/Users/brett/.zshrc" . 3540)
+ ("/Users/brett/"
+  (dired-filename . "/Users/brett/.emacs.d"))
+ ("/Users/brett/.emacs.d/"
+  (dired-filename . "/Users/brett/.emacs.d/init.el"))
+ ("/Users/brett/workspace/memories-client/js/"
+  (dired-filename . "/Users/brett/workspace/memories-client/js/.."))
+ ("/Users/brett/workspace/memories-client/"
+  (dired-filename . "/Users/brett/workspace/memories-client/js"))
+ ("/Users/brett/workspace/memories/routes/index.js" . 677)
+ ("/Users/brett/workspace/"
+  (dired-filename . "/Users/brett/workspace/.gitignore"))
+ ("/Users/brett/workspace/memories/"
+  (dired-filename . "/Users/brett/workspace/memories/app.js"))
+ ("/Users/brett/workspace/memories/app.js" . 109)
+ ("/Users/brett/workspace/memories/README.md" . 278)
+ ("/Users/brett/workspace/memories/migrations/seeds.sql" . 154)
+ ("/Users/brett/workspace/memories/migrations/01_create_memories.up.sql" . 122)
+ ("/Users/brett/workspace/memories/public/index.html" . 1890)
+ ("/Users/brett/workspace/memories/public/"
+  (dired-filename . "/Users/brett/workspace/memories/public/.."))
+ ("/Users/brett/workspace/swagger-API-01/routes/index.js" . 180)
+ ("/Users/brett/workspace/warmups/unjoin.js" . 813)
+ ("/Users/brett/workspace/redditClone/app/index.html" . 1277)
+ ("/Users/brett/workspace/redditClone/app/"
+  (dired-filename . "/Users/brett/workspace/redditClone/app/js"))
+ ("/Users/brett/workspace/redditClone/app/js/"
+  (dired-filename . "/Users/brett/workspace/redditClone/app/js/controllers.js"))
+ ("/Users/brett/workspace/redditClone/app/js/app.js" . 191)
+ ("/Users/brett/workspace/redditClone/app/js/controllers.js" . 76)
+ ("/Users/brett/workspace/redditClone/app/404.html" . 77)
+ ("/Users/brett/workspace/codeAlongAngularCRUD/public/index.html" . 850)
+ ("/Users/brett/workspace/codeAlongAngularCRUD/"
+  (dired-filename . "/Users/brett/workspace/codeAlongAngularCRUD/routes"))
+ ("/Users/brett/workspace/codeAlongAngularCRUD/routes/"
+  (dired-filename . "/Users/brett/workspace/codeAlongAngularCRUD/routes/index.js"))
+ ("/Users/brett/workspace/codeAlongAngularCRUD/routes/index.js" . 172)
+ ("/Users/brett/workspace/codeAlongAngularCRUD/public/partials/"
+  (dired-filename . "/Users/brett/workspace/codeAlongAngularCRUD/public/partials/."))
+ ("/Users/brett/workspace/codeAlongAngularCRUD/public/"
+  (dired-filename . "/Users/brett/workspace/codeAlongAngularCRUD/public/.."))
+ ("/Users/brett/workspace/codeAlongAngularCRUD/public/partials/guitars.html" . 40)
+ ("/Users/brett/workspace/codeAlongAngularCRUD/public/partials/home.html" . 46)
+ ("/Users/brett/workspace/codeAlongAngularCRUD/public/404.html" . 76)
+ ("/Users/brett/workspace/warmups/dataJoining.js" . 759)
+ ("/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/js/app.js" . 93)
+ ("/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/js"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/js/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/js/controllers.js"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/js/controllers.js" . 103)
+ ("/Users/brett/workspace/angular-unit2/02-routing/homencats/app/js/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/homencats/app/js/controllers.js"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/homencats/app/js/controllers.js" . 106)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/js"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/route-calculator/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/route-calculator/.."))
+ ("/Users/brett/workspace/angular-unit2/02-routing/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/homencats"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/homencats/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/homencats/app"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/homencats/app/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/homencats/app/index.html"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/js/app.js" . 53)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/js/"
+  (dired-filename . "/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/js/controllers.js"))
+ ("/Users/brett/workspace/angular-unit2/02-routing/homencats/app/index.html" . 1084)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/js/controllers.js" . 95)
+ ("/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/result.html" . 77)
+ ("/Users/brett/workspace/angular-unit2/02-routing/route-calculator/app/index.html" . 709)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/index.html" . 1041)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/home.html" . 82)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/projects.html" . 105)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/bio.html" . 188)
+ ("/Users/brett/workspace/angular-unit2/02-routing/simpleBio/app/resume.html" . 189)
+ ("/Users/brett/workspace/angular-unit2/02-routing/homencats/app/js/app.js" . 51)
+ ("/Users/brett/workspace/picturegallery_node/lib/databaseCommand.js" . 559)
+ ("/Users/brett/workspace/angular-unit1/08-redditclone/"
+  (dired-filename . "/Users/brett/workspace/angular-unit1/08-redditclone/.."))
+ ("/Users/brett/workspace/angular-unit1/"
+  (dired-filename . "/Users/brett/workspace/angular-unit1/07-clicker"))
+ ("/Users/brett/workspace/angular-unit1/07-clicker/"
+  (dired-filename . "/Users/brett/workspace/angular-unit1/07-clicker/index.html"))
+ ("/Users/brett/workspace/angular-unit1/08-redditclone/app.js" . 94)
+ ("/Users/brett/workspace/angular-unit1/08-redditclone/index.html" . 77)
+ ("/Users/brett/workspace/angular-unit1/07-clicker/index.html" . 78)
+ ("/Users/brett/.emacs.d/elpa/evil-surround-20150605.2306/evil-surround-autoloads.el" . 2182)
+ ("/Users/brett/workspace/angular-unit1/07-clicker/app.js" . 125)
+ ("/Users/brett/workspace/angular-unit1/.git/"
+  (dired-filename . "/Users/brett/workspace/angular-unit1/.git/.."))
+ ("/Users/brett/workspace/angular-unit1/index.html" . 197)
+ ("/Users/brett/.emacs.d/elpa/ace-jump-mode-20140616.115/ace-jump-mode-autoloads.el" . 1553)
+ ("/Users/brett/.emacs.d/elpa/dash-20151021.113/dash-autoloads.el" . 217)
+ ("/Users/brett/.emacs.d/elpa/elscreen-20151025.1800/elscreen-autoloads.el" . 625)
+ ("/Users/brett/.emacs.d/elpa/markdown-mode-20151108.735/markdown-mode-autoloads.el" . 697)
+ ("/Users/brett/.emacs.d/elpa/powerline-20151008.1449/powerline-autoloads.el" . 2229)
+ ("/Users/brett/.emacs.d/elpa/zenburn-theme-20151101.1158/zenburn-theme-autoloads.el" . 449)
+ ("/Users/brett/.emacs.d/elpa/ace-jump-mode-2.0.0.0/ace-jump-mode-autoloads.el" . 1553)
+ ("/Users/brett/workspace/warmups/gameOfThrees.js" . 589)
+ ("/Users/brett/workspace/warmups/spiral.js" . 704)
+ ("/Users/brett/.emacs.d/elpa/json-reformat-20151007.1728/json-reformat-autoloads.el" . 556)
+ ("/Users/brett/.emacs.d/elpa/json-snatcher-20150511.2047/json-snatcher-autoloads.el" . 432)
+ ("/Users/brett/.emacs.d/elpa/let-alist-1.0.4/let-alist-autoloads.el" . 1233)
+ ("/Users/brett/workspace/warmups/gameOfThrees.clj" . 66)
+ ("/Users/brett/.emacs.d/elpa/calmer-forest-theme-20130925.2210/calmer-forest-theme-autoloads.el" . 440)
+ ("/Users/brett/workspace/gh-oauth/app.js" . 1786)
+ ("/Users/brett/workspace/warmups/oo-move-manager/"
+  (dired-filename . "/Users/brett/workspace/warmups/oo-move-manager/code.js"))
+ ("/Users/brett/idea" . 116)
+ ("/Users/brett/Documents/"
+  (dired-filename . "/Users/brett/Documents/.."))
+ ("/Users/brett/.emacs.d/elpa/evil-tabs-20150127.1346/evil-tabs-autoloads.el" . 1762)
+ ("/Users/brett/.emacs.d/elpa/elscreen-20140421.414/elscreen.el" . 1333)
+ ("/Users/brett/.emacs.d/elpa/"
+  (dired-filename . "/Users/brett/.emacs.d/elpa/.."))
+ ("/Users/brett/.emacs.d/elpa/evil-terminal-cursor-changer-20150827.1951/evil-terminal-cursor-changer-autoloads.el" . 273)
+ ("/Users/brett/workspace/warmups/palindromeRecursive.js" . 105)
+ ("/Users/brett/workspace/jquery-image-filtering/index.html" . 3125)
+ ("/Users/brett/workspace/jquery-image-filtering/app.js" . 2411)
+ ("/Users/brett/workspace/jquery-image-filtering/storiestodo.org" . 326)
+ ("/Users/brett/workspace/jquery-image-filtering/readme.md" . 1392)
+ ("/Users/brett/workspace/jquery-image-filtering/"
+  (dired-filename . "/Users/brett/workspace/jquery-image-filtering/index.html"))
+ ("/Users/brett/workspace/async-tea-party/src/async_tea_party/"
+  (dired-filename . "/Users/brett/workspace/async-tea-party/src/async_tea_party/.."))
+ ("/Users/brett/workspace/async-tea-party/src/"
+  (dired-filename . "/Users/brett/workspace/async-tea-party/src/.."))
+ ("/Users/brett/workspace/async-tea-party/"
+  (dired-filename . "/Users/brett/workspace/async-tea-party/project.clj"))
+ ("/Users/brett/workspace/async-tea-party/project.clj" . 399)
+ ("/Users/brett/.lein/profiles.clj" . 43)
+ ("/Users/brett/.emacs.d/elpa/pkg-info-20150517.443/pkg-info-autoloads.el" . 3737)
+ ("/Users/brett/.emacs.d/elpa/epl-20150517.433/epl-autoloads.el" . 214)
+ ("/Users/brett/.emacs.d/elpa/queue-0.1.1/queue-autoloads.el" . 333)
+ ("/Users/brett/.emacs.d/elpa/spinner-1.4/spinner-autoloads.el" . 2402)
+ ("/Users/brett/workspace/round-robin-js/src/round_robin.js" . 545)
+ ("/Users/brett/Documents/cookienotes.org" . 2123)
+ ("/Users/brett/workspace/warmups/arrayToObject.js" . 474)
+ ("/Users/brett/workspace/hubot-web-frontend/planAndTodo.org" . 393)
+ ("/Users/brett/workspace/CRUDnotes.org" . 28)
+ ("/Users/brett/.atom/"
+  (dired-filename . "/Users/brett/.atom/.."))
+ ("/Users/"
+  (dired-filename . "/Users/brett"))
+ ("/Users/brett/.oh-my-zsh/"
+  (dired-filename . "/Users/brett/.oh-my-zsh/.."))
+ ("/Users/brett/workspace/tip-calculator-html-js/js/app.js" . 91)
+ ("/Users/brett/workspace/tip-calculator-html-js/"
+  (dired-filename . "/Users/brett/workspace/tip-calculator-html-js/js"))
+ ("/Users/brett/workspace/tip-calculator-html-js/js/"
+  (dired-filename . "/Users/brett/workspace/tip-calculator-html-js/js/app.js")))

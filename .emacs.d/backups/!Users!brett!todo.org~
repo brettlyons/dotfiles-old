@@ -6,6 +6,7 @@
 * Project ideas 
 ** a "crassly applying humor" (cards against humanity) online version
 *** players should be able to add and remove cards, card rendering via css, websockets for a "table", custom cards(update/delete)
+*** This is currently my top pick
 ** A gratitude list app, where people can finish the sentance "I am grateful for . . ."
    * It's a very "word cloud" kind of app, like, tabulation and analysis of sentances.
    * but not a lot of "many to many" relationships, so to speak.
@@ -21,16 +22,18 @@
 ** c 'game' art with timing and breathe deep and progress makeing it
    kind of psychadelic and having speed analytics and stuff as well.
 ** d Something that uses an API
-* last weeks tasks completed: 5/10
-* TODO MAINTENCE TASKS [1/8]
-  - [ ] add auth to picture gallery site ??
-  - [ ] add Oauth to picture gallery site ?? 
-  - [ ] laundry bedsheets
+* last weeks tasks completed: 1/7
+* TODO MAINTENCE TASKS [0/6]
+  - [ ] Use "Paradoxicality" as the last word in a haiku
   - [ ] sell other macbook air
-  - [X] pay rent !! TODAY
-  - [ ] finish unit 1 of Angular stuff
-  - [ ] start react curriculum
-  - [ ] do week 1 of living clojure exercises
-    - [ ] Day 5
+  - [ ] Reddit Clone
+  - [ ] microservices (uncomment front end retreival front end fault-tolerence)
+  - [ ] new generic psql proj. w/promises proj. ( potentially for final proj. )
+  - [ ] start react curriculum (maybe Learn You Node)
  
+* TODO KLINTS TASKS ( did you work on it? )
+  - [ ] Reddit Clone
+  - [ ] PostgreSQL promises association
+  - [ ] portfolio-site ( setup )
+  - [ ] microservices (small things)
 

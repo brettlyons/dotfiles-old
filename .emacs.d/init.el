@@ -4,12 +4,16 @@
 (setq-default tab-width 2)
 ;; same for js mode
 (setq js-indent-level 2)
-;; pairing of parens
-(electric-pair-mode 1)
-;; Indent Level?
+;; Indent Level
 (setq-default indent-level 2)
 (setq-default evil-shift-width 2)
 
+(setq-default c-basic-offset 2
+              tab-width 2
+              indent-tabs-mode nil)
+
+;; pairing of parens
+(electric-pair-mode 1)
 
 ;;(add-hook 'js-mode-hook
 ;;    (function (lambda ()
@@ -20,36 +24,20 @@
   (function (lambda ()
     (linum-mode 1))))
 
+; turn off cursor blink
+(setq visible-cursor nil)
 
-(setq-default c-basic-offset 2
-              tab-width 2
-              indent-tabs-mode nil)
-
-;; (defun my-java-conf ()
-;;   "Java mode mods"
-;;   (setq indent-tabs-mode nil)
-;;   (setq indent-level 2)
-;;   (setq tab-width 2))
-
-; java indent should be 2
-;; (add-hook 'java-mode-hook 'my-java-conf)
-
-;;(let ((default-directory "/usr/share/emacs/site-lisp/"))
-;;  (normal-top-level-add-subdirs-to-load-path))
-
-;;(setq x-select-enable-clipboard-manager nil)
-
-;;(let ((default-directory "/usr/local/share/emacs/site-lisp/"))
-;;  (normal-top-level-add-subdirs-to-load-path))
-
+(setq x-select-enable-clipboard nil)
+(setq x-select-enable-primary t)
+(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
 ;; different site-lisp dirs for different OS's -- enabling shared home
-(cond 
+(cond
   ((string-equal system-type "gnu/linux")
     (let ((default-directory "/usr/share/emacs/site-lisp/"))
       (normal-top-level-add-subdirs-to-load-path)))
   ((string-equal system-type "darwin")
-    (let (default-directory "/usr/local/share/emacs/site-lisp/")
+    (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
       (normal-top-level-add-subdirs-to-load-path))))
 
 ;; autosave to file instead of #filename#
@@ -79,43 +67,88 @@
 (push '("melpa" . "http://melpa.milkbox.net/packages/")
       package-archives)
 (package-initialize)
-;; Init of evil-tabs-mode MUST occur before evil-mode 1
+
+;; Init of evil-tabs-mode MUST occur before evil-mode 1 to maintain key bindings
 (global-evil-tabs-mode t)
-;; vim mode
+
+;; evil mode is the Extensiible VIm Layer 
+
+;; (autoload 'evil "evil" "Select evil" t)
+;; (autoload 'evil-leader "evil-leader" "Select evil-leader" t)
+;; (autoload 'evil-org "evil-leader" "Select evil-org" t)
 (require 'evil)
 (require 'evil-leader)
 (require 'evil-org)
+(evil-mode 1)
 
-;; for copy and paste
+;; for copy and paste on mac
 (require 'pbcopy)
 (turn-on-pbcopy)
 
-(evil-mode 1)
-;;Yesss, give me a powerline . . .
+;; powerline
 (require 'powerline)
 (powerline-evil-vim-color-theme)
 
-;; evil-surround mode on!
+;; evil-surround mode on.
 (require 'evil-surround)
 (global-evil-surround-mode 1)
 
 ;;(powerline-evil-theme)
 ;; (powerline-default-theme) ; also possible: (powerline-evil-center-color-theme)
+
 (display-time-mode t)
 
 ; Ace jump activation, via spacebar in normal mode
 (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)
 
-;; start fullscreen
+;; start fullscreen (for OS X / floating WMs)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+;; another way to do that ^
 ;;(toggle-frame-maximized)
 ;; (custom-set-variables
 ;;  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
+;; golden ratio mode for split window editing -- not yet working with evil mode 
+(require 'golden-ratio)
+(golden-ratio-mode 1)
+;(golden-ratio-auto-scale t)
 
-; auto-complete mode
-(global-auto-complete-mode 1)
+
+;;semantic markup mode
+;(semantic-mode 1)
+;(setq semantic-complete-inline-analyzer-displayor-class 'semantic-displayor-ghost)
+
+;; auto-complete mode and snippets
+(add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
+(require 'yasnippet)
+(yas-global-mode 1)
+
+;; (define-key yas-minor-mode-map (kbd "<tab>") nil)
+;; (define-key yas-minor-mode-map (kbd "TAB") nil)
+(define-key yas-minor-mode-map (kbd "<C-tab>") 'yas-expand)
+
+;; setting up autocomplete
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(ac-config-default)
+(ac-set-trigger-key "TAB")
+(ac-set-trigger-key "<tab>")
+
+;; set yasnippets to be higher priority in aau
+;; (defadvice ac-common-setup (after give-yasnippet-highest-priority activate)
+;;   (setq ac-sources (delq 'ac-source-yasnippet ac-sources))
+;;     (add-to-list 'ac-sources 'ac-source-yasnippet))
+
+;; (defun ac-js-mode()
+;;   (setq ac-sources '(ac-source-yasnippet
+;;                      ac-source-symbols
+;;                      ac-source-words-in-buffer
+;;                      ac-source-words-in-same-mode-buffers
+;;                      ac-source-files-in-current-dir
+;;                      )))
+;; (add-hook 'js-mode-hook 'ac-js-mode)
+;; (add-hook 'js2-mode-hook 'ac-js-mode)
 
 
 ;; rainbow delimiters in programming modes
@@ -136,14 +169,20 @@
 ;; (define-key evil-normal-state-map "gT" 'elscreen-previous) ;previous tab
 ;; (define-key evil-normal-state-map "gt" 'elscreen-next) ;next tab
 
-;; Java stuff, with JDEE
+;; Java stuff with JDEE -- not necessary.
 ;;(add-to-list 'load-path (format "%s/dist/jdee-2.4.1/lisp" my-jdee-path))
 ;;  (autoload 'jde-mode "jde" "JDE mode" t)
 ;;  (setq auto-mode-alist
 ;;        (append '(("\\.java\\'" . jde-mode)) auto-mode-alist))
-(add-hook 'java-mode-hook (function (lambda () 
-                            (require 'gradle-mode)
-                            (gradle-mode 1))))
+;; (add-hook 'java-mode-hook (function (lambda ()
+;;                             (require 'gradle-mode)
+;;                             (gradle-mode 1))))
+
+;; JavaScript mode-hooks w/ autocomplete
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+;;(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+(setq js2-highlight-level 3)
 
 ;; eslint, jsx stuff
 ;; use web-mode for .jsx files
@@ -173,6 +212,7 @@
 ;; https://github.com/purcell/exec-path-from-shell
 ;; only need exec-path-from-shell on OSX
 ;; this hopefully sets up path and other vars better
+
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
@@ -212,10 +252,10 @@
  '(cua-normal-cursor-color "#839496")
  '(cua-overwrite-cursor-color "#b58900")
  '(cua-read-only-cursor-color "#859900")
- '(custom-enabled-themes (quote (calmer-forest)))
+ '(custom-enabled-themes nil)
  '(custom-safe-themes
    (quote
-    ("f5eb916f6bd4e743206913e6f28051249de8ccfd070eae47b5bde31ee813d55f" "790e74b900c074ac8f64fa0b610ad05bcfece9be44e8f5340d2d94c1e47538de" "7997e0765add4bfcdecb5ac3ee7f64bbb03018fb1ac5597c64ccca8c88b1262f" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "11636897679ca534f0dec6f5e3cb12f28bf217a527755f6b9e744bd240ed47e1" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
+    ("0aa12caf6127772c1a38f7966de8258e7a0651fb6f7220d0bbb3a0232fba967f" "870a63a25a2756074e53e5ee28f3f890332ddc21f9e87d583c5387285e882099" "f5eb916f6bd4e743206913e6f28051249de8ccfd070eae47b5bde31ee813d55f" "790e74b900c074ac8f64fa0b610ad05bcfece9be44e8f5340d2d94c1e47538de" "7997e0765add4bfcdecb5ac3ee7f64bbb03018fb1ac5597c64ccca8c88b1262f" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "11636897679ca534f0dec6f5e3cb12f28bf217a527755f6b9e744bd240ed47e1" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
  '(fci-rule-color "#073642")
  '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
  '(highlight-symbol-colors
@@ -240,6 +280,7 @@
  '(hl-fg-colors
    (quote
     ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
+ '(hl-sexp-background-color "#1c1f26")
  '(inhibit-startup-screen t)
  '(magit-diff-use-overlays nil)
  '(nrepl-message-colors
@@ -287,12 +328,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 110 :family "Anonymous Pro")))))
+ '(default ((t (:height 140 :family "Source Code Pro")))))
 
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
+
 
 (provide 'init)
 ;;; init.el ends here

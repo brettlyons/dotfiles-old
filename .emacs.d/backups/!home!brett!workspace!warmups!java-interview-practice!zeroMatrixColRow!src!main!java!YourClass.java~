@@ -1,0 +1,21 @@
+public class BogusMatrixZeroer {
+  int[][] startingMatrix = new int[4][4]{
+    {1,1,1,1}, {1,0,1,1}, {1,1,1,0}, {1,1,1,1}
+  };
+
+  public static void main(String[] args) {
+    for (int i = 0 ; i < startingMatrix.length() ; i++) {
+      for(int j = 0 ; j < startingMatrix[i].length(); j++) {
+        if(startingMatrix[i][j] == 0) {
+          for(int k = 0 ; k< startingMatrix[i].length() ; k++) {
+            startingMatrix[i][k] = 0;
+          }
+          for(int k = 0 ; k< startingMatrix[i].length() ; k++) {
+            startingMatrix[k][j] = 0;
+          }
+        }
+      }
+    }
+    System.out.println(startingMatrix);
+  }
+}

@@ -1,128 +1,128 @@
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
-node lumberjackPiles.js 
+javac -d bin Encapsulation02.java && java -cp bin galvanize.Encapsulation02
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -h
+javac -help
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && time java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && time java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && time java -cp bin galvanize.Encapsulation03
+ls
+ls bin
+ls bin/galvanize/
+javac -d bin Encapsulation03.java && time java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && time java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && time java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && time java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && time java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && time java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && time java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && time java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && time java -cp bin galvanize.Encapsulation03
 exit
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-clear
-clear
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asciihouse.js 
-node asterixCount.js 
-node asterixCount.js 
-ls
-cd 06-intro-to-controllers/
-ls
-open index.html 
-http-server -c-1
-http-server -c-1
-ls
-git add -A
+javac -d bin Inheritance01.java && java -cp bin galvanize.Inheritance01
 cd ..
-git add -A
-git commit
-git push
-exit
-nodemon
-ear
-clear
-exit
-nodemon
-http-server -c-1
-http-server -c-1
-http-server -c-1
-clear
-exit
-http-server -c-1
-http-server -c-1
-node dataJoining.js 
-node dataJoining.js 
-exit
-exit
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-node dataJoining.js 
-exit
-node dataJoining.js 
-exit
+cd ..
+cd warmups/java-warmups/
 ls
-mkdir partials
-mv guitars.html partials
-cd partials/
+javac 24clock.java 
+javac 24clock.java 
+javac 24clock.java 
+javac 24clock.java 
+javac 24clock.java 
+java ClockTest.class
+ls
+java ClockTest
+ls
+javac 24clock.java 
+javac 24clock.java 
+javac 24clock.java 
+javac 24clock.java 
+javac 24clock.java 
+java ClockTest
+java ClockTest
+javac 24clock.java 
+java ClockTest
+java ClockTest
+javac 24clock.java 
+java ClockTest
+javac 24clock.java
+java ClockTest
+javac 24clock.java
+java ClockTest
+javac 24clock.java
+javac 24clock.java
+javac 24clock.java
+java ClockTest
+javac 24clock.java
+java ClockTest
+java ClockTest
+javac 24clock.java
+java ClockTest
+javac 24clock.java
+java ClockTest
+javac 24clock.java
+java ClockTest
+java ClockTest
+javac 24clock.java && java ClockTest
+javac 24clock.java && java ClockTest
+javac 24clock.java && java ClockTest
+javac 24clock.java && java ClockTest
+javac 24clock.java && java ClockTest
+javac 24clock.java && java ClockTest
+javac 24clock.java && java ClockTest
+javac 24clock.java && java ClockTest
+exit
+javac bogus.java && java Bogus
+javac bogus.java && java Bogus
+javac bogus.java && java Bogus
+javac bogus.java && java Bogus
+javac bogus.java && java Bogus
+exit
 ls
 cd ..
 ls
-mv partials/guitars.html partials/home.html
-cd partials/
+cd ..
 ls
 cd ..
 ls
-mv 404.html partials/
+gradle test --ZombieTest
+gradle
+ls
+gradle
 exit
