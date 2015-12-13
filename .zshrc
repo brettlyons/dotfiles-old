@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/brett/.oh-my-zsh
+export ZSH=/Users/brett/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -49,11 +49,68 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(sprunge git ssh)
+plugins=(git sprunge)
 
 # User configuration
 
-export PATH="~/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+if [ -f /etc/bash_completion ]; then
+	    . /etc/bash_completion
+fi
+
+eval $(keychain --eval --quiet id_rsa)
+
+# xhost +local:root > /dev/null 2>&1
+
+export HISTSIZE=10000
+export HISTFILESIZE=${HISTSIZE}
+export HISTCONTROL=ignoreboth
+export JAVA_FONTS=/usr/share/fonts/TTF
+export EDITOR=/usr/bin/nvim
+
+alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias grep='grep --color=tty -d skip'
+alias cp="cp -i"                          # confirm before overwriting something
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+alias np='$EDITOR PKGBUILD'
+alias fixit='sudo rm -f /var/lib/pacman/db.lck'
+alias update='yaourt -Syua'
+alias con='$EDITOR $HOME/.i3/config'
+alias comp='$EDITOR $HOME/.config/compton.conf'
+alias inst='sudo pacman -S'
+alias mirrors='sudo pacman-mirrors -g'
+alias printer='system-config-printer'
+
+# ex - archive extractor
+# usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+export TERM=rxvt-unicode-256color
+# ^ from .bashrc on linux side
+
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -78,9 +135,46 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
-
+#
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+bindkey -v
+
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
+function zle-line-init zle-keymap-select {
+  VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+  RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+#  $(git_custom_status) , this after }
+  zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+export KEYTIMEOUT=1
+
+alias share="x0vncserver -passwordfile ~/.vnc/passwd"
+
+alias emc='emacsclient -nc -a ""'
+alias emt='emacsclient -t -a ""'
+
+# EDITOR='/usr/local/bin/emt'
+
+# alias emt="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
+# alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs"
+# alias lem="/usr/bin/emacs -nw"
+#alias emacsclient='/usr/local/Cellar/emacs/24.5/bin/emacsclient -c'
+
+alias emacsc='/usr/local/Cellar/emacs/24.5/bin/emacsclient -c  -F "((fullscreen . maximized))"'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
