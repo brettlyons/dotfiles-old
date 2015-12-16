@@ -5,7 +5,7 @@ export ZSH=/Users/brett/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="roman"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -152,9 +152,11 @@ bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
 
+local lambda='λ'
+#PROMPT="%B${lambda}%b "
 function zle-line-init zle-keymap-select {
   VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
-  RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+  RPS1=" ${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1 "
 #  $(git_custom_status) , this after }
   zle reset-prompt
 }
