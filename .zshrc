@@ -178,5 +178,5 @@ alias emt='emacsclient -t -a ""'
 #alias emacsclient='/usr/local/Cellar/emacs/24.5/bin/emacsclient -c'
 
 alias emacsc='/usr/local/Cellar/emacs/24.5/bin/emacsclient -c  -F "((fullscreen . maximized))"'
-
+export PATH="$PATH:$HOME/.npm-packages/bin" # for npm installs
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
