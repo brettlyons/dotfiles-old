@@ -255,13 +255,15 @@ bar {
 #	wheel_down_cmd nop
 	font pango:Source Code Pro Bold,Icons 12
 	colors {
-		separator #2ECC71
+		#separator #2ECC71
+		separator #3b2349
 		background #000000
 		statusline #DDDDDD
-		focused_workspace #FFFFFF #2ECC71 #000000
+		focused_workspace #000000 #3b2349 #FFFFFF
 		active_workspace #000000 #A4A28D #FFFFFF
 		inactive_workspace #A4A28D #000000 #DDDDDD
-		urgent_workspace #2ECC71 #900000 #FFFFFF
+		# urgent_workspace #3b2349 #900000 #FFFFFF
+		urgent_workspace #3b2349 #900000 #FFFFFF
 	}
 }
 
@@ -290,7 +292,8 @@ exec --no-startup-id i3-msg 'exec firefox'
 exec i3-wait layout splitv
 
 # Theme colors
-client.focused #2ECC71 #2ECC71 #000000 #FFFFFF
+client.focused #3b2349 #3b2349 #000000 #FFFFFF
+# client.focused ##2ECC71 #2ECC71 #000000 #FFFFFF
 client.unfocused #222222 #222222 #2ECC71 #222222
 client.urgent #274D01 #900000 #FFFFFF #900000
 
