@@ -5,7 +5,7 @@ export ZSH=/Users/brett/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="roman"
+ZSH_THEME="lyonsb"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -177,6 +177,17 @@ alias emt='emacsclient -t -a ""'
 # alias lem="/usr/bin/emacs -nw"
 #alias emacsclient='/usr/local/Cellar/emacs/24.5/bin/emacsclient -c'
 
+#pastebin convenience function
+pb () {
+  curl -F "c=@${1:--}" https://ptpb.pw/
+}
+
+pbx () {
+  curl -sF "c=@${1:--}" -w "%{redirect_url}" 'https://ptpb.pw/?r=1' -o /dev/stderr | xsel -l /dev/null -b
+}
+
 alias emacsc='/usr/local/Cellar/emacs/24.5/bin/emacsclient -c  -F "((fullscreen . maximized))"'
+
+export PATH="$PATH:$HOME/.gem/ruby/2.3.0/bin"
 export PATH="$PATH:$HOME/.npm-packages/bin" # for npm installs
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
