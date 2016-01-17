@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/brett/.oh-my-zsh
+export ZSH=/home/brett/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -57,7 +57,10 @@ if [ -f /etc/bash_completion ]; then
 	    . /etc/bash_completion
 fi
 
-eval $(keychain --eval --quiet id_rsa)
+# for ssh keys
+eval $(keychain --eval --quiet ~/.ssh/id_rsa)
+
+eval $(dircolors ~/.dir_colors)
 
 # xhost +local:root > /dev/null 2>&1
 
@@ -107,7 +110,8 @@ ex ()
   fi
 }
 
-export TERM=rxvt-unicode-256color
+# export TERM=rxvt-unicode-256color
+# export TERM=rxvt-unicode-256color
 # ^ from .bashrc on linux side
 
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
@@ -177,6 +181,14 @@ alias emt='emacsclient -t -a ""'
 # alias lem="/usr/bin/emacs -nw"
 #alias emacsclient='/usr/local/Cellar/emacs/24.5/bin/emacsclient -c'
 
+# make sure termite knows the when opening new windows 
+if [[ $TERM == xterm-termite ]]; then
+  . /etc/profile.d/vte.sh
+  __vte_osc7
+fi
+
+source /etc/profile.d/vte.sh
+
 #pastebin convenience function
 pb () {
   curl -F "c=@${1:--}" https://ptpb.pw/
@@ -191,3 +203,4 @@ alias emacsc='/usr/local/Cellar/emacs/24.5/bin/emacsclient -c  -F "((fullscreen 
 export PATH="$PATH:$HOME/.gem/ruby/2.3.0/bin"
 export PATH="$PATH:$HOME/.npm-packages/bin" # for npm installs
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
