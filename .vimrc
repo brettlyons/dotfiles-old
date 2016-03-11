@@ -2,7 +2,8 @@
 call plug#begin('~/.vim/plugged')
 
 " Sensible vim config
-Plug 'tpope/vim-sensible'
+" Plug 'tpope/vim-sensible'
+" Great for Vim, unnecessary for NeoVim
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -12,6 +13,9 @@ Plug 'scrooloose/syntastic'
 
 " NERD commenter
 Plug 'scrooloose/nerdcommenter'
+
+" NERD tree
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " Auto-pairs
 Plug 'jiangmiao/auto-pairs'
@@ -30,12 +34,7 @@ call plug#end()
 filetype plugin indent on
 syntax on
 
-" set background=dark
-" try
-"   colorscheme solarized
-" catch
-" endtry
-
+" color the 80th column please.
 if (exists('+colorcolumn'))
   set colorcolumn=80
   highlight ColorColumn ctermbg=2
@@ -44,18 +43,27 @@ endif
 " sets save(write) on dbl-escape
 map <Esc><Esc> :w<CR>
 
+" toggle nerd tree on Ctl-\
+map <C-\> :NERDTreeToggle<CR>
+
 " Leader key = backslash
 let mapleader = '\'
 
 " turn off the visual bell
 :set visualbell t_vb=
 
+" Cursor change in NeoVim
+if has('nvim')
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
+endif
+
 " Disable all cursor blinking:
-:set guicursor+=a:blinkon0
+" :set guicursor+=a:blinkon0
 " Default setting, uncommong to restore:
 " :set guicursor&
+
 " Enable mouse for all modes
-:set mouse=a
+" :set mouse=a
 
 " tab stuffs
 :set number 		"sets absolute line numbers
