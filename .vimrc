@@ -1,12 +1,3 @@
-" Pathogen load
-" filetype off
-"
-" source ~/.vim/autoload/pathogen.vim
-" source ~/.vim/autoload/rainbow_parentheses.vim
-"
-" execute pathogen#infect()
-" " execute pathogen#helptags()
-
 " vim-plug plugin loader
 call plug#begin('~/.vim/plugged')
 
@@ -32,7 +23,7 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'elmcast/elm-vim', { 'for': 'elm' }
 
 " Vim-parinfer
-Plug 'bhurlow/vim-parinfer'
+Plug 'bhurlow/vim-parinfer', { 'do': 'npm i' }
 
 call plug#end()
 
