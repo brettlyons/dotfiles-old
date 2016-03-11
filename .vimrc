@@ -1,17 +1,49 @@
 " Pathogen load
-filetype off
+" filetype off
+"
+" source ~/.vim/autoload/pathogen.vim
+" source ~/.vim/autoload/rainbow_parentheses.vim
+"
+" execute pathogen#infect()
+" " execute pathogen#helptags()
 
-call pathogen#infect()
-call pathogen#helptags()
+" vim-plug plugin loader
+call plug#begin('~/.vim/plugged')
+
+" Sensible vim config
+Plug 'tpope/vim-sensible'
+
+" Airline
+Plug 'vim-airline/vim-airline'
+
+" Syntastic
+Plug 'scrooloose/syntastic'
+
+" NERD commenter
+Plug 'scrooloose/nerdcommenter'
+
+" Auto-pairs
+Plug 'jiangmiao/auto-pairs'
+
+" loaded for clj files
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+
+" Elm-Mode for elm files
+Plug 'elmcast/elm-vim', { 'for': 'elm' }
+
+" Vim-parinfer
+Plug 'bhurlow/vim-parinfer'
+
+call plug#end()
 
 filetype plugin indent on
 syntax on
 
-set background=dark
-try
-  colorscheme solarized
-catch
-endtry
+" set background=dark
+" try
+"   colorscheme solarized
+" catch
+" endtry
 
 if (exists('+colorcolumn'))
   set colorcolumn=80
@@ -20,6 +52,9 @@ endif
 
 " sets save(write) on dbl-escape
 map <Esc><Esc> :w<CR>
+
+" Leader key = backslash
+let mapleader = '\'
 
 " turn off the visual bell
 :set visualbell t_vb=
@@ -57,7 +92,7 @@ autocmd BufWritePre * :call <SID>StripTrailingWhiteSpaces()
 
 
 " Rainbow Parentheses
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound
+" au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadBraces
