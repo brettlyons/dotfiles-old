@@ -54,11 +54,11 @@ plugins=(git sprunge)
 # User configuration
 
 if [ -f /etc/bash_completion ]; then
-	    . /etc/bash_completion
+  . /etc/bash_completion
 fi
 
 # for ssh keys
-eval $(keychain --eval --quiet ~/.ssh/id_rsa)
+eval $(keychain --eval --noask id_ed25519 id_rsa)
 
 eval $(dircolors ~/.dir_colors)
 
@@ -159,10 +159,10 @@ bindkey '^r' history-incremental-search-backward
 local lambda='λ'
 #PROMPT="%B${lambda}%b "
 function zle-line-init zle-keymap-select {
-  VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
-  RPS1=" ${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1 "
+VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+RPS1=" ${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1 "
 #  $(git_custom_status) , this after }
-  zle reset-prompt
+zle reset-prompt
 }
 
 zle -N zle-line-init
@@ -181,7 +181,7 @@ alias emt='emacsclient -t -a ""'
 # alias lem="/usr/bin/emacs -nw"
 #alias emacsclient='/usr/local/Cellar/emacs/24.5/bin/emacsclient -c'
 
-# make sure termite knows the when opening new windows 
+# make sure termite knows the when opening new windows
 if [[ $TERM == xterm-termite ]]; then
   . /etc/profile.d/vte.sh
   __vte_osc7
