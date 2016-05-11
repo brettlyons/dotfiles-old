@@ -33,19 +33,18 @@
       (package-install 'use-package)))
 (require 'use-package)
 
-(use-package evil-tabs
-  :ensure t)
+(setq use-package-always-ensure t)
+(setq use-package-verbose t)
 
-(use-package evil-leader
-  :ensure t)
+(use-package evil-tabs)
+
+(use-package evil-leader)
 
 (use-package evil-org
-  :ensure t
   :init
   (setq evil-want-C-i-jump nil))
 
 (use-package powerline
-  :ensure t
   :config
   (powerline-default-theme))
 
@@ -56,12 +55,10 @@
 ;;   (require 'evil-terminal-cursor-changer))
 
 (use-package evil-surround
-  :ensure t
   :config
   (global-evil-surround-mode 1))
 
 (use-package evil
-  :ensure t
   :init
   (setq evil-normal-state-cursor '("green" box))
   (setq evil-insert-state-cursor '("green" bar))
@@ -72,17 +69,14 @@
 ; Ace jump activation, via spacebar in normal mode
 ;; (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)
 (use-package ace-jump-mode
-  :ensure t
   :config
   (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode))
 
 (use-package yasnippet
-  :ensure t
   :init
   (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
   :config
-  (yas-global-mode 1)
-  :bind)
+  (yas-global-mode 1))
 
   ;; :bind (:map yas-minor-mode-map
   ;;             ("<C-tab>" .'yas-expand))
@@ -92,7 +86,6 @@
 ;; (define-key yas-minor-mode-map (kbd "TAB") nil)
 
 (use-package auto-complete
-  :ensure t
   ;; :init
   ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
   :config
@@ -109,30 +102,25 @@
 
 ;; ;; http://www.flycheck.org/manual/latest/index.html
 (use-package flycheck
-  :ensure t
   :config
   (global-flycheck-mode))
 ;; ;; turn on flychecking globally
 ;; (add-hook 'after-init-hook #'global-flycheck-mode)
 
 
-
 (use-package rainbow-delimiters
-  :ensure t
+  :defer t
   :config
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
 
-(use-package material-theme
-  :ensure t)
+(use-package material-theme)
 
 (use-package cider
-  :ensure t)
+  :mode ("\\.clj\\'" . clojure-mode))
 
-(use-package sbt-mode
-  :ensure t)
+(use-package sbt-mode)
 
-(use-package scala-mode
-  :ensure t)
+(use-package scala-mode)
 
 (use-package ensime
   :init
@@ -216,17 +204,19 @@
 ;; only need exec-path-from-shell on OSX
 ;; this hopefully sets up path and other vars better
 
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
+;; MAC OS X FIX FOR LACKING ENV VARs
+;; (when (memq window-system '(mac ns))
+;;   (exec-path-from-shell-initialize))
 
+;; ELM MODE
 ;; elm-mode auto-complete setup
-(defun my-elm-hook ()
-  "Turn on auto-complete for elm as well as set up the oracle."
-  #'elm-oracle-setup-ac
-  (auto-complete-mode t))
+;; (defun my-elm-hook ()
+;;   "Turn on auto-complete for elm as well as set up the oracle."
+;;   #'elm-oracle-setup-ac
+;;   (auto-complete-mode t))
 ;; (add-hook 'elm-mode-hook #'elm-oracle-setup-ac)
 
-(add-hook 'elm-mode-hook 'my-elm-hook)
+;; (add-hook 'elm-mode-hook 'my-elm-hook)
 
 ;; set yasnippets to be higher priority in aau
 ;; (defadvice ac-common-setup (after give-yasnippet-highest-priority activate)
@@ -246,17 +236,15 @@
 ;; JavaScript mode-hooks w/ autocomplete
 ;;(add-hook 'js-mode-hook 'js2-minor-mode)
 (use-package js2-mode
-  :ensure t
   :init
   (setq js2-highlight-level 3)
   :config
   (add-hook 'js2-mode-hook 'ac-js2-mode)
-  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)))
+  :mode ("\\.js\\'" . js2-mode))
 
 ;; http://web-mode.org/
 ;; use web-mode for .jsx files
 (use-package web-mode
-  :ensure t
   :init
   (setq web-mode-enable-current-column-highlight t)
   (setq web-mode-markup-indent-offset 2)
@@ -267,8 +255,9 @@
       ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
   :config
   (flycheck-add-mode 'javascript-eslint 'web-mode)
-  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-  (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode)))
+  :mode
+  ("\\.html?\\'" . web-mode)
+  ("\\.jsx$" . web-mode))
   
 
 ;; disable jshint to prefer eslint checking
@@ -306,6 +295,7 @@
  '(custom-safe-themes
    (quote
     ("e56ee322c8907feab796a1fb808ceadaab5caba5494a50ee83a13091d5b1a10c" default)))
+ '(inhibit-startup-screen t)
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
