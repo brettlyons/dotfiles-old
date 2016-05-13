@@ -38,8 +38,8 @@
 
 (use-package evil-tabs)
 
-;; (use-package evil-leader
-;;   :defer 1)
+(use-package evil-leader
+  :defer 1)
 
 (use-package evil-org
   :defer 1
@@ -67,7 +67,7 @@
   (setq evil-insert-state-cursor '("green" bar))
   (global-evil-tabs-mode t)
   :config
-  (evil-mode 1)
+  ;; (evil-mode 1)
   (global-evil-surround-mode 1)
   :bind (:map evil-normal-state-map
               ("SPC" . ace-jump-mode)))
