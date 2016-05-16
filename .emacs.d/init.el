@@ -31,15 +31,15 @@
     (progn
       (package-refresh-contents)
       (package-install 'use-package)))
-(require 'use-package)
+(eval-when-compile
+  (require 'use-package))
 
 (setq use-package-always-ensure t)
 (setq use-package-verbose t)
 
 (use-package evil-tabs)
 
-;; (use-package evil-leader
-;;   :defer 1)
+;; (use-package evil-leader)
 
 (use-package evil-org
   :defer 1
@@ -114,6 +114,7 @@
 
 ;; ;; http://www.flycheck.org/manual/latest/index.html
 (use-package flycheck
+  :defer 1
   :config
   (global-flycheck-mode))
 ;; ;; turn on flychecking globally
@@ -141,6 +142,19 @@
   :init
   (add-hook 'scala-mode-hook 'ensime-mode)
   :commands ensime ensime-mode)
+
+(use-package elm-mode
+  :mode ("\\.elm\\'" . elm-mode))
+            
+
+;; ELM MODE
+;; elm-mode auto-complete setup
+(defun my-elm-hook ()
+  "Turn on auto-complete for elm as well as set up the oracle."
+  (auto-complete-mode t))
+
+(add-hook 'elm-mode-hook #'elm-oracle-setup-ac)
+(add-hook 'elm-mode-hook 'my-elm-hook)
 
 ;; pairing of parens (built-in)
 (electric-pair-mode 1)
@@ -220,15 +234,6 @@
 ;; (when (memq window-system '(mac ns))
 ;;   (exec-path-from-shell-initialize))
 
-;; ELM MODE
-;; elm-mode auto-complete setup
-;; (defun my-elm-hook ()
-;;   "Turn on auto-complete for elm as well as set up the oracle."
-;;   #'elm-oracle-setup-ac
-;;   (auto-complete-mode t))
-;; (add-hook 'elm-mode-hook #'elm-oracle-setup-ac)
-
-;; (add-hook 'elm-mode-hook 'my-elm-hook)
 
 ;; set yasnippets to be higher priority in aau
 ;; (defadvice ac-common-setup (after give-yasnippet-highest-priority activate)
