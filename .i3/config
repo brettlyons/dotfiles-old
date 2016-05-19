@@ -2,7 +2,10 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
-set $mod Mod4                   
+set $mod Mod1
+#Super is now mod key
+set $ctl Ctrl 
+#Ctrl is now combo key
 
 # So I can change move keys in one place.
 set $rs l
@@ -48,8 +51,8 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10 && exec notify-send 'brightn
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 && exec notify-send 'brightness down'
 
 # Start Applications
-bindsym $mod+Ctrl+b exec i3-sensible-terminal -e 'bmenu'
-# bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
+bindsym $mod+$ctl+b exec i3-sensible-terminal -e 'bmenu'
+# bindsym $mod+$ctl+b exec terminal -e 'bmenu'
 # bindsym $mod+F2 exec palemoon
 # bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
@@ -57,14 +60,14 @@ bindsym $mod+Shift+F3 exec gksu pcmanfm
 # bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+F5 exec i3-sensible-terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b
+bindsym $mod+$ctl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec "scrot -e 'mv $f ~/Screenshots'; sleep 1; exec notify-send 'screenshot has been saved to ~/Screenshots'"
 bindsym $mod+Print --release exec "scrot -ue 'mv $f ~/Screenshots'; sleep 1; exec notify-send 'screenshot has been saved to ~/Screenshots'"
 bindsym $mod+Shift+Print --release exec "notify-send 'selection will be saved to ~/Screenshots'; scrot -se 'mv $f ~/Screenshots'"
 # this h is for movement
 # bindsym $mod+Shift+h exec qpdfview i3_help.pdf
-bindsym $mod+Ctrl+x exec xkill
+bindsym $mod+$ctl+x exec xkill
 
 # focus_follows_mouse no
 
@@ -140,18 +143,18 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 
 #navigate workspaces next / previous
-bindsym $mod+Ctrl+Right workspace next
-bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+$ctl+Right workspace next
+bindsym $mod+$ctl+Left workspace prev
 
 # Move focused container to workspace
-bindsym $mod+Ctrl+1 move container to workspace number 1
-bindsym $mod+Ctrl+2 move container to workspace number 2
-bindsym $mod+Ctrl+3 move container to workspace number 3
-bindsym $mod+Ctrl+4 move container to workspace number 4
-bindsym $mod+Ctrl+5 move container to workspace number 5
-bindsym $mod+Ctrl+6 move container to workspace number 6
-bindsym $mod+Ctrl+7 move container to workspace number 7
-bindsym $mod+Ctrl+8 move container to workspace number 8
+bindsym $mod+$ctl+1 move container to workspace number 1
+bindsym $mod+$ctl+2 move container to workspace number 2
+bindsym $mod+$ctl+3 move container to workspace number 3
+bindsym $mod+$ctl+4 move container to workspace number 4
+bindsym $mod+$ctl+5 move container to workspace number 5
+bindsym $mod+$ctl+6 move container to workspace number 6
+bindsym $mod+$ctl+7 move container to workspace number 7
+bindsym $mod+$ctl+8 move container to workspace number 8
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace number 1; workspace 1
@@ -290,7 +293,7 @@ exec --no-startup-id clipit
 # exec --no-startup-id start_conky_grey
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 5 -locker blurlock
-exec --no-startup-id i3-msg 'layout tabbed;exec thunderbird'
+# exec --no-startup-id i3-msg 'layout tabbed;exec thunderbird'
 exec --no-startup-id i3-msg 'exec firefox'
 exec --no-startup-id i3-wait layout splitv
 
@@ -305,7 +308,7 @@ client.urgent #274D01 #900000 #FFFFFF #900000
 ############################
 exec --no-startup-id pulseaudio
 exec --no-startup-id pa-applet
-bindsym $mod+Ctrl+m exec pavucontrol
+bindsym $mod+$ctl+m exec pavucontrol
 
 #############################
 ### settings for i3-gaps: ###

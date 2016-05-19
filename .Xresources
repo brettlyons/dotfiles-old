@@ -1,7 +1,7 @@
 !URxvt.font: 9x15
 URxvt*font: xft:Source Code Pro:regular:size=12
 URxvt*letterSpace: -1
-Xft.dpi: 96
+Xft.dpi: 168
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
@@ -27,32 +27,32 @@ URxvt*termName:                       rxvt-unicode-256color
 
 ! swayr color scheme
 
-*background: #1c1709
-*foreground: #c2b9a1
+! *background: #1c1709
+! *foreground: #c2b9a1
 
-*color0:     #1c1709
-*color8:     #4f4939
+! *color0:     #1c1709
+! *color8:     #4f4939
 
-*color1:     #8e4317
-*color9:     #f07935
+! *color1:     #8e4317
+! *color9:     #f07935
 
-*color2:     #787200
-*color10:    #d9d138
+! *color2:     #787200
+! *color10:    #d9d138
 
-*color3:     #945c00
-*color11:    #ffab26
+! *color3:     #945c00
+! *color11:    #ffab26
 
-*color4:     #315094
-*color12:    #8aa9ed
+! *color4:     #315094
+! *color12:    #8aa9ed
 
-*color5:     #5c2e40
-*color13:    #ff8cb8
+! *color5:     #5c2e40
+! *color13:    #ff8cb8
 
-*color6:     #00617d
-*color14:    #43bfe0
+! *color6:     #00617d
+! *color14:    #43bfe0
 
-*color7:     #c2b9a1
-*color15:    #f2e8c9
+! *color7:     #c2b9a1
+! *color15:    #f2e8c9
 
 !!Source http://github.com/altercation/solarized
 
@@ -99,33 +99,33 @@ URxvt*termName:                       rxvt-unicode-256color
 
 ! Google Material Design
 
-! *background     : #263238
-! *foreground     : #eceff1
-!
-! ! black
-! *color0       : #263238
-! *color8       : #37474f
-! ! red
-! *color1       : #ff9800
-! *color9       : #ffa74d
-! ! green
-! *color2       : #8bc34a
-! *color10      : #9ccc65
-! ! yellow
-! *color3       : #ffc107
-! *color11      : #ffa000
-! ! blue
-! *color4       : #03a9f4
-! *color12      : #81d4fa
-! ! magenta
-! *color5       : #e91e63
-! *color13      : #ad1457
-! ! cyan
-! *color6       : #009688
-! *color14      : #26a69a
-! ! white
-! *color7       : #cfd8dc
-! *color15      : #eceff1
+*background     : #263238
+*foreground     : #eceff1
+
+! black
+*color0       : #263238
+*color8       : #37474f
+! red
+*color1       : #ff9800
+*color9       : #ffa74d
+! green
+*color2       : #8bc34a
+*color10      : #9ccc65
+! yellow
+*color3       : #ffc107
+*color11      : #ffa000
+! blue
+*color4       : #03a9f4
+*color12      : #81d4fa
+! magenta
+*color5       : #e91e63
+*color13      : #ad1457
+! cyan
+*color6       : #009688
+*color14      : #26a69a
+! white
+*color7       : #cfd8dc
+*color15      : #eceff1
 
 !Tartan colours
 
