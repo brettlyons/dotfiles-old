@@ -3,13 +3,13 @@
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod1
-#Super is now mod key
-set $ctl Ctrl 
+#Alt is now mod key
+set $ctl Ctrl
 #Ctrl is now combo key
 
 # So I can change move keys in one place.
-set $rs l
-set $ls h
+set $rs h
+set $ls l
 set $us k
 set $ds j
 
