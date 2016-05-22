@@ -8,8 +8,8 @@ set $ctl Ctrl
 #Ctrl is now combo key
 
 # So I can change move keys in one place.
-set $rs h
-set $ls l
+set $rs l
+set $ls h
 set $us k
 set $ds j
 
@@ -43,11 +43,11 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency -l 20
+bindsym $mod+d exec --no-startup-id dmenu_recency -fn "Source Code Pro:Regular" -l 20
 # bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 400 -opacity "75" -bw 0 -font "Source Code Pro Medium 14"
 
 # start passmenu
-bindsym $mod+p exec --no-startup-id passmenu -l 20
+bindsym $mod+p exec --no-startup-id passmenu -fn "Source Code Pro:Regular" -l 20
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 && exec notify-send 'brightness up'
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 && exec notify-send 'brightness down'
@@ -103,7 +103,7 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split in horizontal orientation
-bindsym $mod+semicolon split h;exec notify-send 'tile horizontally'
+bindsym $mod+g split h;exec notify-send 'tile horizontally'
 
 # split in vertical orientation
 bindsym $mod+v split v;exec notify-send 'tile vertically'
@@ -278,7 +278,8 @@ bar {
 
 # Autostart applications
 exec_always --no-startup-id setxkbmap -option 'ctrl:nocaps'
-exec --no-startup-id xflux -z 80302
+exec --no-startup-id redshift-gtk
+# exec --no-startup-id xflux -z 80302
 exec --no-startup-id syndaemon -i 0.8 -K -R
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore
@@ -294,7 +295,7 @@ exec --no-startup-id clipit
 # exec --no-startup-id compton -f -b
 # exec --no-startup-id start_conky_grey
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 5 -locker blurlock
+exec --no-startup-id xautolock -time 5 -locker blurlock -lockaftersleep
 # exec --no-startup-id i3-msg 'layout tabbed;exec thunderbird'
 exec --no-startup-id i3-msg 'exec firefox'
 exec --no-startup-id i3-wait layout splitv
@@ -308,8 +309,8 @@ client.urgent #274D01 #900000 #FFFFFF #900000
 ############################
 # SOUND SECTION            #
 ############################
-exec --no-startup-id pulseaudio
-exec --no-startup-id pa-applet
+# exec --no-startup-id pulseaudio
+# exec --no-startup-id pa-applet
 bindsym $mod+$ctl+m exec pavucontrol
 
 #############################
