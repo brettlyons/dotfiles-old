@@ -39,7 +39,7 @@
 
 (use-package evil-tabs)
 
-;; (use-package evil-leader)
+(use-package evil-leader)
 
 (use-package evil-org
   :defer 1
@@ -65,8 +65,52 @@
   :init
   (setq evil-normal-state-cursor '("green" box))
   (setq evil-insert-state-cursor '("green" bar))
-  (global-evil-tabs-mode t)
+  (global-evil-leader-mode)
   :config
+  (global-evil-tabs-mode t)
+  (evil-mode 1)
+  (global-evil-surround-mode 1)
+  :bind (:map evil-normal-state-map
+              ("SPC" . ace-jump-mode)))
+
+(use-package neotree
+  :config
+  (setq neo-smart-open t)
+  (evil-leader/set-key
+    "\\" 'neotree-toggle))
+
+(add-hook 'neotree-mode-hook
+          (lambda ()
+            (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
+            (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)))
+
+(use-package evil-org
+  :defer 1
+  :init
+  (setq evil-want-C-i-jump nil))
+
+(use-package powerline
+  :config
+  (powerline-default-theme))
+
+;; (use-package evil-terminal-cursor-changer
+;;   :if (not display-graphic-p))
+;; tabs
+;; (unless (display-graphic-p)
+;;   (require 'evil-terminal-cursor-changer))
+
+(use-package evil-surround
+  :defer t
+  :config
+  (global-evil-surround-mode 1))
+
+(use-package evil
+  :init
+  (setq evil-normal-state-cursor '("green" box))
+  (setq evil-insert-state-cursor '("green" bar))
+  (global-evil-leader-mode)
+  :config
+  (global-evil-tabs-mode t)
   (evil-mode 1)
   (global-evil-surround-mode 1)
   :bind (:map evil-normal-state-map
@@ -145,7 +189,7 @@
 
 (use-package elm-mode
   :mode ("\\.elm\\'" . elm-mode))
-            
+
 
 ;; ELM MODE
 ;; elm-mode auto-complete setup
@@ -275,7 +319,7 @@
   :mode
   ("\\.html?\\'" . web-mode)
   ("\\.jsx$" . web-mode))
-  
+
 
 ;; disable jshint to prefer eslint checking
 ;; (setq-default flycheck-disabled-checkers

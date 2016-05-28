@@ -39,7 +39,7 @@
 
 (use-package evil-tabs)
 
-;; (use-package evil-leader)
+(use-package evil-leader)
 
 (use-package evil-org
   :defer 1
@@ -65,12 +65,56 @@
   :init
   (setq evil-normal-state-cursor '("green" box))
   (setq evil-insert-state-cursor '("green" bar))
-  (global-evil-tabs-mode t)
+  (global-evil-leader-mode)
   :config
+  (global-evil-tabs-mode t)
   (evil-mode 1)
   (global-evil-surround-mode 1)
   :bind (:map evil-normal-state-map
               ("SPC" . ace-jump-mode)))
+
+(use-package neotree
+  :config
+  (evil-leader/set-key
+    "\\" 'neotree-toggle)
+  (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
+  (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide))
+
+(use-package evil-org
+  :defer 1
+  :init
+  (setq evil-want-C-i-jump nil))
+
+(use-package powerline
+  :config
+  (powerline-default-theme))
+
+;; (use-package evil-terminal-cursor-changer
+;;   :if (not display-graphic-p))
+;; tabs
+;; (unless (display-graphic-p)
+;;   (require 'evil-terminal-cursor-changer))
+
+(use-package evil-surround
+  :defer t
+  :config
+  (global-evil-surround-mode 1))
+
+(use-package evil
+  :init
+  (setq evil-normal-state-cursor '("green" box))
+  (setq evil-insert-state-cursor '("green" bar))
+  (global-evil-leader-mode)
+  :config
+  (global-evil-tabs-mode t)
+  (evil-mode 1)
+  (global-evil-surround-mode 1)
+  :bind (:map evil-normal-state-map
+              ("SPC" . ace-jump-mode)))
+
+(use-package neotree
+  :init
+  )
 
 ; Ace jump activation, via spacebar in normal mode
 ;; (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)
@@ -149,13 +193,12 @@
 
 ;; ELM MODE
 ;; elm-mode auto-complete setup
-;; (defun my-elm-hook ()
-;;   "Turn on auto-complete for elm as well as set up the oracle."
-;;   ;; #'elm-oracle-setup-ac
-;;   (auto-complete-mode t))
+(defun my-elm-hook ()
+  "Turn on auto-complete for elm as well as set up the oracle."
+  (auto-complete-mode t))
+
 (add-hook 'elm-mode-hook #'elm-oracle-setup-ac)
-(add-hook 'elm-mode-hook (auto-complete-mode t))
-;; (add-hook 'elm-mode-hook 'my-elm-hook)
+(add-hook 'elm-mode-hook 'my-elm-hook)
 
 ;; pairing of parens (built-in)
 (electric-pair-mode 1)

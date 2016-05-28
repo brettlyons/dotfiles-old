@@ -129,48 +129,49 @@ bindsym $mod+Shift+s sticky toggle
 bindsym $mod+a focus parent
 
 # Workspace names
-set $ws1 1: Web/Email
-# set $ws2 2:
-# set $ws3 3:
-# set $ws3 4:
+set $WS1 1: Web
+set $WS2 2: Email
+set $WS3 3: Code
+set $WS4 4: IRC
+set $WS8 8: Music
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
+bindsym $mod+1 workspace $WS1
+bindsym $mod+2 workspace $WS2
+bindsym $mod+3 workspace $WS3
+bindsym $mod+4 workspace $WS4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
+bindsym $mod+8 workspace $WS8
 
 #navigate workspaces next / previous
 bindsym $mod+$ctl+Right workspace next
 bindsym $mod+$ctl+Left workspace prev
 
 # Move focused container to workspace
-bindsym $mod+$ctl+1 move container to workspace number 1
-bindsym $mod+$ctl+2 move container to workspace number 2
-bindsym $mod+$ctl+3 move container to workspace number 3
-bindsym $mod+$ctl+4 move container to workspace number 4
+bindsym $mod+$ctl+1 move container to workspace number $WS1
+bindsym $mod+$ctl+2 move container to workspace number $WS2
+bindsym $mod+$ctl+3 move container to workspace number $WS3
+bindsym $mod+$ctl+4 move container to workspace number $WS4
 bindsym $mod+$ctl+5 move container to workspace number 5
 bindsym $mod+$ctl+6 move container to workspace number 6
 bindsym $mod+$ctl+7 move container to workspace number 7
-bindsym $mod+$ctl+8 move container to workspace number 8
+bindsym $mod+$ctl+8 move container to workspace number $WS8
 
 # Move to workspace with focused container
-bindsym $mod+Shift+1 move container to workspace number 1; workspace 1
-bindsym $mod+Shift+2 move container to workspace number 2; workspace 2
-bindsym $mod+Shift+3 move container to workspace number 3; workspace 3
-bindsym $mod+Shift+4 move container to workspace number 4; workspace 4
+bindsym $mod+Shift+1 move container to workspace number $WS1; workspace $WS1
+bindsym $mod+Shift+2 move container to workspace number $WS2; workspace $WS2
+bindsym $mod+Shift+3 move container to workspace number $WS3; workspace $WS3
+bindsym $mod+Shift+4 move container to workspace number $WS4; workspace $WS4
 bindsym $mod+Shift+5 move container to workspace number 5; workspace 5
 bindsym $mod+Shift+6 move container to workspace number 6; workspace 6
 bindsym $mod+Shift+7 move container to workspace number 7; workspace 7
-bindsym $mod+Shift+8 move container to workspace number 8; workspace 8
+bindsym $mod+Shift+8 move container to workspace number $WS8; workspace $WS8
 
 # Open applications on specific workspaces
-assign [class="Thunderbird"] 1
-assign [class="Firefox"] 1
+assign [class="Thunderbird"] $WS2
+assign [class="Firefox"] $WS1
 # assign [class="Pcmanfm"] 3
 # assign [class="Skype"] 5
 
@@ -289,13 +290,14 @@ exec --no-startup-id nm-applet
 # exec --no-startup-id pa-applet
 # exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
+# exec --no-startup-id clipit
 # exec --no-startup-id blueman
 # exec_always --no-startup-id sbxkb
-# exec --no-startup-id compton -f -b
+exec --no-startup-id compton -f -b
 # exec --no-startup-id start_conky_grey
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 5 -locker blurlock -lockaftersleep
+exec --no-startup-id caffeine
 # exec --no-startup-id i3-msg 'layout tabbed;exec thunderbird'
 exec --no-startup-id i3-msg 'exec firefox'
 exec --no-startup-id i3-wait layout splitv
