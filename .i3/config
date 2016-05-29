@@ -103,7 +103,7 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split in horizontal orientation
-bindsym $mod+semicolon split h;exec notify-send 'tile horizontally'
+bindsym $mod+g split h;exec notify-send 'tile horizontally'
 
 # split in vertical orientation
 bindsym $mod+v split v;exec notify-send 'tile vertically'
@@ -145,6 +145,7 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 
 #navigate workspaces next / previous
+bindsym $mod+Tab workspace next
 bindsym $mod+$ctl+Right workspace next
 bindsym $mod+$ctl+Left workspace prev
 
@@ -278,7 +279,8 @@ bar {
 
 # Autostart applications
 exec_always --no-startup-id setxkbmap -option 'ctrl:nocaps'
-exec --no-startup-id xflux -z 80302
+# exec --no-startup-id xflux -z 80302
+exec --no-startup-id redshift-gtk
 exec --no-startup-id syndaemon -i 0.8 -K -R
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore
@@ -291,16 +293,18 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman
 # exec_always --no-startup-id sbxkb
-# exec --no-startup-id compton -f -b
+exec --no-startup-id compton -f -b
 # exec --no-startup-id start_conky_grey
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 5 -locker blurlock
+exec --no-startup-id caffeine
 # exec --no-startup-id i3-msg 'layout tabbed;exec thunderbird'
 exec --no-startup-id i3-msg 'exec firefox'
 exec --no-startup-id i3-wait layout splitv
 
 # Theme colors
-client.focused #3b2349 #3b2349 #000000 #FFFFFF
+# client.focused #3b2349 #3b2349 #000000 #FFFFFF
+client.focused #3b2349 #777777 #000000 #FFFFFF
 # client.focused ##2ECC71 #2ECC71 #000000 #FFFFFF
 client.unfocused #222222 #222222 #2ECC71 #222222
 client.urgent #274D01 #900000 #FFFFFF #900000
@@ -317,7 +321,7 @@ bindsym $mod+$ctl+m exec pavucontrol
 #############################
 
 # Disable window titlebars entirely
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 6
 
 # Set inner/outer gaps
 gaps inner 10
