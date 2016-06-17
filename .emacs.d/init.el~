@@ -75,10 +75,14 @@
 
 (use-package neotree
   :config
+  (setq neo-smart-open t)
   (evil-leader/set-key
-    "\\" 'neotree-toggle)
-  (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
-  (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide))
+    "\\" 'neotree-toggle))
+
+(add-hook 'neotree-mode-hook
+          (lambda ()
+            (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
+            (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)))
 
 (use-package evil-org
   :defer 1
@@ -111,10 +115,6 @@
   (global-evil-surround-mode 1)
   :bind (:map evil-normal-state-map
               ("SPC" . ace-jump-mode)))
-
-(use-package neotree
-  :init
-  )
 
 ; Ace jump activation, via spacebar in normal mode
 ;; (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)
@@ -187,9 +187,13 @@
   (add-hook 'scala-mode-hook 'ensime-mode)
   :commands ensime ensime-mode)
 
+(use-package elixir-mode
+  :defer t)
+
+
 (use-package elm-mode
   :mode ("\\.elm\\'" . elm-mode))
-            
+
 
 ;; ELM MODE
 ;; elm-mode auto-complete setup
@@ -318,8 +322,10 @@
   (flycheck-add-mode 'javascript-eslint 'web-mode)
   :mode
   ("\\.html?\\'" . web-mode)
-  ("\\.jsx$" . web-mode))
-  
+  ("\\.jsx$" . web-mode)
+  ("\\.eex$" . web-mode))
+
+(use-package emmet-mode)
 
 ;; disable jshint to prefer eslint checking
 ;; (setq-default flycheck-disabled-checkers
@@ -363,4 +369,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#263238" :foreground "#ffffff" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 143 :width normal :foundry "ADBO" :family "Source Code Pro")))))
+ '(default ((t (:inherit nil :stipple nil :background "#263238" :foreground "#ffffff" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 163 :width normal :foundry "ADBO" :family "Source Code Pro")))))

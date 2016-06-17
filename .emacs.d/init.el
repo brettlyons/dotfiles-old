@@ -187,7 +187,13 @@
   (add-hook 'scala-mode-hook 'ensime-mode)
   :commands ensime ensime-mode)
 
+(use-package elixir-mode
+  :defer t)
+
+
 (use-package elm-mode
+  :config
+  (setq elm-format-on-save t)
   :mode ("\\.elm\\'" . elm-mode))
 
 
@@ -318,8 +324,10 @@
   (flycheck-add-mode 'javascript-eslint 'web-mode)
   :mode
   ("\\.html?\\'" . web-mode)
-  ("\\.jsx$" . web-mode))
+  ("\\.jsx$" . web-mode)
+  ("\\.eex$" . web-mode))
 
+(use-package emmet-mode)
 
 ;; disable jshint to prefer eslint checking
 ;; (setq-default flycheck-disabled-checkers

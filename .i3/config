@@ -129,11 +129,11 @@ bindsym $mod+Shift+s sticky toggle
 bindsym $mod+a focus parent
 
 # Workspace names
-set $WS1 1: Web
-set $WS2 2: Email
-set $WS3 3: Code
-set $WS4 4: IRC
-set $WS8 8: Music
+set $WS1 1
+set $WS2 2
+set $WS3 3
+set $WS4 4
+set $WS8 8
 
 # switch to workspace
 bindsym $mod+1 workspace $WS1
@@ -263,7 +263,7 @@ bar {
 	status_command i3status
 #	wheel_up_cmd nop
 #	wheel_down_cmd nop
-	font pango:Source Code Pro Bold,Icons 12
+	font pango:Source Code Pro Bold,Icons 18
 	colors {
 		#separator #2ECC71
 		separator #3b2349

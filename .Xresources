@@ -2,9 +2,9 @@
 URxvt*font: xft:Source Code Pro:regular:size=12
 URxvt*letterSpace: -1
 ! Standard DPI
-Xft.dpi: 96
+! Xft.dpi: 96
 ! 3K HiDPI
-!Xft.dpi: 168
+Xft.dpi: 168
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
