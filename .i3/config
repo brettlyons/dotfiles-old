@@ -303,7 +303,7 @@ exec --no-startup-id i3-msg 'exec firefox'
 exec --no-startup-id i3-wait layout splitv
 
 # Theme colors
-client.focused #3b2349 #3b2349 #000000 #FFFFFF
+client.focused #3b2349 #3b2349 #FFFFFF #000000
 # client.focused ##2ECC71 #2ECC71 #000000 #FFFFFF
 client.unfocused #222222 #222222 #2ECC71 #222222
 client.urgent #274D01 #900000 #FFFFFF #900000
