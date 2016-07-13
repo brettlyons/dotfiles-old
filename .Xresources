@@ -2,9 +2,9 @@
 URxvt*font: xft:Source Code Pro:regular:size=12
 URxvt*letterSpace: -1
 ! Standard DPI
-Xft.dpi: 96
+! Xft.dpi: 96
 ! 3K HiDPI
-!Xft.dpi: 168
+Xft.dpi: 168
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
@@ -15,6 +15,7 @@ Xft.lcdfilter: lcddefault
 Xcursor.theme: Chameleon-Pearl-Regular-0.5
 Xcursor.size:  0
 URxvt.depth: 32
+URxvt.background: [85]#263238
 ! URxvt.background: [80]#000000
 URxvt*secondaryScreen: 1
 URxvt.secondaryScroll: 0
@@ -337,8 +338,10 @@ URxvt.resize-font.bigger: C-Up
 
 ! other possible settings:
 ! Rxvt.perl-ext-common: ...,clipboard
-URxvt.keysym.M-C-c:   perl:clipboard:copy
-URxvt.keysym.M-C-v:   perl:clipboard:paste
+! URxvt.keysym.M-C-c:   perl:clipboard:copy
+URxvt.keysym.C-S-c:   perl:clipboard:copy
+! URxvt.keysym.M-C-v:   perl:clipboard:paste
+URxvt.keysym.C-S-v:   perl:clipboard:paste
 ! URxvt.keysym.Md: perl:clipboard:paste_escaped
 ! URxvt*termName:                       string
 ! URxvt*geometry:                       geometry
