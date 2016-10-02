@@ -140,14 +140,14 @@
 ;; (define-key yas-minor-mode-map (kbd "<tab>") nil)
 ;; (define-key yas-minor-mode-map (kbd "TAB") nil)
 
-(use-package auto-complete
-  :defer 1
-  ;; :init
-  ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-  :config
-  (ac-config-default)
-  (ac-set-trigger-key "TAB")
-  (ac-set-trigger-key "<tab>"))
+;; (use-package auto-complete
+;;   :defer 1
+;;   ;; :init
+;;   ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+;;   :config
+;;   (ac-config-default)
+;;   (ac-set-trigger-key "TAB")
+;;   (ac-set-trigger-key "<tab>"))
 
 ;; setting up autocomplete
 ;; (require 'auto-complete-config)
@@ -156,14 +156,22 @@
 ;; (ac-set-trigger-key "TAB")
 ;; (ac-set-trigger-key "<tab>")
 
+
+(use-package company
+  :init
+  (global-company-mode t))
+
 ;; ;; http://www.flycheck.org/manual/latest/index.html
 (use-package flycheck
   :defer 1
-  :config
+  :init
   (global-flycheck-mode))
 ;; ;; turn on flychecking globally
 ;; (add-hook 'after-init-hook #'global-flycheck-mode)
 
+(use-package flycheck-rust)
+
+(use-package flycheck-elm)
 
 (use-package rainbow-delimiters
   :defer 1
@@ -190,8 +198,11 @@
 (use-package elixir-mode
   :defer t)
 
-
 (use-package elm-mode
+  :init
+  (elm-oracle-setup-completion)
+  (add-to-list 'company-backends 'company-elm)
+  (flycheck-elm-setup)
   :config
   (setq elm-format-on-save t)
   :mode ("\\.elm\\'" . elm-mode))
@@ -199,12 +210,12 @@
 
 ;; ELM MODE
 ;; elm-mode auto-complete setup
-(defun my-elm-hook ()
-  "Turn on auto-complete for elm as well as set up the oracle."
-  (auto-complete-mode t))
+;; (defun my-elm-hook ()
+;;   "Turn on auto-complete for elm as well as set up the oracle."
+;;   (auto-complete-mode t))
 
-(add-hook 'elm-mode-hook #'elm-oracle-setup-ac)
-(add-hook 'elm-mode-hook 'my-elm-hook)
+;; (add-hook 'elm-mode-hook #'elm-oracle-setup-ac)
+;; (add-hook 'elm-mode-hook 'my-elm-hook)
 
 ;; pairing of parens (built-in)
 (electric-pair-mode 1)
@@ -224,8 +235,8 @@
 (xterm-mouse-mode 1)
 
 ;; copy & paste in linux
-(setq x-select-enable-clipboard t)
-(setq x-select-enable-primary t)
+(setq select-enable-clipboard t)
+(setq select-enable-primary t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
 ;; different site-lisp dirs for different OS's -- enabling shared home
@@ -320,8 +331,8 @@
   (setq web-mode-ac-sources-alist
     '(("css" . (ac-source-css-property))
       ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
-  :config
-  (flycheck-add-mode 'javascript-eslint 'web-mode)
+  ;; :config
+  ;; (flycheck-add-mode 'javascript-eslint 'web-mode)
   :mode
   ("\\.html?\\'" . web-mode)
   ("\\.jsx$" . web-mode)
