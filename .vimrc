@@ -81,7 +81,7 @@ let g:airline_theme='luna'
 let g:ycm_semantic_triggers = {
      \ 'elm' : ['.'],
      \}
-}
+
 
 " Synstastic setup
 let g:syntastic_always_populate_loc_list = 1
