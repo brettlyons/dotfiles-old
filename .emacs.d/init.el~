@@ -129,7 +129,7 @@
 (use-package yasnippet
   :defer 1
   :init
-  (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
+  (add-to-list 'yas-snippet-dirs "~/.emacs.d/snippets/yasnippet-snippets")
   :config
   (yas-global-mode 1))
 
@@ -140,14 +140,14 @@
 ;; (define-key yas-minor-mode-map (kbd "<tab>") nil)
 ;; (define-key yas-minor-mode-map (kbd "TAB") nil)
 
-(use-package auto-complete
-  :defer 1
-  ;; :init
-  ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-  :config
-  (ac-config-default)
-  (ac-set-trigger-key "TAB")
-  (ac-set-trigger-key "<tab>"))
+;; (use-package auto-complete
+;;   :defer 1
+;;   ;; :init
+;;   ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+;;   :config
+;;   (ac-config-default)
+;;   (ac-set-trigger-key "TAB")
+;;   (ac-set-trigger-key "<tab>"))
 
 ;; setting up autocomplete
 ;; (require 'auto-complete-config)
@@ -156,14 +156,22 @@
 ;; (ac-set-trigger-key "TAB")
 ;; (ac-set-trigger-key "<tab>")
 
+
+(use-package company
+  :init
+  (global-company-mode t))
+
 ;; ;; http://www.flycheck.org/manual/latest/index.html
 (use-package flycheck
   :defer 1
-  :config
+  :init
   (global-flycheck-mode))
 ;; ;; turn on flychecking globally
 ;; (add-hook 'after-init-hook #'global-flycheck-mode)
 
+(use-package flycheck-rust)
+
+(use-package flycheck-elm)
 
 (use-package rainbow-delimiters
   :defer 1
@@ -190,19 +198,24 @@
 (use-package elixir-mode
   :defer t)
 
-
 (use-package elm-mode
+  :init
+  (elm-oracle-setup-completion)
+  (add-to-list 'company-backends 'company-elm)
+  (flycheck-elm-setup)
+  :config
+  (setq elm-format-on-save t)
   :mode ("\\.elm\\'" . elm-mode))
 
 
 ;; ELM MODE
 ;; elm-mode auto-complete setup
-(defun my-elm-hook ()
-  "Turn on auto-complete for elm as well as set up the oracle."
-  (auto-complete-mode t))
+;; (defun my-elm-hook ()
+;;   "Turn on auto-complete for elm as well as set up the oracle."
+;;   (auto-complete-mode t))
 
-(add-hook 'elm-mode-hook #'elm-oracle-setup-ac)
-(add-hook 'elm-mode-hook 'my-elm-hook)
+;; (add-hook 'elm-mode-hook #'elm-oracle-setup-ac)
+;; (add-hook 'elm-mode-hook 'my-elm-hook)
 
 ;; pairing of parens (built-in)
 (electric-pair-mode 1)
@@ -222,8 +235,8 @@
 (xterm-mouse-mode 1)
 
 ;; copy & paste in linux
-(setq x-select-enable-clipboard t)
-(setq x-select-enable-primary t)
+(setq select-enable-clipboard t)
+(setq select-enable-primary t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
 ;; different site-lisp dirs for different OS's -- enabling shared home
@@ -304,8 +317,9 @@
   :init
   (setq js2-highlight-level 3)
   :config
-  (add-hook 'js2-mode-hook 'ac-js2-mode)
   :mode "\\.js\\'")
+
+(use-package emmet-mode)
 
 ;; http://web-mode.org/
 ;; use web-mode for .jsx files
@@ -315,31 +329,13 @@
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-code-indent-offset 2)
-  (setq web-mode-ac-sources-alist
-    '(("css" . (ac-source-css-property))
-      ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
-  :config
-  (flycheck-add-mode 'javascript-eslint 'web-mode)
+  ;; :config
+  ;; (flycheck-add-mode 'javascript-eslint 'web-mode)
   :mode
-  ("\\.html?\\'" . web-mode)
-  ("\\.jsx$" . web-mode)
-  ("\\.eex$" . web-mode))
+  ("\\.html?\\'" . '(web-mode emmet-mode))
+  ("\\.jsx$" . '(web-mode emmet-mode)
+  ("\\.eex$" . '(web-mode emmet-mode))
 
-(use-package emmet-mode)
-
-;; disable jshint to prefer eslint checking
-;; (setq-default flycheck-disabled-checkers
-;;   (append flycheck-disabled-checkers
-;;     '(javascript-jshint)))
-
-;; use eslint with web-mode for jsx files
-
-;; disable json-jsonlist checking for json files
-;; (setq-default flycheck-disabled-checkers
-;;   (append flycheck-disabled-checkers
-;;     '(json-jsonlist)
-;; ;    '(javascript-jscs) ; uncomment to disable javascript-jscs
-;;     ))
 
 
 ;; end of web-mode stuff for indent setting etc.
@@ -363,10 +359,13 @@
    (quote
     ("e56ee322c8907feab796a1fb808ceadaab5caba5494a50ee83a13091d5b1a10c" default)))
  '(inhibit-startup-screen t)
+ '(package-selected-packages
+   (quote
+    (company-web web-mode use-package rust-mode rainbow-delimiters powerline neotree material-theme js2-mode flycheck-rust flycheck-elm flycheck-clojure evil-terminal-cursor-changer evil-tabs evil-surround evil-org ensime emmet-mode elm-mode elixir-mode company-quickhelp auto-complete ace-jump-mode)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#263238" :foreground "#ffffff" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 163 :width normal :foundry "ADBO" :family "Source Code Pro")))))
+ '(default ((t (:inherit nil :stipple nil :background "#263238" :foreground "#ffffff" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 143 :width normal :foundry "ADBO" :family "Source Code Pro")))))

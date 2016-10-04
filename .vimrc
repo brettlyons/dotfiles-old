@@ -20,11 +20,11 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " Deoplete (hope it doesn't conflict with ultisnips?)
-Plug 'Shougo/deoplete.nvim', has('nvim') ? {} : { 'on' : [] }
+" Plug 'Shougo/deoplete.nvim', has('nvim') ? {} : { 'on' : [], 'do' : ':UpdateRemotePlugins' }
 
 "YouCompleteMe
 " on new installs, need to nav to the dir and ./install
-Plug 'valloric/youcompleteme'
+Plug 'valloric/youcompleteme', { 'do' : './install.sh' }
 
 " NERD commenter
 Plug 'scrooloose/nerdcommenter'
@@ -71,11 +71,6 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_theme='luna'
 
-" ultisnip config
-" let g:UltiSnipsExpandTrigger='<tab>'
-" let g:UltiSnipsListSnippets='<c-tab'
-" let g:UltiSnipsJumpForwardTrigger='<c-j>'
-" let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 
 
 let g:ycm_semantic_triggers = {
@@ -99,10 +94,15 @@ endif
 " NeoVim Specifics
 if has('nvim')
   " Deoplete
-"  let g:deoplete#enable_at_startup = 1
-"  let g:deoplete#enable_smart_case = 1
+  let g:deoplete#enable_at_startup = 1
+  let g:deoplete#enable_smart_case = 1
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
   let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+  " ultisnip config
+  let g:UltiSnipsExpandTrigger='<tab>'
+  let g:UltiSnipsListSnippets='<c-tab>'
+  let g:UltiSnipsJumpForwardTrigger='<c-j>'
+  let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 endif
 
 " sets save(write) on dbl-escape

@@ -129,7 +129,7 @@
 (use-package yasnippet
   :defer 1
   :init
-  (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
+  (add-to-list 'yas-snippet-dirs "~/.emacs.d/snippets/yasnippet-snippets")
   :config
   (yas-global-mode 1))
 
@@ -313,12 +313,18 @@
 
 ;; JavaScript mode-hooks w/ autocomplete
 ;;(add-hook 'js-mode-hook 'js2-minor-mode)
-(use-package js2-mode
-  :init
-  (setq js2-highlight-level 3)
-  :config
-  (add-hook 'js2-mode-hook 'ac-js2-mode)
-  :mode "\\.js\\'")
+;; -- Temporarily prefer js-mode
+;; (use-package js2-mode
+;;   :init
+;;   (setq js2-highlight-level 3)
+;;   :mode "\\.js\\'")
+
+(use-package emmet-mode
+  :mode
+  "\\.html?\\'"
+  "\\.jsx$"
+  "\\.eex$")
+  
 
 ;; http://web-mode.org/
 ;; use web-mode for .jsx files
@@ -328,9 +334,6 @@
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-code-indent-offset 2)
-  (setq web-mode-ac-sources-alist
-    '(("css" . (ac-source-css-property))
-      ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
   ;; :config
   ;; (flycheck-add-mode 'javascript-eslint 'web-mode)
   :mode
@@ -338,21 +341,6 @@
   ("\\.jsx$" . web-mode)
   ("\\.eex$" . web-mode))
 
-(use-package emmet-mode)
-
-;; disable jshint to prefer eslint checking
-;; (setq-default flycheck-disabled-checkers
-;;   (append flycheck-disabled-checkers
-;;     '(javascript-jshint)))
-
-;; use eslint with web-mode for jsx files
-
-;; disable json-jsonlist checking for json files
-;; (setq-default flycheck-disabled-checkers
-;;   (append flycheck-disabled-checkers
-;;     '(json-jsonlist)
-;; ;    '(javascript-jscs) ; uncomment to disable javascript-jscs
-;;     ))
 
 
 ;; end of web-mode stuff for indent setting etc.
@@ -376,6 +364,9 @@
    (quote
     ("e56ee322c8907feab796a1fb808ceadaab5caba5494a50ee83a13091d5b1a10c" default)))
  '(inhibit-startup-screen t)
+ '(package-selected-packages
+   (quote
+    (company-web web-mode use-package rust-mode rainbow-delimiters powerline neotree material-theme js2-mode flycheck-rust flycheck-elm flycheck-clojure evil-terminal-cursor-changer evil-tabs evil-surround evil-org ensime emmet-mode elm-mode elixir-mode company-quickhelp auto-complete ace-jump-mode)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
