@@ -3,15 +3,7 @@
 ;; My init.el.  Currently configured to automatically check for packages, and configure relevant pieces of those packages.
 
 ;;; Code:
-;; Spaces, not tabs
-;; Tab width is now 2
-;; Indent Level
-(setq-default indent-tabs-mode nil
-              tab-width 2
-              indent-level 2
-              evil-shift-width 2
-              c-basic-offset 2
-              indent-tabs-mode nil)
+
 
 ;; package archives first
 (require 'package)
@@ -30,16 +22,41 @@
 (eval-when-compile
   (require 'use-package))
 
-(setq
- use-package-always-ensure t
- create-lockfiles nil
- make-backup-files nil
- column-number-mode t
- scroll-error-top-bottom t
- show-paren-delay 0.5
- sentence-end-double-space nil)
 
-(setq use-package-verbose t)
+;; Turn on show-paren and electric-pair
+(electric-pair-mode 1)
+(show-paren-mode 1)
+(display-time-mode t)
+
+;; Spaces, not tabs
+;; Tab width: 2
+;; Indent Level: 2
+
+(setq-default indent-tabs-mode nil
+              tab-width 2
+              indent-level 2
+              evil-shift-width 2
+              c-basic-offset 2)
+
+(setq visible-cursor nil
+      use-package-always-ensure t
+      create-lockfiles nil
+      make-backup-files nil
+      column-number-mode t
+      scroll-error-top-bottom t
+      show-paren-delay 0.3
+      sentence-end-double-space nil)
+
+;; (setq use-package-verbose t) ;; uncomment for debugging init
+
+;; adds line numbers to sourcecode files
+(add-hook 'prog-mode-hook
+  (function (lambda ()
+    (linum-mode 1))))
+
+;; mouse in terminal
+(require 'mouse)
+(xterm-mouse-mode 1)
 
 (use-package auto-package-update
   :init
@@ -59,12 +76,6 @@
 (use-package powerline
   :config
   (powerline-default-theme))
-
-;; (use-package evil-terminal-cursor-changer
-;;   :if (not display-graphic-p))
-;; tabs
-;; (unless (display-graphic-p)
-;;   (require 'evil-terminal-cursor-changer))
 
 (use-package evil-surround
   :defer t
@@ -103,12 +114,6 @@
   :config
   (powerline-default-theme))
 
-;; (use-package evil-terminal-cursor-changer
-;;   :if (not display-graphic-p))
-;; tabs
-;; (unless (display-graphic-p)
-;;   (require 'evil-terminal-cursor-changer))
-
 (use-package evil-surround
   :defer t
   :config
@@ -126,62 +131,39 @@
   :bind (:map evil-normal-state-map
               ("SPC" . ace-jump-mode)))
 
-; Ace jump activation, via spacebar in normal mode
-;; (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)
-;; (use-package ace-jump-mode
-;;   :commands ace-jump-mode
-;;   :init
-;;   (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode))
-
 (use-package ace-jump-mode
   :defer t)
 
 (use-package yasnippet
   :defer 1
   :init
-  (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
+  (add-to-list 'yas-snippet-dirs "~/.emacs.d/snippets/yasnippet-snippets")
   :config
   (yas-global-mode 1))
 
-  ;; :bind (:map yas-minor-mode-map
-  ;;             ("<C-tab>" .'yas-expand))
+;; :bind (:map yas-minor-mode-map
+;;             ("<C-tab>" .'yas-expand))
+;; --  ^ for use-package.
 ;; (define-key yas-minor-mode-map (kbd "<C-tab>") 'yas-expand)
-;; ==
 ;; (define-key yas-minor-mode-map (kbd "<tab>") nil)
 ;; (define-key yas-minor-mode-map (kbd "TAB") nil)
 
-;; (use-package auto-complete
-;;   :defer 1
-;;   ;; :init
-;;   ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-;;   :config
-;;   (ac-config-default)
-;;   (ac-set-trigger-key "TAB")
-;;   (ac-set-trigger-key "<tab>"))
-
-;; setting up autocomplete
-;; (require 'auto-complete-config)
-;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-;; (ac-config-default)
-;; (ac-set-trigger-key "TAB")
-;; (ac-set-trigger-key "<tab>")
-
 (use-package company
   :init
-  (global-company-mode))
+  (global-company-mode t))
 
-;; ;; http://www.flycheck.org/manual/latest/index.html
+;; http://www.flycheck.org/manual/latest/index.html
 (use-package flycheck
   :defer 1
-  :config
+  :init
   (global-flycheck-mode))
-;; ;; turn on flychecking globally
-;; (add-hook 'after-init-hook #'global-flycheck-mode)
 
+(use-package flycheck-rust)
+
+(use-package flycheck-elm)
 
 (use-package rainbow-delimiters
-  :defer 1
-  :config
+  :init
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
 
 (use-package material-theme)
@@ -208,38 +190,15 @@
 (use-package elixir-mode
   :defer t)
 
-
 (use-package elm-mode
+  :init
+  (elm-oracle-setup-completion)
+  (add-to-list 'company-backends 'company-elm)
+  (flycheck-elm-setup)
   :config
   (setq elm-format-on-save t)
   :mode ("\\.elm\\'" . elm-mode))
 
-
-;; ELM MODE
-;; elm-mode auto-complete setup
-(defun my-elm-hook ()
-  "Turn on auto-complete for elm as well as set up the oracle."
-  (auto-complete-mode t))
-
-(add-hook 'elm-mode-hook #'elm-oracle-setup-ac)
-(add-hook 'elm-mode-hook 'my-elm-hook)
-
-;; pairing of parens (built-in)
-(electric-pair-mode 1)
-(show-paren-mode 1)
-;; (display-time-mode t)
-
-;; adds line numbers to sourcecode files
-(add-hook 'prog-mode-hook
-  (function (lambda ()
-    (linum-mode 1))))
-
-; turn off cursor blink
-(setq visible-cursor nil)
-
-;; mouse in terminal
-(require 'mouse)
-(xterm-mouse-mode 1)
 
 ;; copy & paste in linux
 (setq select-enable-clipboard t)
@@ -272,6 +231,7 @@
       (set-buffer buf)
       (if (and (buffer-file-name) (buffer-modified-p))
           (basic-save-buffer)))))
+
 (add-hook 'auto-save-hook 'full-auto-save)
 
 ;(require 'pbcopy)
@@ -302,30 +262,9 @@
 ;; (when (memq window-system '(mac ns))
 ;;   (exec-path-from-shell-initialize))
 
-
-;; set yasnippets to be higher priority in aau
-;; (defadvice ac-common-setup (after give-yasnippet-highest-priority activate)
-;;   (setq ac-sources (delq 'ac-source-yasnippet ac-sources))
-;;     (add-to-list 'ac-sources 'ac-source-yasnippet))
-
-;; (defun ac-js-mode()
-;;   (setq ac-sources '(ac-source-yasnippet
-;;                      ac-source-symbols
-;;                      ac-source-words-in-buffer
-;;                      ac-source-words-in-same-mode-buffers
-;;                      ac-source-files-in-current-dir
-;;                      )))
-;; (add-hook 'js-mode-hook 'ac-js-mode)
-;; (add-hook 'js2-mode-hook 'ac-js-mode)
-
-;; JavaScript mode-hooks w/ autocomplete
-;;(add-hook 'js-mode-hook 'js2-minor-mode)
-(use-package js2-mode
+(use-package emmet-mode
   :init
-  (setq js2-highlight-level 3)
-  :config
-  (add-hook 'js2-mode-hook 'ac-js2-mode)
-  :mode "\\.js\\'")
+  (add-hook 'web-mode-hook 'emmet-mode)) ;; Auto-start on any markup modes
 
 ;; http://web-mode.org/
 ;; use web-mode for .jsx files
@@ -335,32 +274,10 @@
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-code-indent-offset 2)
-  (setq web-mode-ac-sources-alist
-    '(("css" . (ac-source-css-property))
-      ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
-  :config
-  (flycheck-add-mode 'javascript-eslint 'web-mode)
-  :mode
-  ("\\.html?\\'" . web-mode)
-  ("\\.jsx$" . web-mode)
-  ("\\.eex$" . web-mode))
-
-(use-package emmet-mode)
-
-;; disable jshint to prefer eslint checking
-;; (setq-default flycheck-disabled-checkers
-;;   (append flycheck-disabled-checkers
-;;     '(javascript-jshint)))
-
-;; use eslint with web-mode for jsx files
-
-;; disable json-jsonlist checking for json files
-;; (setq-default flycheck-disabled-checkers
-;;   (append flycheck-disabled-checkers
-;;     '(json-jsonlist)
-;; ;    '(javascript-jscs) ; uncomment to disable javascript-jscs
-;;     ))
-
+  ;; (flycheck-add-mode 'javascript-eslint 'web-mode)
+  :mode (("\\.html?\\'" . web-mode)
+         ("\\.jsx$" . web-mode)
+         ("\\.eex$" . web-mode)))
 
 ;; end of web-mode stuff for indent setting etc.
 
@@ -369,7 +286,6 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
-
 
 (provide 'init)
 ;;; init.el ends here
@@ -385,7 +301,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (web-mode use-package rainbow-delimiters powerline neotree material-theme js2-mode flycheck evil-tabs evil-surround evil-org emmet-mode elm-mode elixir-mode cider auto-package-update auto-complete ace-jump-mode)))
+    (company-web web-mode use-package rust-mode rainbow-delimiters powerline neotree material-theme js2-mode flycheck-rust flycheck-elm flycheck-clojure evil-terminal-cursor-changer evil-tabs evil-surround evil-org ensime emmet-mode elm-mode elixir-mode company-quickhelp auto-complete ace-jump-mode)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
