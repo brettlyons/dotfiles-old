@@ -71,19 +71,15 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_theme='luna'
 
-
-
 let g:ycm_semantic_triggers = {
      \ 'elm' : ['.'],
      \}
-
 
 " Synstastic setup
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 
 let g:elm_syntastic_show_warnings = 1
-
 
 " color the 80th column please.
 if (exists('+colorcolumn'))
@@ -122,7 +118,7 @@ set visualbell t_vb=
 
 " Disable all cursor blinking:
 set guicursor+=a:blinkon0
-" Default setting, uncommong to restore:
+" Default setting, uncomment to restore:
 " :set guicursor&
 
 " Enable mouse for all modes
