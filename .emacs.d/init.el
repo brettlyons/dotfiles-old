@@ -174,8 +174,7 @@
 (use-package flycheck-elm)
 
 (use-package rainbow-delimiters
-  :defer 1
-  :config
+  :init
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
 
 (use-package material-theme)
@@ -320,11 +319,8 @@
 ;;   :mode "\\.js\\'")
 
 (use-package emmet-mode
-  :mode
-  "\\.html?\\'"
-  "\\.jsx$"
-  "\\.eex$")
-  
+  :init
+  (add-hook 'web-mode-hook 'emmet-mode)) ;; Auto-start on any markup modes
 
 ;; http://web-mode.org/
 ;; use web-mode for .jsx files
@@ -334,12 +330,10 @@
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-code-indent-offset 2)
-  ;; :config
   ;; (flycheck-add-mode 'javascript-eslint 'web-mode)
-  :mode
-  ("\\.html?\\'" . web-mode)
-  ("\\.jsx$" . web-mode)
-  ("\\.eex$" . web-mode))
+  :mode (("\\.html?\\'" . web-mode)
+         ("\\.jsx$" . web-mode)
+         ("\\.eex$" . web-mode)))
 
 
 
