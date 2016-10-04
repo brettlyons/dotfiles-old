@@ -4,7 +4,9 @@ URxvt*letterSpace: -1
 ! Standard DPI
 ! Xft.dpi: 96
 ! 3K HiDPI
-Xft.dpi: 168
+! Xft.dpi: 168
+! 4K HiDPI
+Xft.dpi: 192
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb

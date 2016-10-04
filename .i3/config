@@ -279,16 +279,17 @@ bar {
 
 
 # Autostart applications
+exec_always --no-startup-id xrdb /home/brett/.Xresources
 exec_always --no-startup-id setxkbmap -option 'ctrl:nocaps'
 # exec --no-startup-id xflux -z 80302
 exec --no-startup-id redshift-gtk
 exec --no-startup-id syndaemon -i 0.8 -K -R
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
 ##exec --no-startup-id volumeicon
-# exec --no-startup-id start-pulseaudio-x11
-# exec --no-startup-id pa-applet
+exec --no-startup-id start-pulseaudio-x11
+exec --no-startup-id pa-applet
 # exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 # exec --no-startup-id clipit

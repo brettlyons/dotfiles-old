@@ -3,27 +3,23 @@
 ;; My init.el.  Currently configured to automatically check for packages, and configure relevant pieces of those packages.
 
 ;;; Code:
-;; Basics, universals.
 ;; Spaces, not tabs
-(setq-default indent-tabs-mode nil)
 ;; Tab width is now 2
-(setq-default tab-width 2)
-;; same for js mode -- js2 mode set up below though.
-;; (setq js-indent-level 2)
 ;; Indent Level
-(setq-default indent-level 2)
-(setq-default evil-shift-width 2)
-
-(setq-default c-basic-offset 2
+(setq-default indent-tabs-mode nil
               tab-width 2
+              indent-level 2
+              evil-shift-width 2
+              c-basic-offset 2
               indent-tabs-mode nil)
 
 ;; package archives first
 (require 'package)
-(push '("marmalade" . "http://marmalade-repo.org/packages/")
-      package-archives )
-(push '("melpa" . "http://melpa.org/packages/")
-      package-archives)
+(setq
+ package-archives '(("marmalade" . "https://marmalade-repo.org/packages/")
+                    ("melpa" . "https://melpa.org/packages/")
+                    ("melpa-stable" . "https://stable.melpa.org/packages/")))
+
 (package-initialize)
 
 ;; set up use-package to simplify this config
@@ -34,8 +30,22 @@
 (eval-when-compile
   (require 'use-package))
 
-(setq use-package-always-ensure t)
+(setq
+ use-package-always-ensure t
+ create-lockfiles nil
+ make-backup-files nil
+ column-number-mode t
+ scroll-error-top-bottom t
+ show-paren-delay 0.5
+ sentence-end-double-space nil)
+
 (setq use-package-verbose t)
+
+(use-package auto-package-update
+  :init
+  (auto-package-update-maybe)
+  (auto-package-update-at-time "00:15")
+  (setq auto-package-update-delete-old-versions t))
 
 (use-package evil-tabs)
 
@@ -140,14 +150,14 @@
 ;; (define-key yas-minor-mode-map (kbd "<tab>") nil)
 ;; (define-key yas-minor-mode-map (kbd "TAB") nil)
 
-(use-package auto-complete
-  :defer 1
-  ;; :init
-  ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-  :config
-  (ac-config-default)
-  (ac-set-trigger-key "TAB")
-  (ac-set-trigger-key "<tab>"))
+;; (use-package auto-complete
+;;   :defer 1
+;;   ;; :init
+;;   ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+;;   :config
+;;   (ac-config-default)
+;;   (ac-set-trigger-key "TAB")
+;;   (ac-set-trigger-key "<tab>"))
 
 ;; setting up autocomplete
 ;; (require 'auto-complete-config)
@@ -155,6 +165,10 @@
 ;; (ac-config-default)
 ;; (ac-set-trigger-key "TAB")
 ;; (ac-set-trigger-key "<tab>")
+
+(use-package company
+  :init
+  (global-company-mode))
 
 ;; ;; http://www.flycheck.org/manual/latest/index.html
 (use-package flycheck
@@ -182,7 +196,11 @@
   :mode "\\.scala\\'")
 
 (use-package ensime
+  :pin melpa-stable
   :mode ("\\.scala\\'" . scala-mode)
+  :config
+  (electric-pair-mode 1)
+  (show-paren-mode 1)
   :init
   (add-hook 'scala-mode-hook 'ensime-mode)
   :commands ensime ensime-mode)
@@ -224,8 +242,8 @@
 (xterm-mouse-mode 1)
 
 ;; copy & paste in linux
-(setq x-select-enable-clipboard t)
-(setq x-select-enable-primary t)
+(setq select-enable-clipboard t)
+(setq select-enable-primary t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
 ;; different site-lisp dirs for different OS's -- enabling shared home
@@ -365,6 +383,9 @@
    (quote
     ("e56ee322c8907feab796a1fb808ceadaab5caba5494a50ee83a13091d5b1a10c" default)))
  '(inhibit-startup-screen t)
+ '(package-selected-packages
+   (quote
+    (web-mode use-package rainbow-delimiters powerline neotree material-theme js2-mode flycheck evil-tabs evil-surround evil-org emmet-mode elm-mode elixir-mode cider auto-package-update auto-complete ace-jump-mode)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
