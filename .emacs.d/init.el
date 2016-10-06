@@ -137,9 +137,10 @@
 (use-package yasnippet
   :defer 1
   :init
-  (add-to-list 'yas-snippet-dirs "~/.emacs.d/snippets/yasnippet-snippets")
+  (yas-global-mode 1)
   :config
-  (yas-global-mode 1))
+  (add-to-list 'yas-snippet-dirs "~/.emacs.d/snippets/yasnippet-snippets"))
+
 
 ;; :bind (:map yas-minor-mode-map
 ;;             ("<C-tab>" .'yas-expand))
@@ -161,6 +162,9 @@
 (use-package flycheck-rust)
 
 (use-package flycheck-elm)
+
+(use-package json-mode
+  :defer t)
 
 (use-package rainbow-delimiters
   :init
@@ -186,6 +190,14 @@
   :init
   (add-hook 'scala-mode-hook 'ensime-mode)
   :commands ensime ensime-mode)
+
+;; (add-hook 'scala-mode-hook
+;;           (let ((original-command (lookup-key scala-mode-map [tab])))
+;;             `(lambda ()
+;;                (setq yas-fallback-behavior
+;;                      '(apply ,original-command))
+;;                (local-set-key [tab] 'yas-expand))))
+
 
 (use-package elixir-mode
   :defer t)
@@ -264,7 +276,7 @@
 
 (use-package emmet-mode
   :init
-  (add-hook 'web-mode-hook 'emmet-mode)) ;; Auto-start on any markup modes
+  (add-hook 'web-mode-hook 'emmet-mode)) ;; Auto-start in any web-mode
 
 ;; http://web-mode.org/
 ;; use web-mode for .jsx files
@@ -301,7 +313,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (company-web web-mode use-package rust-mode rainbow-delimiters powerline neotree material-theme js2-mode flycheck-rust flycheck-elm flycheck-clojure evil-terminal-cursor-changer evil-tabs evil-surround evil-org ensime emmet-mode elm-mode elixir-mode company-quickhelp auto-complete ace-jump-mode)))
+    (json-mode company-web web-mode use-package rust-mode rainbow-delimiters powerline neotree material-theme js2-mode flycheck-rust flycheck-elm flycheck-clojure evil-terminal-cursor-changer evil-tabs evil-surround evil-org ensime emmet-mode elm-mode elixir-mode company-quickhelp auto-complete ace-jump-mode)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

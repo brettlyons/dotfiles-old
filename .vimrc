@@ -35,7 +35,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " Auto-pairs
 Plug 'jiangmiao/auto-pairs'
 
-" loaded for clj files
+" Clojure setup
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " JS completion with TERN-js
@@ -43,6 +43,10 @@ Plug 'carlitux/deoplete-ternjs'
 
 " Elm-Mode for elm files
 Plug 'elmcast/elm-vim', { 'for': 'elm' }
+
+" Scala Mode / Ensime
+Plug 'derekwyatt/vim-scala'
+Plug 'ensime/ensime-vim'
 
 " Elixir mode
 Plug 'elixir-lang/vim-elixir'
@@ -109,7 +113,7 @@ let mapleader = '\'
 
 " toggle nerd tree on Ctl-\
 map <C-\> :NERDTreeToggle<CR>
-
+map <leader>\ :NERDTreeToggle<CR>
 " Show matching pairs
 set showmatch
 
@@ -143,5 +147,7 @@ fun! <SID>StripTrailingWhiteSpaces()
   %s/\s\+$//e
   call cursor(l, c)
 endfun
+
+autocmd BufWritePost *.scala :EnTypeCheck " for scala typechecking.
 
 autocmd BufWritePre * :call <SID>StripTrailingWhiteSpaces()
