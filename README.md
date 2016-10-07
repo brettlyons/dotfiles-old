@@ -5,3 +5,7 @@ install python2-pip and python-pip
 (as root) pip " " " "
 
 BEFORE running :PlugInstall from neovim.
+
+After installing Emacs
+To install Spacemacs:
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
