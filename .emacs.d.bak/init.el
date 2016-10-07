@@ -198,7 +198,6 @@
 ;;                      '(apply ,original-command))
 ;;                (local-set-key [tab] 'yas-expand))))
 
-
 (use-package elixir-mode
   :defer t)
 
