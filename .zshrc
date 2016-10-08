@@ -49,7 +49,7 @@ ZSH_THEME="lyonsb"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sprunge)
+plugins=(git)
 
 # User configuration
 
@@ -58,7 +58,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 # for ssh keys
-eval $(keychain --eval --noask id_ed25519 id_rsa)
+eval $(keychain --eval --quiet id_ed25519 id_rsa)
 
 eval $(dircolors ~/.dir_colors)
 
@@ -68,7 +68,7 @@ export HISTSIZE=10000
 export HISTFILESIZE=${HISTSIZE}
 export HISTCONTROL=ignoreboth
 export JAVA_FONTS=/usr/share/fonts/TTF
-export EDITOR=/usr/bin/nvim
+export EDITOR=/usr/bin/emacs
 
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
@@ -114,7 +114,7 @@ ex ()
 # export TERM=rxvt-unicode-256color
 # ^ from .bashrc on linux side
 
-export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -144,8 +144,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
 bindkey -v
 
@@ -179,7 +177,7 @@ alias emt='emacsclient -t -a ""'
 # alias emt="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
 # alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs"
 # alias lem="/usr/bin/emacs -nw"
-#alias emacsclient='/usr/local/Cellar/emacs/24.5/bin/emacsclient -c'
+# alias emacsclient='/usr/local/Cellar/emacs/24.5/bin/emacsclient -c'
 
 # make sure termite knows the when opening new windows
 if [[ $TERM == xterm-termite ]]; then
@@ -200,7 +198,11 @@ pbx () {
 
 alias emacsc='/usr/local/Cellar/emacs/24.5/bin/emacsclient -c  -F "((fullscreen . maximized))"'
 
-export PATH="$PATH:$HOME/.gem/ruby/2.3.0/bin"
-export PATH="$PATH:$HOME/.npm-packages/bin" # for npm installs
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+### Added by the Heroku Toolbelt
+# export PATH="/usr/local/heroku/bin:$PATH"
+
+# export PATH="$HOME/.gem/ruby/2.3.0/bin:$PATH"
+# export PATH="$PATH:$HOME/.npm-packages/bin" # for npm installs
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# eval "$(rbenv init -)"
