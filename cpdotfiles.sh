@@ -2,6 +2,8 @@
 cp ~/dotfiles/.i3/config ~/.config/i3/config
 cp ~/dotfiles/.Xresources ~/.Xresources
 cp ~/dotfiles/.spacemacs ~/
+cp ~/dotfiles/.zshrc ~/.zshrc
+cp ~/dotfiles/.zshenv ~/.zshenv
 cp ~/dotfiles/.vimrc ~/.vimrc
 cp -r ~/dotfiles/.vim ~/.config/nvim
 ln -s ~/.vim ~/.config/nvim
