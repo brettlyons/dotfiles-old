@@ -1,6 +1,6 @@
 !URxvt.font: 9x15
-URxvt*font: xft:Source Code Pro:regular:size=12
-URxvt*letterSpace: -1
+URxvt*font: xft:Source Code Pro:regular:size=14
+! URxvt*letterSpace: -1
 ! Standard DPI
 ! Xft.dpi: 96
 ! 3K HiDPI

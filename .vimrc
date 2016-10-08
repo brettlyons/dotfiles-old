@@ -15,9 +15,11 @@ Plug 'vim-airline/vim-airline-themes'
 " Syntastic
 Plug 'scrooloose/syntastic'
 
+" SuperTab
+Plug 'iervandew/supertab'
+
 " Ultisnips w/snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " Deoplete (hope it doesn't conflict with ultisnips?)
 " Plug 'Shougo/deoplete.nvim', has('nvim') ? {} : { 'on' : [], 'do' : ':UpdateRemotePlugins' }
@@ -34,6 +36,9 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " Auto-pairs
 Plug 'jiangmiao/auto-pairs'
+
+"Emmet mode
+Plug 'mattn/emmet-vim', { 'for' : ['html', 'css'] }
 
 " Clojure setup
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
@@ -94,16 +99,31 @@ endif
 " NeoVim Specifics
 if has('nvim')
   " Deoplete
-  let g:deoplete#enable_at_startup = 1
-  let g:deoplete#enable_smart_case = 1
+  "let g:deoplete#enable_at_startup = 1
+  "let g:deoplete#enable_smart_case = 1
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
   let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
-  " ultisnip config
-  let g:UltiSnipsExpandTrigger='<tab>'
-  let g:UltiSnipsListSnippets='<c-tab>'
-  let g:UltiSnipsJumpForwardTrigger='<c-j>'
-  let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 endif
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsListSnippets='<c-tab>'
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" ultisnip config
+" let g:UltiSnipsExpandTrigger='<tab>'
+" let g:UltiSnipsJumpForwardTrigger='<c-j>'
+" let g:UltiSnipsJumpBackwardTrigger='<c-k>'
+
+" Emmet Mode for HTML/CSS only
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 " sets save(write) on dbl-escape
 map <Esc><Esc> :w<CR>
@@ -129,15 +149,15 @@ set guicursor+=a:blinkon0
 set mouse=a
 
 " tab stuffs
-set number 		"sets absolute line numbers
+set number    "sets absolute line numbers
 " :set relativenumber     "sets relative line numbers, when combined with the above, gives 2 columns of line numbers
 set autoindent         "continues indentation from previous line
 " :set smartindent        "adds indentation sometimes
-set tabstop=2		"a tab is 2 spaces
-set expandtab		"Always use spaces instead of tabs
-set softtabstop=2	"Insert 2 spaces per tab press
-set shiftwidth=2	"An indent is 2 spaces
-set shiftround		"Round indent to nearest shiftwidth multiple
+set tabstop=2   "a tab is 2 spaces
+set expandtab   "Always use spaces instead of tabs
+set softtabstop=2 "Insert 2 spaces per tab press
+set shiftwidth=2  "An indent is 2 spaces
+set shiftround    "Round indent to nearest shiftwidth multiple
 :%retab!
 nnoremap <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 
@@ -148,6 +168,7 @@ fun! <SID>StripTrailingWhiteSpaces()
   call cursor(l, c)
 endfun
 
-autocmd BufWritePost *.scala :EnTypeCheck " for scala typechecking.
+" Typecheck the scala file on save.
+" autocmd BufWritePost *.scala :EnTypeCheck " for scala typechecking.
 
 autocmd BufWritePre * :call <SID>StripTrailingWhiteSpaces()

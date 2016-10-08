@@ -52,6 +52,9 @@ bindsym $mod+p exec --no-startup-id passmenu -fn "Source Code Pro:Regular" -l 20
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 && exec notify-send 'brightness up'
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 && exec notify-send 'brightness down'
 
+# run rofi window switcher
+bindsym $ctl+space exec --no-startup-id rofi -show window
+
 # Start Applications
 bindsym $mod+$ctl+b exec i3-sensible-terminal -e 'bmenu'
 # bindsym $mod+$ctl+b exec terminal -e 'bmenu'
