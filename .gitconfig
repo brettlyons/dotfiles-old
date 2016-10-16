@@ -3,7 +3,7 @@
 	email = blyons@students.naropa.edu
 [core]
   excludesfile = /Users/brett/.gitignore_global
-	editor = /usr/local/bin/nvim
+	editor = /usr/local/bin/vim
 [push]
 	default = simple
 [alias]
