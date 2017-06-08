@@ -58,7 +58,10 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 # for ssh keys
-eval $(keychain --eval --agents ssh,gpg --quiet id_ed25519 id_rsa)
+if pgrep i3
+then
+  eval $(keychain --eval --agents ssh,gpg --quiet id_rsa)
+fi
 
 eval $(dircolors ~/.dir_colors)
 
