@@ -1,11 +1,15 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/home/brett/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="lyonsb"
+# Path to your oh-my-zsh installation.
+export ZSH=/home/blyons/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="dracula"
+# ZSH_THEME="lambda"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,76 +55,11 @@ ZSH_THEME="lyonsb"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+source $ZSH/oh-my-zsh.sh
+
 # User configuration
 
-if [ -f /etc/bash_completion ]; then
-  . /etc/bash_completion
-fi
-
-# for ssh keys
-if pgrep i3
-then
-  eval $(keychain --eval --agents ssh,gpg --quiet id_rsa)
-fi
-
-eval $(dircolors ~/.dir_colors)
-
-# xhost +local:root > /dev/null 2>&1
-
-export HISTSIZE=10000
-export HISTFILESIZE=${HISTSIZE}
-export HISTCONTROL=ignoreboth
-export JAVA_FONTS=/usr/share/fonts/TTF
-export EDITOR=/usr/bin/emacs
-
-alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias grep='grep --color=tty -d skip'
-alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias np='$EDITOR PKGBUILD'
-alias fixit='sudo rm -f /var/lib/pacman/db.lck'
-alias update='yaourt -Syua'
-alias con='$EDITOR $HOME/.i3/config'
-alias comp='$EDITOR $HOME/.config/compton.conf'
-alias inst='sudo pacman -S'
-alias mirrors='sudo pacman-mirrors -g'
-alias printer='system-config-printer'
-
-# ex - archive extractor
-# usage: ex <file>
-ex ()
-{
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
-}
-
-# export TERM=rxvt-unicode-256color
-# export TERM=rxvt-unicode-256color
-# ^ from .bashrc on linux side
-
-# export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -136,7 +75,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -146,66 +85,24 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+#
+# [[ $- = *i* ]] && source ~/liquidprompt
 
 bindkey -v
 
-bindkey '^P' up-history
-bindkey '^N' down-history
-bindkey '^?' backward-delete-char
-bindkey '^h' backward-delete-char
-bindkey '^w' backward-kill-word
-bindkey '^r' history-incremental-search-backward
-
-local lambda='λ'
-#PROMPT="%B${lambda}%b "
-function zle-line-init zle-keymap-select {
-VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
-RPS1=" ${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1 "
-#  $(git_custom_status) , this after }
-zle reset-prompt
-}
-
-zle -N zle-line-init
-zle -N zle-keymap-select
-export KEYTIMEOUT=1
-
-alias share="x0vncserver -passwordfile ~/.vnc/passwd"
-
 alias emc='emacsclient -nc -a ""'
 alias emt='emacsclient -t -a ""'
+# alias journal='emc "$(date +%B%F).txt"'
 
-# EDITOR='/usr/local/bin/emt'
+source /home/blyons/.antigen/antigen.zsh
 
-# alias emt="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
-# alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs"
-# alias lem="/usr/bin/emacs -nw"
-# alias emacsclient='/usr/local/Cellar/emacs/24.5/bin/emacsclient -c'
+antigen use oh-my-zsh
 
-# make sure termite knows the when opening new windows
-if [[ $TERM == xterm-termite ]]; then
-  . /etc/profile.d/vte.sh
-  __vte_osc7
-fi
+antigen bundle git
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle nojhan/liquidprompt
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-history-substring-search
 
-source /etc/profile.d/vte.sh
-
-#pastebin convenience function
-pb () {
-  curl -F "c=@${1:--}" https://ptpb.pw/
-}
-
-pbx () {
-  curl -sF "c=@${1:--}" -w "%{redirect_url}" 'https://ptpb.pw/?r=1' -o /dev/stderr | xsel -l /dev/null -b
-}
-
-alias emacsc='/usr/local/Cellar/emacs/24.5/bin/emacsclient -c  -F "((fullscreen . maximized))"'
-
-
-### Added by the Heroku Toolbelt
-# export PATH="/usr/local/heroku/bin:$PATH"
-
-# export PATH="$HOME/.gem/ruby/2.3.0/bin:$PATH"
-# export PATH="$PATH:$HOME/.npm-packages/bin" # for npm installs
-# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-# eval "$(rbenv init -)"
+antigen apply
