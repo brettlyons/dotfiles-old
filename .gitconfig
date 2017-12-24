@@ -2,8 +2,10 @@
 	name = Brett Lyons
 	email = blyons@students.naropa.edu
 [core]
-  excludesfile = /Users/brett/.gitignore_global
-	editor = /usr/local/bin/vim
+  excludesfile = /home/blyons/.gitignore_global
+	editor = /usr/bin/nvim
+	autocrlf = input
+	safecrlf = true
 [push]
 	default = simple
 [alias]
