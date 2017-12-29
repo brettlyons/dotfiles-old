@@ -10,6 +10,3 @@ ln -s ~/.vim ~/.config/nvim
 cp -r ~/dotfiles/.vim ~/.vim
 # install spacemacs
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-# and antigen
-mkdir ~/.antigen
-curl -L git.io/antigen > ~/.antigen/antigen.zsh
